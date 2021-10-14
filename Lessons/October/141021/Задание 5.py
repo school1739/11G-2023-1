@@ -1,0 +1,10 @@
+a = int(input("Введите целое число а: "))
+b = int(input("Введите целое число b: "))
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+import math
+print(math.log10(a))
+print(a**b)
