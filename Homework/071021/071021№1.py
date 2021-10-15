@@ -1,0 +1,1 @@
+print("Бурыкин Павел;pashabur18@gmail.com")
