@@ -25,4 +25,4 @@ elif month == "ноябрь":
 elif month == "декабрь":
     print("в этом месяце - 31 день")
 else:
-    None
+    exit()
