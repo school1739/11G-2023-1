@@ -1,4 +1,4 @@
-a = input().lower()
+a = input('Введите букву: ').lower()
 
 if a == 'a' or a == 'e' or a == 'i' or a == 'o' or a == 'u':
     print('Гласная')
