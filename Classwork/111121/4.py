@@ -9,8 +9,9 @@ D = d*250
 Sum = A+B+C+D
 i = 1000
 while Sum>i:
-    Summ=(i - Sum )
+    n= i*2
+    Summ=(n - Sum)
     print(Summ)
-    i+1000
 else:
-    print(i - Sum)
+    print(Sum,"Цена")
+    print(i - Sum,"Сдача")
