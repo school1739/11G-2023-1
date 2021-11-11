@@ -10,5 +10,10 @@ print('Вводите числа:')
 while (num := float(input())) != 0:
     total += num
     n += 1
-# Выводим среднее значение
-print(total / n)
+
+if n == 0:
+    # Сразу введён 0
+    print('Error')
+else:
+    # Выводим среднее значение
+    print(total / n)
