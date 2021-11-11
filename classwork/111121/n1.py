@@ -8,5 +8,5 @@ else:
         a=int(input())
         b+=1
         c+=a
-print(c/b)
+print(c/b)                                       
 
