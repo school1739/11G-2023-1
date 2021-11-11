@@ -1,6 +1,5 @@
-k = int(input("Введите цены:"))
-sum = 0
-while k!= "" or k!= " ":
-    sum+=int(k)
-    k = input()
+price = input("Введите цены:")
+sum=0
+while price !=' ':
+    sum+=int(price)
 print(sum)
