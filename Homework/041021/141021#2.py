@@ -5,3 +5,5 @@ while i<=n:
     h=i+h
     i=i+1
 print(i,h)
+
+# Evaluation: Здесь должна быть Красная Шапочка.
