@@ -8,10 +8,10 @@ C = c*450
 D = d*250
 Sum = A+B+C+D
 i = 1000
-while Sum>i:
-    n= i*2
-    Summ=(n - Sum)
-    print(Summ)
-else:
+if  Sum < i:
     print(Sum,"Цена")
     print(i - Sum,"Сдача")
+else:
+    S = (Sum // i + 1) * i
+    print(Sum,"Цена")
+    print(S-Sum,"Сдача")
