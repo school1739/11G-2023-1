@@ -13,3 +13,5 @@ print("Call center tax:" + " " + str(0.44) +
       "\nGeneral tax:" + " " + str("%.2f" % ((float(dop_sms) + float(dop_min) + 15 + 0.44) * 0.05)) +
       "\nTotal:" + str(
     "%.2f" % (15 + 0.44 + float(dop_sms) + float(dop_min) + (float(dop_sms) + float(dop_min) + 15 + 0.44) * 0.05)))
+
+# Evaluation: OK

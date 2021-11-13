@@ -27,3 +27,5 @@ elif (birth[0] >= 23 and birth[0] <= 30 and birth[1] == 11) or (birth[1] == 12 a
 _list = ['monkey', 'cock', ' dog', 'pig', 'rat', 'bull', 'tiger', 'rabbit', 'dragon', 'snake', ' horse', 'goat']
 print(f"Your zodiac sign is {znak} "
       f"\nYou are {_list[birth[2] % 12]} according to chinese calendar")
+
+# Evaluation: OK. Отличное оформление, btw!

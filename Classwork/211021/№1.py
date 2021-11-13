@@ -7,3 +7,5 @@ data = datetime(year, month, day)
 newdate = data + timedelta(days=1)
 newdate = newdate.strftime("%Y-%m-%d")
 print(newdate)
+
+# Evaluation: OK
