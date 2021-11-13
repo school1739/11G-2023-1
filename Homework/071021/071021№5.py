@@ -8,3 +8,5 @@ round(s,2)
 round(S,2)
 V = s + S
 print(V)
+
+# Evaluation: Нет форматирования.
