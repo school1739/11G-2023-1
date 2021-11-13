@@ -24,4 +24,6 @@ elif a=="november":
 elif a=="december":
     print("31")
 else:
-    print("Некорректно введен месяц")
+    print("Некорректно введен месяц"
+
+# Evaluation: ОК
