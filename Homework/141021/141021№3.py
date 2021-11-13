@@ -4,3 +4,5 @@ C = int(input("Сувениры: "))
 B = int(input("Безделушки: "))
 S = C * c + B * b
 print(S)
+
+# Evaluation: OK

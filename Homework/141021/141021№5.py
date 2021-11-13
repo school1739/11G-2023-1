@@ -12,3 +12,5 @@ print("частное от деления", dell)
 print("Произведение", proiz)
 print(log)
 print("Степень", step)
+
+# Evaluation: Почему не посчитан логарифм?
