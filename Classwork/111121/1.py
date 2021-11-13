@@ -1,8 +1,8 @@
-a = int(input())
+a = int(input())                # Создаём новые переменные
 b = 0
 c = a
 if a == 0:
-    ptint("Erorr")
+    print("Erorr")
 else:
     while a !=0:
         a = int(input())

@@ -12,6 +12,6 @@ if Sum < i:
     print(Sum, "Цена")
     print(i - Sum, "Сдача")
 else:
-    S = (Sum // i + 1) * i
+    S = (Sum // i + 1) * i           # Ввод новой переменной
     print(Sum, "Цена")
     print(S-Sum, "Сдача")
