@@ -23,3 +23,5 @@ elif month == "ноябрь":
     print("30")
 else:
     print("31")
+
+# Evaluation: OK

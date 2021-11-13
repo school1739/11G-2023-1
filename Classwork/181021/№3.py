@@ -5,3 +5,5 @@ elif verb == 'y':
     print("Эта буква может быть гласной и согласной")
 else:
     print("Буква согласная")
+
+# Evaluation: OK

@@ -6,3 +6,5 @@ if old >= 0:
         print("Ваш возраст:", " ", 7 * old)
 else:
     print("Неправильное число")
+
+# Evaluation: OK

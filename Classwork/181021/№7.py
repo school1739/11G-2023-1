@@ -7,3 +7,5 @@ elif dlina1 == dlina2 or dlina1 == dlina3 or dlina2 == dlina3:
     print("Трейгольник равнобедренный")
 else:
     print("Трейгольник разносторонний")
+
+# Evaluation: OK
