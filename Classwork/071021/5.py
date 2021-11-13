@@ -3,3 +3,4 @@ less_1l = int(input())
 more_1L = int(input())
 print("Если ты сдашь всю эту посуду, то получишь:" + str(round(less_1l*0.1+more_1L*0.25,2)) + "₽")
 
+# Evaluation: OK
