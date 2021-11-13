@@ -65,3 +65,5 @@ else:
     print("payment for extra minutes -", "%.2f" % payment_for_extra_minutes, "$")
     print("payment for extra sms -", "%.2f" % payment_for_extra_sms, "$")
     print("total payment -", "%.2f" % total_payment, "$")
+
+    # Evaluation: OK

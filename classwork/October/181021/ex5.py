@@ -26,3 +26,5 @@ elif month == "декабрь":
     print("в этом месяце - 31 день")
 else:
     exit()
+
+# Evaluation: OK

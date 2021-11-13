@@ -44,3 +44,5 @@ elif (19 <= date <= 29 and month == 2) or (month == 3 and 1 <= date <= 20):
     print("Знак зодиака:Рыбы")
 
 print("Год:", chinese_zodiac[(year - 2020) % 12])
+
+# Evaluation: OK

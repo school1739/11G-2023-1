@@ -5,3 +5,5 @@ elif latin_letter == "y":
     print("ваша буква и гласная, и согласная")
 else:
     print("ваша буква согласная")
+
+# Evaluation: OK

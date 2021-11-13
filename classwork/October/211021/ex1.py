@@ -12,4 +12,4 @@ next_date = date + datetime.timedelta(days=1)
 # вывод следующей даты
 print(f'Следующий день после вашего введенного: {next_date.strftime("%d.%m.%Y")}')
 
-
+# Evaluation: OK. Респект за datetime.
