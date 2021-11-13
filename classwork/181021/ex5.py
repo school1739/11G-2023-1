@@ -24,3 +24,4 @@ elif a=="Ноябрь":
 elif a=="Декабрь":
     print("31")
 
+# Evaluation: OK

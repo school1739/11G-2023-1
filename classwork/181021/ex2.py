@@ -4,3 +4,5 @@ if a > 0 and a <= 2:
 if a > 2:
     print(a*4)
 else: print('неверно введено число')
+
+# Evaluation: Формула для a>2 неправильная.

@@ -5,3 +5,5 @@ elif let == "y":
     print("и согласная и гласная")
 else:
     print("это буква согласная")
+
+# Evaluation: OK

@@ -17,3 +17,5 @@ elif number_of_sides ==10:
     print("Ваша фигура - десятиугольник")
 else:
     print("Введите число от 3 до 10")
+
+# Evaluation: OK
