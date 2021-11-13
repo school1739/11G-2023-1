@@ -11,3 +11,5 @@ cash_for_all_bottles = bottles_less_than_liter * cash_for_one_bottle_less_than_l
                        cash_for_one_bottle_more_than_liter * bottles_more_than_liter
 
 print("%.2f" % cash_for_all_bottles + '₽')
+
+# Evaluation: OK. Отдельный респект за именование переменных во всех заданиях!
