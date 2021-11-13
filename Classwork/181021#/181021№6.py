@@ -8,3 +8,5 @@ elif a==70:
 elif a==40:
     print("Тихая комната")
 elif
+
+# Evaluation: Не дописано.
