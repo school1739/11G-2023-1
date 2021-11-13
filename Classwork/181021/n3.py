@@ -6,3 +6,4 @@ elif zxc == 'y':
 else:
     print("Буква согласная")
 
+# Evaluation: SyntaxError: invalid syntax

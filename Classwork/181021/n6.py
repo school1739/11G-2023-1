@@ -15,3 +15,5 @@ elif o == 40:
     print("Уровень такой же как в тихой комнате")
 else:
     print("Тишина")
+
+# Evaluation: NameError: name 'O' is not defined
