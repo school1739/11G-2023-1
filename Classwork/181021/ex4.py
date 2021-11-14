@@ -22,3 +22,5 @@ elif a == 10:
 
 
 print(f'Это {s}угольник')
+
+# Evaluation: OK
