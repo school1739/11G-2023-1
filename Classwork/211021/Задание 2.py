@@ -27,3 +27,5 @@ if n != 0 and n != 00:
     print("Выйгравшая ставка:", col)
     print("Выйгравшая ставка:", number)
     print("Выйгравшая ставка:", bet)
+
+# Evaluation: OK
