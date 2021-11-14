@@ -1,18 +1,12 @@
 #Условие
-b = float(input('Введите число: '))
-
-# S - сумма чисел
-S = 0.0
-# K - количество чисел в последовательности
-K = 0
-while b != 0:
-    S += b
-    K += 1
-    b = float(input('Введите число: '))
-
-if K != 0:
-    s_a = S / K
+a=int(input())
+b=0
+c=a
+if a==0:
+   print(ValueError)
 else:
-    s_a = 0.0
-
-print('Среднее арифметическое равно %.3f' % (s_a))
+    while a!=0:
+        a=int(input())
+        b+=1
+        c+=a
+print(c/b)
