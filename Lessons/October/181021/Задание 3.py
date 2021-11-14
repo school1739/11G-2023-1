@@ -5,3 +5,5 @@ elif n == 'y':
     print("Как гласная, так и согласная")
 else:
     print("Согласная")
+
+# Evaluation: OK
