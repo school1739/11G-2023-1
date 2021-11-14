@@ -15,4 +15,8 @@ while (age := input()) != '':
         total += 150
 # Выводим общую цену и сдачу с ближайшей тысячи рублей
 print(f'Общая цена: {total}')
-print(f'Сдача с ближайшей тысячи рублей: {0 if (mod := total % 1000) == 0 else 1000 - mod}')
+if total % 1000 == 0:
+    change = 0
+else:
+    change = 1000 - total % 1000
+print(f'Сдача с ближайшей тысячи рублей: {change}')

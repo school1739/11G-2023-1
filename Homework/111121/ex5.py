@@ -8,7 +8,8 @@ while (bits := input()) != '':
     # Проверяем ввод
     if len(bits) == 8 and all(c in ('0', '1') for c in bits):
         # Выводим бит чётности
-        print(bits.count('1') % 2)
+        parity_bit = bits.count('1') % 2
+        print(parity_bit)
     else:
         # Неверный ввод
         print('Error')
