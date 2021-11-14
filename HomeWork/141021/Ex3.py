@@ -4,3 +4,5 @@ n = int(input("Сувениры"))
 z = int(input("Безделушки"))
 s = n * c + z * b
 print(s)
+
+# Evaluation: OK
