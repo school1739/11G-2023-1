@@ -24,3 +24,5 @@ if total_messages > basic_messages:
 print(f'Сумма отчислений кол-центрам 911: {call_center_tax}$')
 print(f'Налог: {tax:.2f}$')
 print(f'Итоговая сумма к оплате: {total_cost:.2f}$')
+
+# Evaluation: OK

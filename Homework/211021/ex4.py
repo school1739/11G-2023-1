@@ -26,3 +26,5 @@ chinese_horoscope = ('Обезьяна', 'Петух', 'Собака', 'Свин
 
 print(f'Знак зодиака: {next(i for i in zodiac_signs if date_of_birth >= i[0])[1]}')
 print(f'Животное по китайскому летоисчислению: {chinese_horoscope[date_of_birth.year % 12]}')
+
+# Evaluation: OK
