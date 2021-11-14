@@ -7,3 +7,5 @@ elif a == b !=c or a == c !=b or c == b != a:
     print("Треугольник равнобедренный")
 else:
     print("Треугольник разносторонний")
+
+# Evaluation: OK

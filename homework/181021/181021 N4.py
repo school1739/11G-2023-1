@@ -17,3 +17,5 @@ elif a ==10:
     print("десьтиугольник")
 else:
     print("Введите другое число")
+
+# Evaluation: OK
