@@ -8,3 +8,5 @@ print(a%b)
 import math
 print(math.log10(a))
 print(a**b)
+
+# Evaluation: OK. На всякий случай ещё раз напомню, что в папке Lessons НЕ РАБОТАЕМ!
