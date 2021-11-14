@@ -1,3 +1,4 @@
+from math import ceil
 price = 0
 while True:
     # Ввод возраста
@@ -13,3 +14,4 @@ while True:
     elif 12 < int(years) < 65:
         price += 450
 print(f'Цена за билеты: {price}')
+print(f"Сдача: {ceil(price/1000)*1000-price}")
