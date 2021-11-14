@@ -3,3 +3,5 @@ if a%2 ==0:
     print("Число четное")
 else:
     print("число нечетное")
+
+# Evaluation: OK
