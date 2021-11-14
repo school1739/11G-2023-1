@@ -5,3 +5,5 @@ if a > 2:
 else:
     a_people = ((a - 2) * 4) + (2 * 10.5)
 print(a_people)
+
+# Evaluation: OK

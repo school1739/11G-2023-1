@@ -5,3 +5,5 @@ elif a=="y":
     print("Эта буква согласная и гласная")
 else:
     print("Эта буква согласная")
+
+# Evaluation: OK
