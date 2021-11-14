@@ -4,3 +4,5 @@ c=a*0.18
 print (a)
 print (b)
 print (c)
+
+# Evaluation: Сумма не посчитана.
