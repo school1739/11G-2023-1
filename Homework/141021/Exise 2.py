@@ -7,3 +7,5 @@ i = 0
 for ar[i] in range(n):
     sum += int(ar[i])# сумма натуральных положительных чисел от 1 до введенного пользователем значения.
 print(sum)
+
+# Evaluation: NameError: name 'ar' is not defined
