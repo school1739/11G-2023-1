@@ -1,14 +1,10 @@
-a = int(input())
-b = int(input())
-sum = a + b
-raz = a - b
-pro = a * b
-de = a / b
-step = a ** b
-print("Сумма", sum)
-print("Частное от деления", de)
-print("Разность", raz)
-print("Произведение", pro)
-print("Степень", step)
-
+import math
+a, b = int(input()), int(input())
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
+print(math.log10(a))
+print(a ** b)
 # Evaluation: А где всё остальное?
