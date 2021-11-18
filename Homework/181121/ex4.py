@@ -2,10 +2,10 @@ from math import sqrt
 
 
 # Формула Виета для приближения числа π
-def viet_formula(prec):
+def viet_formula(iters):
     result = 1
     a = 0
-    for _ in range(prec):
+    for _ in range(iters):
         a = sqrt(2 + a)
         result *= a / 2
     result = 2 / result
@@ -13,9 +13,9 @@ def viet_formula(prec):
 
 
 # Формула Валлиса
-def wallis_formula(prec):
+def wallis_formula(iters):
     result = 1
-    for i in range(1, prec + 1):
+    for i in range(1, iters + 1):
         a = 4 * (i ** 2)
         result *= a / (a - 1)
     result *= 2
@@ -23,9 +23,9 @@ def wallis_formula(prec):
 
 
 # Ряд Лейбница
-def leibniz_formula(prec):
+def leibniz_formula(iters):
     result = 0
-    for i in range(prec):
+    for i in range(iters):
         result += ((-1) ** i) / (2 * i + 1)
     result *= 4
     return result
@@ -46,8 +46,7 @@ formula = input('''
 3. Ряд Лейбница
 ''')
 
-# Не знаю, как производить вычисления до определённого знака после запятой, поэтому вводить надо количество итераций
+# Не знаю как производить вычисления до определённого знака после запятой, поэтому вводить надо количество итераций
 iterations = int(input('Количество итераций (чем больше, тем точнее): '))
-
-# Берём из словаря функцию с введённым номером и выводим результат
+# Берём из словаря функцию по введённому номеру и выводим результат
 print(formulas[formula](iterations))
