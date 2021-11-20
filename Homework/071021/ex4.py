@@ -3,4 +3,4 @@ a=int(input())
 b=int(input())
 c=a * b
 d= c / 43560
-print(d+ "акров")
+print(d, "акров")
