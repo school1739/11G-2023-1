@@ -1,16 +1,30 @@
-binary_number = int(input('ENTER THE NUMBER IN BINARY VIEW:'))
+input_string = input('Input binary number:')
 
-# разбиение числа на элементы, перемещенные в список
-x = [int(a) for a in str(binary_number)]
+# Определяем наивысший показатель степени для двоичного числа
+power = len(input_string)-1
 
-dlina_of_list = len(x)
+# создаем переменные для хранения выходных результатов
+output1 = []
+output2 = []
 result = 0
-number_in_list = 0
 
-# цикл для подсчета числа
-for i in range(0, dlina_of_list):
-    dlina_of_list -= 1
-    result = result + x[number_in_list] * 2 ** dlina_of_list
-    number_in_list += 1
+# цилк по каждой цифре двоичного числа начиная с высшего порядка
+for char in input_string:
+    # проверяем, что цифра двоичная
+    if char != '0' and char != '1':
+        print("Error!")
+        exit()
 
-print(binary_number, "(2)", "=", result, "(10)")
+    # добавляем результаты в переменные
+    output1.append('{}*2^{}'.format(char, power))
+    temp = int(char) * 2 ** power
+    output2.append(str(temp))
+    result += temp
+
+    # уменьшаем показатель степени
+    power -= 1
+
+# Выводим результат
+print('{}(2) = {} = {} = {}'.format(input_string, '+'.join(output1), '+'.join(output2), result))
+
+exit()
