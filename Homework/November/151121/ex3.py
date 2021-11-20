@@ -1,8 +1,12 @@
+# сделал не до конца, так как находит просто 3 орла/решки НЕПОДРЯД
+
+
 import random
+
 mon = [1, 2]
 a = 0
 tries = 0
-while a != 3:
+while a != 3:  # пока не наберется 3 орла/решки
     ran = random.choice(mon)
     if ran == 1:
         a += 1
