@@ -1,18 +1,29 @@
 import random
 
+# Количество симуляций
+SIMULATIONS = 100
 # Всего попыток
-total = 0
+total_attempts = 0
 
-# Выполняем 10 симуляций
-for i in range(10):
-    attempts = []
-    # Добавляем в попытки решку или орла пока 3 последних элемента не будут равны
-    while len(attempts) < 3 or len(set(attempts[-3:])) != 1:
-        attempts += random.choice(('О', 'Р'))
-    # Выводим все попытки и их количество
-    print(f'> {" ".join(attempts)} (попыток: {len(attempts)})')
-    # Прибавляем количество попыток к их общему количеству
-    total += len(attempts)
+# Выполняем симуляции
+for i in range(SIMULATIONS):
+    current_attempts = 0
+    last = None
+    in_a_row = 1
+    # Выполняем, пока не будет 3 одинаковых подряд
+    while in_a_row != 3:
+        # Бросаем монетку
+        attempt = random.choice(('О', 'Р'))
+        if attempt == last:
+            in_a_row += 1
+        else:
+            in_a_row = 1
+        last = attempt
+        print(attempt, end=' ')
+        current_attempts += 1
+    # Выводим количество попыток в симуляции
+    print(f'(попыток: {current_attempts})')
+    total_attempts += current_attempts
 
 # Выводим среднее значение
-print(f'Среднее количество попыток: {total / 10}')
+print(f'Среднее количество попыток: {total_attempts / SIMULATIONS}')
