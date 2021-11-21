@@ -3,20 +3,22 @@ import math
 # Константа отвечающая за режим отладки
 DEBUG_MODE = False
 
+
 # Функция отладочного вывода для функций расчета
 def debug_print(pi, diff):
     if DEBUG_MODE:
         print("PI={}, Difference={:.20f}".format(pi, diff))
 
+
 # Вычисление по формуле Виетта
 def viet(eps):
     a = math.sqrt(2)
     p = a / 2.
-    pi = 2/p
-    diff = 2*eps
+    pi = 2 / p
+    diff = 2 * eps
 
     while diff > eps:
-        a = math.sqrt(2+a)
+        a = math.sqrt(2 + a)
         p *= a / 2.
         _pi = 2 / p
         diff = abs(pi - _pi)
@@ -26,17 +28,18 @@ def viet(eps):
 
     return pi
 
+
 # Вычисление по формуле Валлиса
 def vallis(eps):
     n = 1
-    k = 4/3.
+    k = 4 / 3.
     p = 1
-    pi = 2*p
+    pi = 2 * p
 
-    while k-1 > eps:
-        k = 4.*n*n / (4.*n*n-1)
+    while k - 1 > eps:
+        k = 4. * n * n / (4. * n * n - 1)
         p *= k
-        _pi = 2*p
+        _pi = 2 * p
         diff = abs(pi - _pi)
         pi = _pi
         n += 1
@@ -44,6 +47,7 @@ def vallis(eps):
         debug_print(pi, diff)
 
     return pi
+
 
 # Вычисление по формуле Лейбница
 def leibniz(eps):
@@ -53,10 +57,10 @@ def leibniz(eps):
     diff = 1
 
     while diff > eps:
-        a = k / (2*n + 1)
+        a = k / (2 * n + 1)
         s += a
-        pi = 4*s
-        diff = abs(4*a)
+        pi = 4 * s
+        diff = abs(4 * a)
         n += 1
         k *= -1
 
@@ -78,6 +82,7 @@ def calculate_pi(formula, epsilon):
         print("Wrong formula.")
         return -1
 
+
 # Ввод пользователем номера формулы
 formula = int(input("Formula (1-Viet, 2-Vallis, 3-Leibniz):"))
 
@@ -97,5 +102,5 @@ pi = calculate_pi(formula, epsilon)
 if pi == -1:
     exit()
 
-output_format = 'PI = {:.' + str(digits+1) + 'f}'
+output_format = 'PI = {:.' + str(digits + 1) + 'f}'
 print(output_format.format(pi))
