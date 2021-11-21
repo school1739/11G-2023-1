@@ -1,4 +1,5 @@
 import random
+
 changes = 0
 max_num = 0
 i=0
