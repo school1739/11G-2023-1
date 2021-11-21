@@ -1,0 +1,6 @@
+print("Введите сумму первоначального взноса")
+sum = int(input())
+year1 = sum + (sum / 100 * 4)
+year2 = year1 + (year1 / 100 * 4)
+year3 = year2 + (year2 / 100 * 4)
+print("1 год: %.2f, 2 год: %.2f, 3 год %.2f" % (year1, year2, year3))
