@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 
-dataset = pd.read_csv('content/IGN_reviews.csv')
+dataset = pd.read_csv('IGN_reviews.csv')
 dataframe = pd.DataFrame(dataset)
 
 dataframe
