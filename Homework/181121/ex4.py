@@ -1,12 +1,13 @@
 from math import sqrt
+from decimal import Decimal, getcontext
 
 
 # Формула Виета для приближения числа π
 def viet_formula(iters):
-    result = 1
-    a = 0
+    result = Decimal(1)
+    a = Decimal(0)
     for _ in range(iters):
-        a = sqrt(2 + a)
+        a = (2 + a).sqrt()
         result *= a / 2
     result = 2 / result
     return result
@@ -14,9 +15,9 @@ def viet_formula(iters):
 
 # Формула Валлиса
 def wallis_formula(iters):
-    result = 1
+    result = Decimal(1)
     for i in range(1, iters + 1):
-        a = 4 * (i ** 2)
+        a = Decimal(4 * (i ** 2))
         result *= a / (a - 1)
     result *= 2
     return result
@@ -24,9 +25,9 @@ def wallis_formula(iters):
 
 # Ряд Лейбница
 def leibniz_formula(iters):
-    result = 0
+    result = Decimal(0)
     for i in range(iters):
-        result += ((-1) ** i) / (2 * i + 1)
+        result += (-1) ** i / Decimal(2 * i + 1)
     result *= 4
     return result
 
@@ -47,6 +48,9 @@ formula = input('''
 ''')
 
 # Не знаю как производить вычисления до определённого знака после запятой, поэтому вводить надо количество итераций
-iterations = int(input('Количество итераций (чем больше, тем точнее): '))
+# и знаков после запятой при вычислениях
+iterations = int(input('Количество итераций: '))
+precision = int(input('Знаков после запятой при вычислениях: '))
+getcontext().prec = precision + 1
 # Берём из словаря функцию по введённому номеру и выводим результат
 print(formulas[formula](iterations))
