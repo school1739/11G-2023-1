@@ -23,11 +23,10 @@ dataframe.tail(2)
 dataframe.info()
 
 _dataframe = dataframe.isnull()
-_dataframe
 
 _dataframe.sum()
 
-new_dataframe=dataframe.dropna()
+new_dataframe = dataframe.dropna()
 new_dataframe
 
 new_dataframe.to_csv("reviews_non-nulled.csv")
