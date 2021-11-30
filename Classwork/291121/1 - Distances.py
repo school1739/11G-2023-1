@@ -1,5 +1,7 @@
-# Есть словарь координат городов
+from pprint import pprint
+from math import hypot
 
+# Есть словарь координат городов
 sites = {
     'Moscow': (550, 370),
     'London': (510, 510),
@@ -8,21 +10,20 @@ sites = {
 
 # Составим словарь словарей расстояний между ними
 # расстояние на координатной сетке - ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
-
 distances = {}
 
-
 # Проходим через все города
-for city_from in sites.keys():
-    distances[city_from] = {}
-    # Находим координаты 1-ого города
-    x1, y1 = sites[city_from]
-    for city_to in sites.keys():
-        # Исключаем расстояние между одним и тем же городом
-        if city_from != city_to:
-            # Координаты 2-ого города
-            x2, y2 = sites[city_to]
-            # Вычисляем расстояние
-            distances[city_from][city_to] = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+for (city_from, (x1, y1)) in sites.items():
+    # Словарь с расстояниями от текущего города
+    current_distances = {}
 
-print(distances)
+    for (city_to, (x2, y2)) in sites.items():
+        # Исключаем расстояния между одним и тем же городом
+        if city_from != city_to:
+            # Вычисляем расстояние
+            current_distances[city_to] = hypot(x1 - x2, y1 - y2)
+    # Добавляем расстояния в общий словарь
+    distances[city_from] = current_distances
+
+# Выводим все города
+pprint(distances)
