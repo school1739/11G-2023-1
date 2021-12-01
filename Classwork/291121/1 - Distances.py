@@ -9,6 +9,7 @@ sites = {
 # Составим словарь словарей расстояний между ними
 # расстояние на координатной сетке - ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
 
+# Создаем словари
 distances = {}
 distances["Moscow"] = {}
 distances["Moscow"]["London"] = ((sites["Moscow"][0] - sites["London"][0]) ** 2 + (
@@ -25,6 +26,6 @@ distances["London"]["Paris"] = ((sites["London"][0] - sites["Paris"][0]) ** 2 + 
             sites["London"][1] - sites["Paris"][1]) ** 2) ** 0.5
 distances["London"]["Moscow"] = ((sites["London"][0] - sites["Moscow"][0]) ** 2 + (
             sites["London"][1] - sites["Moscow"][1]) ** 2) ** 0.5
-
+# Вывод названия словаря и словаря внутри него
 for i in distances:
     print(i, distances[i])
