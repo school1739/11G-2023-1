@@ -4,19 +4,27 @@ garden = ('ромашка', 'роза', 'одуванчик', 'ромашка', 
 # на лугу сорвали цветы
 meadow = ('клевер', 'одуванчик', 'ромашка', 'клевер', 'мак', 'одуванчик', 'ромашка')
 
+
 # создайте множество цветов, произрастающих в саду и на лугу
-# garden_set =
-# meadow_set =
-# TODO здесь ваш код
+garden_set = set(garden)
+meadow_set = set(meadow)
 
 # выведите на консоль все виды цветов
-# TODO здесь ваш код
+# объединение множеств
+union = garden_set | meadow_set
+print(*union)
 
 # выведите на консоль те, которые растут и там и там
-# TODO здесь ваш код
+# пересечение множеств
+intersection = garden_set & meadow_set
+print(*intersection)
 
 # выведите на консоль те, которые растут в саду, но не растут на лугу
-# TODO здесь ваш код
+# разность множеств
+difference1 = garden_set - meadow_set
+print(*difference1)
 
 # выведите на консоль те, которые растут на лугу, но не растут в саду
-# TODO здесь ваш код
+# разность множеств
+difference2 = meadow_set - garden_set
+print(*difference2)
