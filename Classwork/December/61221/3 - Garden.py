@@ -11,16 +11,22 @@ garden_set = set(garden)
 meadow_set = set(meadow)
 
 # выведите на консоль все виды цветов
+# Создание нового множ-ва с помощью "ИЛИ"
+
 all_the_flowers=garden_set|meadow_set
-print(' '.join([i for i in all_the_flowers]))
+print(' '.join(all_the_flowers))
+
 # выведите на консоль те, которые растут и там и там
+# Создание нового множ-ва с помощью "И"
 itamitam = garden_set & meadow_set
-print(' '.join([i for i in itamitam]))
+print(' '.join(itamitam))
 
 # выведите на консоль те, которые растут в саду, но не растут на лугу
+# Создание нового множ-ва с помощью вычитания одного из другого
 garden_meadow =garden_set-meadow_set
 print(' '.join(garden_meadow))
 
 # выведите на консоль те, которые растут на лугу, но не растут в саду
+# Создание нового множ-ва с помощью вычитания одного из другого
 meadow_garden = meadow_set-garden_set
 print(' '.join(meadow_garden))
