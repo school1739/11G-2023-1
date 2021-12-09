@@ -38,6 +38,6 @@ indexes = (
     slice(20, 15, -1)
 )
 # Расшифровка
-result = ' '.join(msg[index] for msg, index in zip(secret_message, indexes))
+result = [msg[index] for msg, index in zip(secret_message, indexes)]
 # Вывод результата
-print(result)
+print(*result)
