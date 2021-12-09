@@ -40,10 +40,22 @@ lamps_price = lamps_item['price']
 lamps_cost = lamps_quantity * lamps_price
 print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб')
 
+
 # Вывести стоимость каждого вида товара на складе:
 # один раз распечать сколько всего столов и их общая стоимость,
 # один раз распечать сколько всего стульев и их общая стоимость,
 #   и т.д. на складе
 # Формат строки <товар> - <кол-во> шт, стоимость <общая стоимость> руб
 
-# TODO здесь ваш код
+# Преобразовываем 2 словаря в 1 список
+store_goods = [(name, store[vendor_code]) for name, vendor_code in goods.items()]
+
+# Проходим по элементам списка
+for name, items in store_goods:
+    # Находим общее количество и стоимость
+    quantity, cost = 0, 0
+    for item in items:
+        quantity += item['quantity']
+        cost += item['quantity'] * item['price']
+    # Выводим
+    print(f'{name} - {quantity} шт, стоимость {cost} руб')
