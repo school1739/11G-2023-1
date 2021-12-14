@@ -35,3 +35,5 @@ for i in range(number_of_simulations):
 print("average number of flip:", all_attempt / number_of_simulations,
       "flip(s)\nP.S: if u want the integer number, that average number of flip:",
       all_attempt // number_of_simulations, "flip(s)")
+
+# Evaluation: OK
