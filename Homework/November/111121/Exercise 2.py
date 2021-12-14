@@ -12,3 +12,5 @@ print(b)
 d = int(5 * round(b / 5))
 #Ввывод результата
 print(d)
+
+# Evaluation: OK
