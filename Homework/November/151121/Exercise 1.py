@@ -12,3 +12,5 @@ for i in range(a, b + 1):
     for с in range(a, b + 1):
         print(с * i, end="\t")
     print() #Вывод таблицы умножения
+
+# Evaluation: OK

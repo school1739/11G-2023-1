@@ -11,3 +11,5 @@ else:
     while a % divider != 0 or b % divider != 0:
         divider -= 1
     print(divider)
+
+# Evaluation: OK
