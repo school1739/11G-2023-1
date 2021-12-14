@@ -17,3 +17,5 @@ print(my_favorite_movies[:10])
 print(my_favorite_movies[42:57])
 print(my_favorite_movies[12:25])
 print(my_favorite_movies[35:40])
+
+# Evaluation: OK

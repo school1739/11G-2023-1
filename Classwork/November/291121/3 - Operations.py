@@ -12,3 +12,5 @@ print(result)
 result_2 = 1 + 23 - 4 + 5
 # выводим результат
 print(result_2)
+
+# Evaluation: NOT OK. 2 и 3 != 23

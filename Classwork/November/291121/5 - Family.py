@@ -21,3 +21,5 @@ print("Рост отца -", str(my_family_height[0][1]) + " см")
 
 # вывод общего роста моей семьи
 print("Общий рост моей семьи -", str(my_family_height[0][1] + my_family_height[1][1] + my_family_height[2][1] + my_family_height[3][1]) + " см")
+
+# Evaluation: OK
