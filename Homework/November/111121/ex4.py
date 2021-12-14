@@ -21,3 +21,8 @@ while old != '':
         sum = sum
 
 print(sum)
+
+# Evaluation: NOT OK
+#   File "/Homework/November/111121/ex4.py", line 13, in <module>
+#     old = int(input())
+# ValueError: invalid literal for int() with base 10: ''
