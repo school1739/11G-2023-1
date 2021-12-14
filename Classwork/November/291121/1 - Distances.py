@@ -32,3 +32,8 @@ distances["Moscow"] = {}
 distances["Paris"]["Moscow"] = str(msk_ldn) + "km"
 distances["Paris"]["London"] = str(prs_ldn) + "km"
 print(distances)
+
+# Evaluation: NOT OK
+# File "/Classwork/November/291121/1 - Distances.py", line 13, in <module>
+#     Moscow = sites("Moscow")
+# TypeError: 'dict' object is not callable
