@@ -9,3 +9,5 @@ for i in range(min, max + 1):
     for g in range(min, max + 1):
         print(g * i, end="\t")
     print()
+
+# Evaluation: OK
