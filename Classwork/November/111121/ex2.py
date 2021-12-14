@@ -13,4 +13,4 @@ summary = int(summary / 5) * 5 + (5 if (summary % 5) > 2.5 else 0)
 
 print("for payment by cash:", summary, "cents")
 
-
+# Evaluation: OK

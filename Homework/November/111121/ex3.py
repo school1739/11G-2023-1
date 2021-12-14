@@ -26,3 +26,5 @@ while True:
     last_point = new_point
 
 print("Perimeter = {0:.2f}".format(perimeter))
+
+# Evaluation: OK

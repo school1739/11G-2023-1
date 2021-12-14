@@ -17,3 +17,6 @@ while data_of_packet != "":
     else:
         print("ur number of bites is incorrect")
         break
+
+# Evaluation: OK
+# * bits

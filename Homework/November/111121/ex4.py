@@ -28,3 +28,5 @@ print("total bill:", bill, "rubles")
 change = math.ceil(bill / 1000) * 1000 - bill
 
 print("Ur change from 1000 rubles:", change, "rubles")
+
+# Evaluation: OK
