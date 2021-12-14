@@ -104,3 +104,11 @@ if pi == -1:
 
 output_format = 'PI = {:.' + str(digits + 1) + 'f}'
 print(output_format.format(pi))
+
+# Evaluation: +-OK. Респект за подробное описание алгоритмов решения и наглядный вывод. Ну и за режим отладки, конечно.
+# Но таки есть косяк:
+# > Formula (1-Viet, 2-Vallis, 3-Leibniz):2
+# > PI value precision (in digits after the point):2
+# > Epsilon=0.00500000000000000097
+# > PI = 3.051
+# Пользователь просит точность до N знаков после запятой, программа возвращает с точностью до N+1

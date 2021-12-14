@@ -28,3 +28,5 @@ for char in input_string:
 print('{}(2) = {} = {} = {}'.format(input_string, '+'.join(output1), '+'.join(output2), result))
 
 exit()
+
+# Evaluation: OK. Отдельный респект за подробный вывод в этом и 1 заданиях.

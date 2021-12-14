@@ -11,3 +11,5 @@ while entered_number > 0:
     entered_number = entered_number // 2
 
 print("finish = 0\nnumber in binary view:", result)
+
+# Evaluation: OK
