@@ -9,3 +9,5 @@ else:
         b += 1
         c += a
 print(c/b)
+
+# Evaluation: OK

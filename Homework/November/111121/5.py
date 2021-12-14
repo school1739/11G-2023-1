@@ -5,3 +5,15 @@ while (bits := input()) != '':                                    # Вводим
         print(parity_bit)
     else:                                                         # Неверный ввод
         print('Error')
+
+# Evaluation: NOT OK
+# >10011001
+# >0
+# >11111111
+# >0
+# >11111100
+# >0
+# >1
+# >Error
+# >11000000
+# >0
