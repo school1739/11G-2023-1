@@ -55,4 +55,4 @@ getcontext().prec = precision + 1
 # Берём из словаря функцию по введённому номеру и выводим результат
 print(formulas[formula](iterations))
 
-
+# Evaluation: OK
