@@ -15,3 +15,5 @@ while True:
         price += 450
 print(f'Цена за билеты: {price}')
 print(f"Сдача: {ceil(price/1000)*1000-price}")
+
+# Evaluation: OK
