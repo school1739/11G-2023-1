@@ -29,3 +29,5 @@ distances["London"]["Moscow"] = ((sites["London"][0] - sites["Moscow"][0]) ** 2 
 # Вывод названия словаря и словаря внутри него
 for i in distances:
     print(i, distances[i])
+
+# Evaluation: OK. Отступы поехали. Не забывай форматировать перед коммитом.
