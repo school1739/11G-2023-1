@@ -36,3 +36,5 @@ third_word = secret_message[2][5:15:2]
 fourth_word = secret_message[3][12:6:-1]
 fifth_word = secret_message[4][20:15:-1]
 print(first_word.upper(), second_word, third_word, fourth_word, fifth_word + '.', end=" ")
+
+# Evaluation: OK. Отдельный респект за форматирование вывода!

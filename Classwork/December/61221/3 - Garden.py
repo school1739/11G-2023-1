@@ -29,3 +29,5 @@ print(' '.join(garden_meadow))
 # Создание нового множ-ва с помощью вычитания одного из другого
 meadow_garden = meadow_set - garden_set
 print(' '.join(meadow_garden))
+
+# Evaluation: OK
