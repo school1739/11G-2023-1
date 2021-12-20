@@ -41,3 +41,5 @@ indexes = (
 result = [msg[index] for msg, index in zip(secret_message, indexes)]
 # Вывод результата
 print(*result)
+
+# Evaluation: OK

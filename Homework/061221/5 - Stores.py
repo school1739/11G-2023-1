@@ -59,3 +59,5 @@ for name, items in store_goods:
         cost += item['quantity'] * item['price']
     # Выводим
     print(f'{name} - {quantity} шт, стоимость {cost} руб')
+
+# Evaluation: OK. Отличное решение!

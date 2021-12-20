@@ -28,3 +28,5 @@ print(*difference1)
 # разность множеств
 difference2 = meadow_set - garden_set
 print(*difference2)
+
+# Evaluation: OK
