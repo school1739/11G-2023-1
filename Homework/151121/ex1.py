@@ -25,3 +25,5 @@ for i in range(FROM, TO + 1):
     for j in range(FROM, TO + 1):
         print_formatted(i * j)
     print()
+
+# Evaluation: OK

@@ -27,3 +27,5 @@ for i in range(SIMULATIONS):
 
 # Выводим среднее значение
 print(f'Среднее количество попыток: {total_attempts / SIMULATIONS}')
+
+# Evaluation: OK
