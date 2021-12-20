@@ -35,3 +35,5 @@ print(f'Рост отца - {father_height} см')
 # Находим сумму ростов всех членов и выводим её
 height_sum = sum(map(lambda m: m[1], my_family_height))
 print(f'Общий рост моей семьи - {height_sum} см')
+
+# Evaluation: OK

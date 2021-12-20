@@ -51,3 +51,5 @@ print(is_point_in_circle(*point_2, radius))
 # 77777.7777
 # False
 # False
+
+# Evaluation: OK
