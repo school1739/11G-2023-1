@@ -70,3 +70,6 @@ sofas_quantity = store[goods['Диван']][0]['quantity'] + store[goods['Див
 sofas_cost = sofas_quantity * store[goods['Диван']][0]['price'] + sofas_quantity * store[goods['Диван']][1]['price']
 # вывод
 print('Диван -', sofas_quantity, 'шт, стоимость', sofas_cost, 'руб')
+
+# Evaluation: NOT OK. Украдено у Карныгина (скорее всего, как и предыдущие) -- это его названия переменных, с ошибкой
+# в слове "chairs".

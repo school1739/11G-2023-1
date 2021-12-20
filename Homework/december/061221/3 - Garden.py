@@ -41,3 +41,6 @@ netamnotam = meadow_set - garden_set
 # печатаем каждый цветок по отдельности:
 for flower in netamnotam:
     print(flower, end=" ")
+
+# Evaluation: NOT OK. Украдено у Карныгина (скорее всего, как и предыдущие) -- это его названия переменных, которые
+# мы с ним обсуждали на перемене.
