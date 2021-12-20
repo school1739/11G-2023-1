@@ -36,3 +36,10 @@ perimeter += start.distance(prev)
 
 # Выводим периметр
 print(f'Периметр = {perimeter:.2f}')
+
+# Evaluation: NOT OK. Перемудрил, и получилось не оч. Классы это круто, но не нужно на нашем уровне.
+# 1 2 3 4
+# Traceback (most recent call last):
+#   File "\python.21-22-1\Classwork\111121\ex3.py", line 25, in <module>
+#     point = Point(*map(int, point.split()))
+# TypeError: Point.__init__() takes 2 positional arguments but 5 were given
