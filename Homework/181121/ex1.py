@@ -14,3 +14,5 @@ def to_binary(decimal):
 num = int(input('Введите число: '))
 # Выводим результат
 print(f'Число в двоичном представлении: {to_binary(num)}')
+
+# Evaluation: OK

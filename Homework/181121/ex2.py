@@ -23,3 +23,5 @@ for index, n in enumerate(reversed(binary_num)):
 
 # Выводим красивый результат
 print(f'\033[93m{binary_num}(2) \033[39m= \033[94m{output1} \033[39m= \033[92m{output2} \033[39m= \033[93m{result}(10)')
+
+# Evaluation: OK. Отдельный мегареспект за форматированный вывод!

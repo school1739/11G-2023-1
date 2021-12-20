@@ -25,3 +25,4 @@ for _ in range(100):
 print(f'Максимальное значение в ряду: {max_num}')
 print(f'Количество смен максимального значения: {updates}')
 
+# Evaluation: OK
