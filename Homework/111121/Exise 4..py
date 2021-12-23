@@ -19,3 +19,5 @@ print(f'Сдача с ближайшей тысячи рублей: {change}')
 # total (подсчет суммы)
 # age (возраст)
 # change (сдача)
+
+# Evaluation: OK

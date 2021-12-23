@@ -13,3 +13,5 @@ if n == 0:
 else:
     # Выводим среднее значение
     print(total / n)
+
+# Evaluation: OK

@@ -32,3 +32,11 @@ perimeter += start.distance(prev)
 
 # Выводим периметр
 print(f'Периметр = {perimeter:.2f}')
+
+# Evaluation: NOT OK
+# Введите все точки, x и y через пробел
+# 31 41 52 72 1 42 53
+# Traceback (most recent call last):
+#   File "\python.21-22-1\Homework\111121\Exise 3..py", line 21, in <module>
+#     point = Point(*map(int, point.split()))
+# TypeError: Point.__init__() takes 3 positional arguments but 8 were given
