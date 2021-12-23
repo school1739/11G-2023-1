@@ -6,3 +6,5 @@ for row in range(1, maximum + 1):# составляем таблицу умно�
     print()
     # column(столбик)
     # row(ряд)
+
+# Evaluation: OK

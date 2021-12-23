@@ -13,3 +13,5 @@ for i in range(10):
 print(f'Среднее количество попыток: {total / 10}')
 
 # ps: (I did my best)
+
+# Evaluation: OK
