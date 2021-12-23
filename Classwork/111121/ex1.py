@@ -9,3 +9,10 @@ else:
         k+=1
         n = int(input())
 print(sum/k)
+
+# Evaluation: NOT OK
+# 5
+# 5
+# 5
+# 0
+# 1.0
