@@ -36,3 +36,5 @@ print("В лугу, но не в саду: ", end="")
 for flower in meadow_and_not_garden:
     print(flower, end=" ")
 print()
+
+# Evaluation: OK. Да не работаем мы в папке Lessons, ну!

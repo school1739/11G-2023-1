@@ -97,3 +97,5 @@ chairs_cost_2 = chairs_quantity_2 * chairs_price_2
 chairs_quantity = chairs_quantity_0 + chairs_quantity_1 + chairs_quantity_2
 chairs_cost = chairs_cost_0 + chairs_cost_1 + chairs_cost_2
 print('Стул -', chairs_quantity, 'шт, стоимость', chairs_cost, 'руб')
+
+# Evaluation: OK. ДА НЕ РАБОТАЕМ МЫ В LESSONS!!!111111АДИНАДИН
