@@ -33,3 +33,5 @@ distances["Paris"]["London"] = str(ldn_prs) + "km"
 
 for i in distances:
     print(i, distances[i])
+
+# Evaluation: OK

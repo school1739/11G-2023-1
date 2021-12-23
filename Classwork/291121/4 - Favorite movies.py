@@ -20,3 +20,5 @@ print(a)
 print(b)
 print(c)
 print(d)
+
+# Evaluation: +-OK. Надо было использовать слайсы.
