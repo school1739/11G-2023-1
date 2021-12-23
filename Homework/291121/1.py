@@ -27,3 +27,5 @@ for k in sites.keys():
 for k in distances.keys():
     for n in distances[k].keys():
         print("%s - %s: %.2f" %(k, n, distances[k][n]))
+
+# Evaluation: +-OK. По заданию надо было создать словарь словарей.

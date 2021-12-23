@@ -38,3 +38,5 @@ print((x ** 2 + y ** 2) ** 0.5 <= radius)
 # 77777.7777
 # False
 # False
+
+# Evaluation: OK
