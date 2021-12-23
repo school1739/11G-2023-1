@@ -8,3 +8,5 @@ m = input("Введите число, сколько знаков после з�
 if n == 1:
     π = math.sqrt(2) * (math.sqrt(2 + math.sqrt(2))) * math.sqrt(2 + (math.sqrt(2 + math.sqrt(2)))) * math.sqrt(2 + math.sqrt(2 + (math.sqrt(2 + math.sqrt(2)))))
     print("%.4f" % π)
+
+# Evaluation: NOT OK
