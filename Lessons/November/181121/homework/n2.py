@@ -12,3 +12,5 @@ print(f"{bin_num}(2) = {sum[0:-2]}= {sum2[0:-2]}= {int(str(bin_num), 2)}(10)"
       f"\n"
       f"\nОтвет: "
       f"\n{bin_num}(2) = {int(str(bin_num), 2)}(10)")
+
+# Evaluation: OK

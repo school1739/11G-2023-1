@@ -25,3 +25,5 @@ else:
     for i in range(4, kol* 1000000, 4):
         pi += -1 / (3 + i) + 1 / (5 + i)
     print(round((pi * 4), rounding))
+
+# Evaluation: OK
