@@ -11,3 +11,5 @@ for i in range(100):
         print(num)
         i+=1
 print(f"Макс значение в ряду:100"f"\кол-во смен макс значения:{a}")
+
+# Evaluation: OK
