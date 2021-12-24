@@ -7,3 +7,5 @@ else:
     while fn % div != 0 or sn % div != 0:
         div -= 1
     print(div)
+
+# Evaluation: OK
