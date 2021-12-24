@@ -14,3 +14,9 @@ while a != 3:
         tries += 1
 
 print("Попытки: ", t)
+
+# Evaluation: NOT OK
+# О Traceback (most recent call last):
+#   File "/Users/bormotoon/PycharmProjects/python.21-22-1/Homework/141121/№3.py", line 14, in <module>
+#     tries += 1
+# NameError: name 'tries' is not defined
