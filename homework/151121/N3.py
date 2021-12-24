@@ -16,3 +16,5 @@ for i in range(10):
         a += 1  # счетчик
     print(f"{' '.join([str(i) for i in c])} (Попыток: {a})")
 print(f"Среднее кол-во попыток- {x//10}")
+
+# Evaluation: OK

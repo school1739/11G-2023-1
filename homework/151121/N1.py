@@ -11,3 +11,5 @@ for j in range(b,a+1):
     for k in range(b,a+1):
         print(k * j, end="\t")
     print()
+
+# Evaluation: OK

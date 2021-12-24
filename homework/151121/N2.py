@@ -10,3 +10,5 @@ else:
         delitel-=1
     #проверка на делитель
     print(delitel)
+
+# Evaluation: OK
