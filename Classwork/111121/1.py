@@ -11,3 +11,5 @@ else:
         i+=1
         k = int(input())
     print(sum/(i))
+
+# Evaluation: OK

@@ -25,3 +25,5 @@ while True:
 # Вычисление длины последней стороны и прибаление её к периметру
 res += sqrt((int(x[0]) - int(x[-1])) ** 2 + (int(y[0]) - int(y[-1])) ** 2)
 print(res)
+
+# Evaluation: OK

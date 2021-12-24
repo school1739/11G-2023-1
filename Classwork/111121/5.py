@@ -10,3 +10,5 @@ while data_packet!="" or data_packet!= " ":
     else:
         print("Введи 8 бит!Дурак")
         break
+
+# Evaluation: OK. Сам такой!
