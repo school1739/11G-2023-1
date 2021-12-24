@@ -55,3 +55,4 @@ for k in goods.keys():
         cost += x['price'] * x['quantity']
     print(k, "-", quantity, "шт, стоимость", cost, "руб")
 
+# Evaluation: OK

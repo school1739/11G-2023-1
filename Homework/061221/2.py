@@ -37,3 +37,5 @@ words = [
     secret_message[4][20:15:-1],
 ]
 print(" ".join(words))
+
+# Evaluation: OK
