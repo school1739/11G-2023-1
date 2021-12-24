@@ -20,3 +20,5 @@ for k in range(total_simulations):
 
 avg = total_tries / total_simulations
 print("Среднее количество попыток: %.1f" % avg)
+
+# Evaluation: OK
