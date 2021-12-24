@@ -7,3 +7,4 @@ while q!=0:
     q = q//2
 print(f"Двоичное значение введенного числа: {result}")
 
+# Evaluation: OK
