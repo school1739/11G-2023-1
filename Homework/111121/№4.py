@@ -19,3 +19,16 @@ while a != '':
     else:
         sum = sum
 print(sum)
+
+# # Evaluation: NOT OK. Бесконечный цикл.
+# Возраст человека: 1
+# 45
+# 89
+# 0
+# 4
+# 24
+# авы
+# Traceback (most recent call last):
+#   File "/Homework/111121/№4.py", line 12, in <module>
+#     a = int(input())
+# ValueError: invalid literal for int() with base 10: 'авы'
