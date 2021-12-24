@@ -31,3 +31,5 @@ while entering:
 p += ((x0 - xa) ** 2 + (y0 - ya) ** 2) ** 0.5
 
 print("Периметр многоугольника равен %.2f" % p)
+
+# Evaluation: OK

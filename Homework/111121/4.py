@@ -19,3 +19,5 @@ while entering:
 print("Общая сумма билетов: ₽", total, sep="")
 remainder = 1000 - total % 1000
 print("Сдача с тысячи: ₽", remainder, sep="")
+
+# Evaluation: OK
