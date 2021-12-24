@@ -23,3 +23,5 @@ my_family_height = [
 # Общий рост моей семьи - ХХ см
 # Вычисляем сумму роста членов семьи
 print(f'Общий рост моей семьи - {sum([i[1] for i in my_family_height])} см')
+
+# Evaluation: NOT OK. А где рост отца?
