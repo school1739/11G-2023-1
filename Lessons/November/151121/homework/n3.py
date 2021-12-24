@@ -20,3 +20,5 @@ for i in range(10):
         average_counter += 1
     print(f"{' '.join([str(i) for i in lst])} (Попыток: {counter})")
 print(f'Среднее количество попыток: {average_counter / 10}')
+
+# Evaluation: OK

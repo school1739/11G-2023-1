@@ -11,3 +11,5 @@ else:
     while first_num % divider != 0 or second_num % divider != 0:
         divider -= 1
     print(divider)
+
+# Evaluation: OK
