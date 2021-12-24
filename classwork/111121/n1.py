@@ -10,3 +10,9 @@ else:
         c+=a
 print(c/b)                                       
 
+# Evaluation: NOT OK.
+# 5
+# 5
+# 5
+# 0
+# 3.3333333333333335

@@ -27,3 +27,4 @@ while True:
 
 print("Perimeter = {0:.2f}".format(perimeter))
 
+# Evaluation: OK

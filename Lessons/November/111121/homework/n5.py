@@ -18,3 +18,9 @@ while data_of_packet != "":
         print("ur number of bites is incorrect")
         break
 
+# Evaluation: NOT OK. Не работает, когда бит нечётный.
+# enter the 8 bites. P.S. 1 or 0:10001000
+# 1
+# enter the 8 bites. P.S. 1 or 0:00010000
+#
+# Process finished with exit code 0
