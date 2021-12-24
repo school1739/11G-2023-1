@@ -77,3 +77,5 @@ sofas_quantity = store[goods['Диван']][0]['quantity'] + store[goods['Див
 sofas_cost = sofas_quantity * store[goods['Диван']][0]['price'] + sofas_quantity * store[goods['Диван']][1]['price']
 # вывод в указанном формате
 print('Диван -', sofas_quantity, 'шт, стоимость', sofas_cost, 'руб')
+
+# Evaluation: OK. Украдено у Карныгина, даже без смены названия переменных, которые он обозначил словами с ошибкой.

@@ -41,3 +41,5 @@ netamnotam = meadow_set - garden_set
 # печатаем каждый цветок по отдельности:
 for flower in netamnotam:
     print(flower, end=" ")
+
+# Evaluation: OK
