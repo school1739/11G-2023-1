@@ -13,3 +13,9 @@ while data_of_packet != "":
     else:
         print("Кол-во байтов неверно")
         break
+
+# Evaluation: NOT OK. Не работает, когда бит # Введиет 8 байтов :11001100
+# # 1
+# # Введиет 8 байтов :10000000
+# #
+# # Process finished with exit code 0нечётный.

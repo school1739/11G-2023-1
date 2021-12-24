@@ -18,3 +18,5 @@ print("общий счет:", bill, "руюлей")
 # вычисление сдачи с ближайшей тысячи
 change = math.ceil(bill / 1000) * 1000 - bill
 print("Ваша сдача от 1000р:", change, "рублей")
+
+# Evaluation: OK
