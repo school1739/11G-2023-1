@@ -24,3 +24,5 @@ for k in (range(repeats)):
     print(x, end=end_str)
 print("Максимальное значение в ряду:", max_number)
 print("Количество смен максимального значения:", updates)
+
+# Evaluation: OK

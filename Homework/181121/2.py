@@ -29,3 +29,5 @@ log1 = '+'.join(log1)
 log2 = '+'.join(log2)
 
 print("%s(2) = %s = %s = %d(10)" % (x, log1, log2, result))
+
+# Evaluation: OK

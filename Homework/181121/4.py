@@ -41,3 +41,5 @@ iters = int(input("Введите количестве итераций: "))
 
 pi = algs[alg_index - 1](iters)
 print("π ≈", round(pi, e))
+
+# Evaluation: OK

@@ -10,3 +10,5 @@ while x > 1:
 result = str(x) + result
 
 print("Двоичное представление:", result)
+
+# Evaluation: OK
