@@ -32,3 +32,4 @@ rastutvsadu = garden_set - meadow_set
 for flower in rastutvsadu:
     print(flower,end=" ")
 
+# Evaluation: NOT OK. Почему только один вывод?
