@@ -15,3 +15,5 @@ else:
     S = (Sum // i + 1) * i
     print(Sum, "Цена")
     print(S-Sum, "Сдача")
+
+# Evaluation: OK
