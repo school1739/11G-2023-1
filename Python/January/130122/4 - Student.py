@@ -9,4 +9,18 @@
 
 educational_grant, expenses = 10000, 12000
 
-# TODO здесь ваш код
+# Месяцы учебного года
+months = [
+    'Сентябрь', 'Октябрь', 'Ноябрь',
+    'Декабрь', 'Январь', 'Февраль',
+    'Март', 'Апрель', 'Май',
+    'Июнь'
+]
+
+result = 0
+for month in months:
+    result += expenses - educational_grant
+    print(f'{month}:\n\tРасходы: {expenses:.2f} рублей.')
+    expenses *= 1.03
+
+print(f'Студенту надо попросить {result:.2f} рублей')
