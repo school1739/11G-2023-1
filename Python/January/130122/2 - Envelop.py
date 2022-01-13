@@ -17,15 +17,19 @@ from itertools import permutations
 # paper_x, paper_y = 9, 11
 # (написать цикл для проверки)
 
-envelop_size = (int(input('Ширина конверта: ')), int(input('Длина конверта: ')))
+# Размеры листа бумаги
 paper_sizes = [
     (8, 9), (9, 8), (6, 8),
     (8, 6), (3, 4), (11, 9),
     (9, 11)
 ]
+# Размер конверта
+envelop_size = (int(input('Ширина конверта: ')), int(input('Длина конверта: ')))
 
+# Проходим по всем размерам бумаги, и проверяем, помещаются ли они в конверт
 for paper_size in paper_sizes:
-    if paper_size[0] <= envelop_size[0] and paper_size[1] <= envelop_size[1]:
+    if paper_size[0] <= envelop_size[0] and paper_size[1] <= envelop_size[1] or \
+       paper_size[0] <= envelop_size[1] and paper_size[1] <= envelop_size[0]:
         print('ДА')
     else:
         print('НЕТ')
@@ -56,6 +60,7 @@ for paper_size in paper_sizes:
 # brick_x, brick_y, brick_z = 3, 11, 6
 # (написать цикл для проверки)
 
+# Размеры кирпича
 brick_sizes = [
     (11, 10, 2), (11, 2, 10), (10, 11, 2),
     (10, 2, 11), (2, 10, 11), (2, 11, 10),
@@ -64,16 +69,14 @@ brick_sizes = [
     (11, 3, 6),  (11, 6, 3),  (6, 11, 3),
     (6, 3, 11),  (3, 6, 11),  (3, 11, 6),
 ]
-
+# Размер отверстия
 hole_size = (int(input('Ширина дырки: ')), int(input('Длина дырки: ')))
 
+# Проходим по всем кирпичам
 for brick_size in brick_sizes:
-    for face in permutations(brick_size, 2):
-        yes = False
-        if face[0] <= hole_size[0] and face[1] <= hole_size[1]:
-            yes = True
-            break
-    if yes:
+    # Проверяем, пролезает ли какая-нибудь грань кирпича через отверстие
+    if any(face[0] <= hole_size[0] and face[1] <= hole_size[1]
+           for face in permutations(brick_size, 2)):
         print('ДА')
     else:
         print('НЕТ')
