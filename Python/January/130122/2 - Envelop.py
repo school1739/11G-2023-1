@@ -6,16 +6,29 @@
 # Использовать только операторы if/elif/else, можно вложенные
 
 # АВТОМАТИЧЕСКИ проверить для:
-# paper_x, paper_y = 8, 9
-# paper_x, paper_y = 9, 8
-# paper_x, paper_y = 6, 8
-# paper_x, paper_y = 8, 6
-# paper_x, paper_y = 3, 4
-# paper_x, paper_y = 11, 9
-# paper_x, paper_y = 9, 11
-# (написать цикл для проверки)
+# ввод размера
+envelop_x = int(input("Enter the size of x-coordinate"))
+envelop_y = int(input("Enter the size of y-coordinate"))
 
-# TODO здесь ваш код
+# размер листов
+size_of_paper = [
+    [8, 9],
+    [9, 8],
+    [6, 8],
+    [8, 6],
+    [3, 4],
+    [11, 9],
+    [9, 11]
+                 ]
+
+# цикл проверки
+for papers in size_of_paper:
+    if envelop_x <= papers[0]  and envelop_y <= papers[1]:
+        print("YES")
+    elif envelop_y <= papers[0]  and envelop_x <= papers[1]:
+        print("YES")
+    else:
+        print("NO")
 
 # Заданы размеры hole_x, hole_y прямоугольного отверстия и размеры brick_х, brick_у, brick_z кирпича (все размеры
 # могут быть в диапазоне от 1 до 1000)
