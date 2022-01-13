@@ -7,8 +7,8 @@
 
 # АВТОМАТИЧЕСКИ проверить для:
 # ввод размера
-envelop_x = int(input("Enter the size of x-coordinate"))
-envelop_y = int(input("Enter the size of y-coordinate"))
+envelop_x = int(input("Enter the width of paper"))
+envelop_y = int(input("Enter the length of paper"))
 
 # размер листов
 size_of_paper = [
@@ -19,13 +19,13 @@ size_of_paper = [
     [3, 4],
     [11, 9],
     [9, 11]
-                 ]
+]
 
 # цикл проверки
 for papers in size_of_paper:
-    if envelop_x <= papers[0]  and envelop_y <= papers[1]:
+    if envelop_x <= papers[0] and envelop_y <= papers[1]:
         print("YES")
-    elif envelop_y <= papers[0]  and envelop_x <= papers[1]:
+    elif envelop_y <= papers[0] and envelop_x <= papers[1]:
         print("YES")
     else:
         print("NO")
@@ -35,25 +35,46 @@ for papers in size_of_paper:
 #
 # Определить, пройдет ли кирпич через отверстие (грани кирпича параллельны сторонам отверстия)
 
-# АВТОМАТИЧЕСКИ проверить для:
-# brick_x, brick_y, brick_z = 11, 10, 2
-# brick_x, brick_y, brick_z = 11, 2, 10
-# brick_x, brick_y, brick_z = 10, 11, 2
-# brick_x, brick_y, brick_z = 10, 2, 11
-# brick_x, brick_y, brick_z = 2, 10, 11
-# brick_x, brick_y, brick_z = 2, 11, 10
-# brick_x, brick_y, brick_z = 3, 5, 6
-# brick_x, brick_y, brick_z = 3, 6, 5
-# brick_x, brick_y, brick_z = 6, 3, 5
-# brick_x, brick_y, brick_z = 6, 5, 3
-# brick_x, brick_y, brick_z = 5, 6, 3
-# brick_x, brick_y, brick_z = 5, 3, 6
-# brick_x, brick_y, brick_z = 11, 3, 6
-# brick_x, brick_y, brick_z = 11, 6, 3
-# brick_x, brick_y, brick_z = 6, 11, 3
-# brick_x, brick_y, brick_z = 6, 3, 11
-# brick_x, brick_y, brick_z = 3, 6, 11
-# brick_x, brick_y, brick_z = 3, 11, 6
-# (написать цикл для проверки)
+# Ввод размера отверстия
+hole_x = int(input("width_of_hole"))
+hole_y = int(input("length_of_hole"))
 
-# TODO здесь ваш код
+# Размеры кирпичей
+size_of_brick = [
+    [11, 10, 2],
+    [11, 2, 10],
+    [10, 11, 2],
+    [10, 2, 11],
+    [2, 10, 11],
+    [2, 11, 10],
+    [3, 5, 6],
+    [3, 6, 5],
+    [6, 3, 5],
+    [6, 5, 3],
+    [5, 6, 3],
+    [5, 3, 6],
+    [11, 3, 6],
+    [11, 6, 3],
+    [6, 11, 3],
+    [6, 3, 11],
+    [3, 6, 11],
+    [3, 11, 6],
+]
+
+# Проверка проходимости
+for bricks in size_of_brick:
+
+    if bricks[0] <= hole_x and bricks[1] <= hole_y:
+        print("YES")
+    elif bricks[1] <= hole_x and bricks[0] <= hole_y:
+        print("YES")
+    elif bricks[0] <= hole_x and bricks[2] <= hole_y:
+        print("YES")
+    elif bricks[2] <= hole_x and bricks[0] <= hole_y:
+        print("YES")
+    elif bricks[2] <= hole_x and bricks[1] <= hole_y:
+        print("YES")
+    elif bricks[1] <= hole_x and bricks[2] <= hole_y:
+        print("YES")
+    else:
+        print("NO")
