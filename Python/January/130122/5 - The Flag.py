@@ -21,46 +21,30 @@ def get_flag():
     sd.line(sd.get_point(500, 500), sd.get_point(1000, 500), color=sd.COLOR_BLUE, width=100)
     sd.line(sd.get_point(500, 600), sd.get_point(1000, 600), color=sd.COLOR_WHITE, width=100)
     # рисуем древко
-    sd.line(sd.get_point(490, 100), sd.get_point(490, 649), color=sd.COLOR_WHITE, width=20)
+    sd.line(sd.get_point(490, 100), sd.get_point(490, 649), color=sd.COLOR_BLACK, width=20)
 
 
-# рисуем шарики
-def get_balloons():
+# рисуем шарик
+def get_balloon(x, y, color):
     # рисуем шарики в разных местах
-    sd.ellipse(sd.get_point(100, 500), sd.get_point(150, 570), color=sd.COLOR_ORANGE, width=0)
-    sd.polygon(point_list=[sd.get_point(120, 500), sd.get_point(130, 500), sd.get_point(125, 493)],
+    center_of_ellipse = (x, y)
+    x1_of_ellipse, y1_of_ellipse = x - 25, y - 35
+    x2_of_ellipse, y2_of_ellipse = x + 25, y + 35
+    x1_of_triangle, y1_of_triangle = (x1_of_ellipse + x2_of_ellipse) // 2, y1_of_ellipse - 7
+    x2_of_triangle, y2_of_triangle = x1_of_triangle - 5, y1_of_ellipse
+    x3_of_triangle, y3_of_triangle = x1_of_triangle + 5, y1_of_ellipse
+    x1_of_line, y1_of_line = x1_of_triangle, y1_of_triangle
+    x2_of_line, y2_of_line = x1_of_triangle, y1_of_triangle - 100
+    sd.ellipse(sd.get_point(x1_of_ellipse, y1_of_ellipse), sd.get_point(x2_of_ellipse, y2_of_ellipse), color, width=0)
+    sd.polygon(point_list=[sd.get_point(x1_of_triangle, y1_of_triangle), sd.get_point(x2_of_triangle, y2_of_triangle),
+                           sd.get_point(x3_of_triangle, y3_of_triangle)],
                color=sd.COLOR_WHITE, width=0)
-    sd.line(sd.get_point(125, 400), sd.get_point(125, 500), color=sd.COLOR_WHITE, width=2)
-
-    sd.ellipse(sd.get_point(200, 400), sd.get_point(250, 470), color=sd.COLOR_GREEN, width=0)
-    sd.polygon(point_list=[sd.get_point(220, 400), sd.get_point(230, 400), sd.get_point(225, 393)],
-               color=sd.COLOR_WHITE, width=0)
-    sd.line(sd.get_point(225, 300), sd.get_point(225, 400), color=sd.COLOR_WHITE, width=2)
-
-    sd.ellipse(sd.get_point(300, 300), sd.get_point(350, 370), color=sd.COLOR_DARK_YELLOW, width=0)
-    sd.polygon(point_list=[sd.get_point(320, 300), sd.get_point(330, 300), sd.get_point(325, 293)],
-               color=sd.COLOR_WHITE, width=0)
-    sd.line(sd.get_point(325, 200), sd.get_point(325, 300), color=sd.COLOR_WHITE, width=2)
-
-    sd.ellipse(sd.get_point(1100, 300), sd.get_point(1150, 370), color=sd.COLOR_RED, width=0)
-    sd.polygon(point_list=[sd.get_point(1120, 300), sd.get_point(1130, 300), sd.get_point(1125, 293)],
-               color=sd.COLOR_WHITE, width=0)
-    sd.line(sd.get_point(1125, 200), sd.get_point(1125, 300), color=sd.COLOR_WHITE, width=2)
-
-    sd.ellipse(sd.get_point(1200, 400), sd.get_point(1250, 470), color=sd.COLOR_DARK_PURPLE, width=0)
-    sd.polygon(point_list=[sd.get_point(1220, 400), sd.get_point(1230, 400), sd.get_point(1225, 393)],
-               color=sd.COLOR_WHITE, width=0)
-    sd.line(sd.get_point(1225, 300), sd.get_point(1225, 400), color=sd.COLOR_WHITE, width=2)
-
-    sd.ellipse(sd.get_point(1300, 500), sd.get_point(1350, 570), color=sd.COLOR_CYAN, width=0)
-    sd.polygon(point_list=[sd.get_point(1320, 500), sd.get_point(1330, 500), sd.get_point(1325, 493)],
-               color=sd.COLOR_WHITE, width=0)
-    sd.line(sd.get_point(1325, 400), sd.get_point(1325, 500), color=sd.COLOR_WHITE, width=2)
+    sd.line(sd.get_point(x1_of_line, y1_of_line), sd.get_point(x2_of_line, y2_of_line), color=sd.COLOR_WHITE, width=2)
 
 
 # рисуем фейерверки
 def get_fireworks():
-    for i in range(700):
+    for i in range(150):
         # рисуем круги в каждой из областей
         sd.circle(center_position=(sd.get_point(sd.random_number(50, 1400), sd.random_number(670, 770))), radius=2,
                   color=sd.random_color(), width=1)
@@ -71,7 +55,37 @@ def get_fireworks():
 
 
 # вызываем функции
-get_balloons()
+print()
+print(
+    "Чтобы программа нарисовала шарик, вам нужно ввести следующие параметры:\n"
+    "1) Положение шарика по горизонтали. (если вы хотите точное расположение, напишите цифрами от 0 до 1500,\n"
+    "если же хотите рандомное расположение - введите 0")
+x = int(input("Ввод: "))
+print(
+    "2) Положение шарика по вертикали. (если вы хотите точное расположение, напишите цифрами от 0 до 800,\n"
+    "если же хотите рандомное расположение - введите 0")
+y = int(input("Ввод: "))
+
+if x == 0 and y != 0:
+    random_x1 = int(input("введите границы рандомного расположения по горизонтали\nПервая:"))
+    random_x2 = int(input("Вторая:"))
+    get_balloon(sd.random_number(random_x1, random_x2), y, sd.random_color())
+
+elif x != 0 and y == 0:
+    random_y1 = int(input("введите границы рандомного расположения по вертикали\nПервая: "))
+    random_y2 = int(input("Вторая:"))
+    get_balloon(x, sd.random_number(random_y1, random_y2), sd.random_color())
+
+elif x == 0 and y == 0:
+    random_x1 = int(input("введите границы рандомного расположения по горизонтали\nПервая:"))
+    random_x2 = int(input("Вторая:"))
+    random_y1 = int(input("введите границы рандомного расположения по вертикали\nПервая: "))
+    random_y2 = int(input("Вторая:"))
+    get_balloon(sd.random_number(random_x1, random_x2), sd.random_number(random_y1, random_y2), sd.random_color())
+
+elif x != 0 and y != 0:
+    get_balloon(x, y, sd.random_color())
+
 get_flag()
 get_fireworks()
 
