@@ -5,5 +5,14 @@
 #   Целочисленное деление ХХХ на YYY дает ZZZ
 
 a, b = 179, 37
+result = -1
+remains = 0
 
-# TODO здесь ваш код
+# деление чисел без остатака
+if b != 0:
+    while remains <= abs(a):
+        remains += abs(b)
+        result += 1
+        print("деление", a, "на", b, "дает", result)
+    else:
+        print("на 0 делить нельзя")
