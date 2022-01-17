@@ -10,7 +10,7 @@ def draw_bubble(center, radius, step, color):
 # Функция для рисования 10 пузырьков в ряд
 def draw_bubble_row(y, radius, step, color):
     for i in range(10):
-        draw_bubble(sd.Point(radius * 2 * (i + 1), y), radius, step, color)
+        draw_bubble(sd.get_point(radius * 2 * (i + 1), y), radius, step, color)
 
 
 # Размер окна
@@ -18,7 +18,7 @@ sd.set_screen_size(1500, 800)
 sd.start_drawing()
 
 # Нарисовать пузырек - три вложенных окружностей с шагом 5 пикселей
-draw_bubble(sd.Point(100, 100), 30, 5, sd.COLOR_YELLOW)
+draw_bubble(sd.get_point(100, 100), 30, 5, sd.COLOR_YELLOW)
 
 
 # Написать функцию рисования пузырька, принимающую 2 (или более) параметра: точка рисовании и шаг
