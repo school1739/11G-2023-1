@@ -18,6 +18,7 @@
 envelop_x = int(input("Enter the width of the envelope:"))
 envelop_y = int(input("Enter the height of the envelope:"))
 paper = [(8, 9), (9, 8), (6, 8), (8, 6), (3, 4), (11, 9), (9, 11)]
+# Проверка значений
 for i in paper:
     if i[0] <= envelop_x and i[1] <= envelop_y:
         print('Yes')
@@ -52,8 +53,7 @@ for i in paper:
 # brick_x, brick_y, brick_z = 3, 11, 6
 # (написать цикл для проверки)
 
-hole_x_y = int(input("Enter the width of the hole:")),int(input("Enter the len of the hole:"))
-
+hole_x, hole_y = int(input("Enter the width of the hole:")), int(input("Enter the len of the hole:"))
 
 size_brick = [
     [11, 10, 2],
@@ -76,12 +76,18 @@ size_brick = [
     [3, 11, 6],
 ]
 for size in size_brick:
-    # Убираем из словарей в size_brick макс.значения
-    size.remove(max(size))
     # Проверка значений
-    if size[0]<=hole_x_y[0] and size[1]<=hole_x_y[0]:
-        print("Yes")
-    elif size[1]<=hole_x_y[0] and size[0]<=hole_x_y[0]:
-        print("Yes")
+    if size[0] <= hole_x and size[1] <= hole_y:
+        print("YES")
+    elif size[1] <= hole_x and size[0] <= hole_y:
+        print("YES")
+    elif size[0] <= hole_x and size[2] <= hole_y:
+        print("YES")
+    elif size[2] <= hole_x and size[0] <= hole_y:
+        print("YES")
+    elif size[2] <= hole_x and size[1] <= hole_y:
+        print("YES")
+    elif size[1] <= hole_x and size[2] <= hole_y:
+        print("YES")
     else:
-        print("No")
+        print("NO")
