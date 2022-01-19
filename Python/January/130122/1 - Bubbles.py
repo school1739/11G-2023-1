@@ -1,31 +1,38 @@
 import simple_draw as sd
 
+
+# функция для пузырика
+def puzyirik(point, step, colour):
+    radius = 50
+    for i in range(3):
+        radius -= step
+        sd.circle(center_position=point, radius=radius, color=colour, width=1)
+
+
 # Нарисовать пузырек - три вложенных окружности с шагом 5 пикселей
-import simple_draw as sd
-def puzyir(start, shag):
-    center_position = sd.get_point(50, 60)
-    COLOR_YELLOW = (255, 255, 0)
-    sd.circle(center_position, radius=25, color=COLOR_YELLOW, width=1)
-    sd.circle(center_position, radius=30, color=COLOR_YELLOW, width=1)
-    sd.circle(center_position, radius=35, color=COLOR_YELLOW, width=1)
+point = sd.get_point(300, 550)
+COLOR_WHITE = (255, 255, 255)
+radius = 50
+for i in range(3):
+    radius -= 5
+    sd.circle(center_position=point, radius=radius, color=COLOR_WHITE, width=1)
+
 # Написать функцию рисования пузырька, принимающую 2 (или более) параметра: точка рисовании и шаг
-center_position=sd.get_point(50,60 )
-COLOR_GREEN = (0, 255, 0)
-sd.circle(center_position, radius=25, color=COLOR_GREEN, width=1)
-sd.circle(center_position, radius=30, color=COLOR_GREEN, width=1)
-sd.circle(center_position, radius=35, color=COLOR_GREEN, width=1)
-sd.pause()
+# см. выше
 # Нарисовать 10 пузырьков в ряд
-for x in range(50, 550, 50):
-    point = sd.get_point(x, 50)
-    create_bubble(point, step=5, color = sd.COLOR_GREEN)
+for x in range(100, 1001, 100):
+    point = sd.get_point(x, 450)
+    puzyirik(point=point, step=5, colour=(255, 255, 255))
+
 # Нарисовать три ряда по 10 пузырьков
-for y in range (100, 301, 100):
-    for x in range(50, 550, 50):
+for y in range(100, 301, 100):
+    for x in range(100, 1001, 100):
         point = sd.get_point(x, y)
-        create_bubble(point, step=5, color = sd.COLOR_GREEN)
+        puzyirik(point=point, step=5, colour=(255, 255, 255))
+
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
-for y in range (10, 1000, 50):
-    for x in range(10, 1000, 50):
-        point = sd.get_point(sd.random_number(10,1400), sd.random_number(10,800))
-        create_bubble(point, step=5, color=sd.random_color())
+for m in range(100):
+    point = sd.random_point()
+    colour = sd.random_color()
+    puzyirik(point=point, step=5, colour=colour)
+sd.pause()
