@@ -6,4 +6,16 @@
 
 a, b = 179, 37
 
-# TODO здесь ваш код
+# задаем значения
+a, b = 179, 37
+result = -1
+remains = 0
+
+# цикл целочисленного деления любых целых чисел (положительных и отрицательных)
+if b != 0:
+    while remains <= abs(a):
+        remains += abs(b)
+        result += 1
+    print("Целочисленное деление", a, ":", b, "=", result)
+else:
+    print("ERROOOOOR")
