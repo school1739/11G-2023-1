@@ -6,4 +6,10 @@
 
 a, b = 179, 37
 
-# TODO здесь ваш код
+x, y = a, b
+result = -1
+while x >= 0:
+    result += 1
+    x -= y
+
+print(f'Целочисленное деление {a} на {b} дает {result}')
