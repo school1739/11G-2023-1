@@ -8,5 +8,13 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
+educational_grant = int(input('Введите стипендию: '))
+expenses = int(input('Введите расходы: '))
+rashodi = 0
+dohodi = 0
+for i in range(10):
+    dohodi += educational_grant
+    rashodi+=expenses
+    expenses*=1.03
+print('Надо попросить: ',rashodi-dohodi)
 
-# TODO здесь ваш код
