@@ -30,3 +30,5 @@ for y in range (10, 1000, 50):
         create_bubble(point, step=3, color=sd.random_color())
 
 sd.pause()
+
+# OK

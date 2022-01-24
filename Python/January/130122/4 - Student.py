@@ -18,3 +18,5 @@ for month in months:
     expenses *= 1.03
 
 print(f'Студенту надо попросить{result:.2f} рублей')
+
+# OK. Забыл пробелы кое-где.
