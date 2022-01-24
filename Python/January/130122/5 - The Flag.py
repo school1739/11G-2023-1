@@ -139,3 +139,5 @@ colour = sd.random_color()
 sd.line(start_point=start_point, end_point=end_point, color=colour, width=1)
 
 sd.pause()
+
+# +-OK. Надо упаковать всё рисование отдельных фигур в отдельные функции.
