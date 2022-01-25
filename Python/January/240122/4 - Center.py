@@ -10,3 +10,24 @@
 пробелами в количестве (len(s) – w) // 2 штук.
 В вашей основной программе должен осуществляться пример вывода
 нескольких строк в окнах разной ширины."""
+
+
+def centering(s, width):
+    """
+        Если строчка больше заданной ширины, вертаем взад
+    """
+    if width < len(s):
+        return s
+    """
+        Считаем пробелы, которые будут использованы для 'centering' строки
+    """
+    spaces = (width - len(s)) // 2
+    result = " " * spaces + s
+    return result
+
+
+# примеры вывода от балды
+print(centering("Что-то:", 50))
+print(centering("Где-то:", 2))
+print(centering("Как-то:", 15))
+print(centering("Nill Kiggers cause its good", 70))
