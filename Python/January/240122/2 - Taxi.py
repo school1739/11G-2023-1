@@ -7,3 +7,20 @@
 
 Может быть применен повышающий коэффициент. Используйте рандом для
 подстановки коэффициента тарифа (от х1 -- обычный тариф до х2.5 -- повышенный."""
+import random
+
+
+# расчет прайса
+def taxi_fare(kilometers):
+    value = kilometers * 1000 / 150 * 0.25 + 4
+    return value
+
+
+# вызов функции
+payment = taxi_fare(kilometers=float(input("enter the kilometers of ur travel - ")))
+
+# коэффицент тарифа
+k = random.uniform(1, 2.5)
+
+# вывод полного прайса
+print("payment -", round(k * payment, 2), "rubles")
