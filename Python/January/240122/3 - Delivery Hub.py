@@ -5,3 +5,17 @@
 сумму доставки. В основной программе должны производиться запрос
 количества позиций в заказе у пользователя, и отображаться на экране
 сумма доставки (сумму перевести в рубли по курсу $1 = 75₽."""
+
+
+def value_of_delivery(number_of_items):
+    """
+        вычисляем стоимость доставки (в рублях)
+    """
+    payment_for_delivery = 10.95 * 75 + 2.95 * (number_of_items - 1) * 75
+    return payment_for_delivery
+
+# вызываем функцию и округляем получившееся значение
+round_of_value_delivery = round(value_of_delivery(number_of_items=int(input("enter the number of items - "))), 2)
+
+# печатаем ответ
+print("payment for delivery - ", round_of_value_delivery, "rubles")
