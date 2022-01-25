@@ -10,3 +10,16 @@
 пробелами в количестве (len(s) – w) // 2 штук.
 В вашей основной программе должен осуществляться пример вывода
 нескольких строк в окнах разной ширины."""
+
+
+def center(string, width):
+    if len(string) >= width:
+        return string
+    else:
+        spaces = ' ' * ((width - len(string)) // 2)
+        return spaces + string
+
+
+while True:
+    string, width = input('Строка: '), int(input('Ширина: '))
+    print(f'Результат: "{center(string, width)}"\n')
