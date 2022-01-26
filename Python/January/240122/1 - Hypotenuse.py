@@ -3,8 +3,12 @@
 ную по теореме Пифагора. В главной программе должен осуществляться
 запрос длин сторон у пользователя, вызов функции и вывод на экран
 полученного результата."""
+
+
 # Функция для расчета гипотенузы
-def hypotrnuse(katet_1,katet_2):
-    hypot = (katet_1**2 + katet_2**2)**0.5
-    print(round(hypot,3))
-hypotrnuse(int(input("Введите катет №1: ")),int(input("Введите катет №2: ")))
+def hypotrnuse(katet_1, katet_2):
+    hypot = (katet_1 ** 2 + katet_2 ** 2) ** 0.5
+    print(round(hypot, 3))
+
+
+hypotrnuse(int(input("Введите катет №1: ")), int(input("Введите катет №2: ")))
