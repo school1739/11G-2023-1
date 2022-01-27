@@ -30,12 +30,13 @@ def draw_balloon(center, width, height):
     # Шарик
     sd.ellipse(start, sd.get_point(start.x + width, start.y + height), sd.random_color())
     # Хвостик
-    sd.polygon([sd.get_point(center.x - 20, start.y - 20),
+    tail_size = width // 10
+    sd.polygon([sd.get_point(center.x - tail_size, start.y - tail_size),
                 sd.get_point(center.x, start.y),
-                sd.get_point(center.x + 20, start.y - 20)],
+                sd.get_point(center.x + tail_size, start.y - tail_size)],
                sd.random_color(), 3)
     # Ниточка
-    sd.line(sd.get_point(center.x, start.y - 20), sd.get_point(center.x, start.y - 100))
+    sd.line(sd.get_point(center.x, start.y - tail_size), sd.get_point(center.x, start.y - height))
 
 
 # Функция для рисования фейерверка
