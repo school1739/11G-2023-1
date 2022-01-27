@@ -1,4 +1,16 @@
 import simple_draw as sd
+import pygame as pg
+import sys
+
+sc = pg.display.set_mode((300, 200))
+
+pg.display.update()
+
+while 1:
+    for i in pg.event.get():
+        if i.type == pg.QUIT:
+            sys.exit()
+    pg.time.delay(1000)
 
 # Нарисовать пузырек - три вложенных окружности с шагом 5 пикселей
 
