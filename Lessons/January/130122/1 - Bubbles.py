@@ -24,6 +24,7 @@ COLOR_DARK_PURPLE = (127, 0, 127)
 point = sd.get_point(300,300)
 sd.circle(center_position=point)
 radius = 50
+
 for i in range(3):
     radius += 5
     sd.circle(center_position=point, radius=radius)
@@ -67,7 +68,7 @@ for x in range(100,301,100):
     ]
 for i in range(10,1100,50):
     for g in range(10,1100,50):
-        point = sd.get_point(sd.random_number(10,1400),sd.random_number(15,800))
+        point = sd.get_point(sd.random_number(10,1400),sd.random_number(10,800))
         bubble(point,step=3)
 
 
