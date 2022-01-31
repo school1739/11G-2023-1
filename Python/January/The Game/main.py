@@ -37,12 +37,11 @@ def judge(choice1, choice2):
         points2 += 1
 
 
-rounds = 0
-while True:
+for i in range(1000):
     judge(player1(), player2())
 
     if points1 >= 50 and points2 >= 50:
-        print('Победила бебра!')
+        print('Ничья!')
         break
     elif points1 >= 50:
         print('1-ый игрок выиграл!')
@@ -50,8 +49,5 @@ while True:
     elif points2 >= 50:
         print('2-ой игрок выиграл!')
         break
-
-    rounds += 1
-    if rounds >= 100:
-        print('Раунды кончились!')
-        break
+else:
+    print('Раунды кончились!')
