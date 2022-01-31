@@ -11,3 +11,28 @@
 один из игроков не наберёт 50 очков, но не более 100 раундов."""
 
 
+from random import randint
+
+p1_number = 0, p2_number = 0
+p1_score = 0, p2_score = 0
+
+def p1():
+    return (0,10)
+
+def p2():
+    return (0,10)
+
+
+def judge(option1, option2):
+    global p1_score, p2_score
+    if option1 == option2:
+        p1_score +=1
+        p2_score +=1
+    elif option1 > option2:
+        p1_score += 1
+        p2_score -= 1
+    else:
+        p1_score -= 1
+        p2_score += 1
+
+
