@@ -13,3 +13,5 @@ def delivery(number_product): # Ввод функции
 x = round(delivery(number_product=int(input("number product:"))), 2)# Вызов функции
 
 print("payment:",x) #Цена
+
+# OK

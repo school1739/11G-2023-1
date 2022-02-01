@@ -16,3 +16,5 @@ def kmm(km)#Задаём функцию
 price= kmm(km=float(input("Введите путь в км:"))) #Расчёт цены
 
 print("price:", round(y * price, 2))
+
+# SyntaxError: expected ':'
