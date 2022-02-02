@@ -37,3 +37,5 @@ for i in range(100):
     draw_bub(sd.random_point(), 30, sd.random_color())
 
 sd.pause()
+
+# OK

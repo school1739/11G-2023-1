@@ -47,6 +47,7 @@ def fireworks():
     for i in range(5):
         sd.circle(sd.get_point(sd.random_number(100, 300) + i * 270, sd.random_number(500, 700)), 4, sd.random_color())
 
+
 # Вызываем ф-ции
 for i in range(100):
     fireworks()
@@ -59,3 +60,5 @@ flag(sd.get_point(width / 2, height / 2))
 # !задний фон рисуется самым первым
 # !К каждому пункту функцию
 sd.pause()
+
+# OK
