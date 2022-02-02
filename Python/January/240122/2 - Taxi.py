@@ -24,3 +24,5 @@ k = random.uniform(1, 2.5)
 
 # вывод полного прайса
 print("payment -", round(k * payment, 2), "rubles")
+
+# OK
