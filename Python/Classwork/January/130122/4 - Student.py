@@ -10,3 +10,5 @@
 educational_grant, expenses = 10000, 12000
 
 # TODO здесь ваш код
+
+# Ну камон, 2 февраля уже

@@ -33,3 +33,5 @@ for i in range(100):
 
 sd.finish_drawing()
 sd.pause()
+
+# OK
