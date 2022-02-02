@@ -10,18 +10,14 @@
 другой игрок штрафуется на 1 очко (-1). Игра продолжается до тех пор, пока
 один из игроков не наберёт 50 очков, но не более 100 раундов."""
 
-
 from random import randint
 
-p1_number = 0, p2_number = 0
-p1_score = 0, p2_score = 0
+p1_score, p2_score = 0, 0
 
 def p1():
-    return (0,10)
-
+    return randint (0,10)
 def p2():
-    return (0,10)
-
+    return randint (0,10)
 
 def judge(option1, option2):
     global p1_score, p2_score
@@ -35,4 +31,23 @@ def judge(option1, option2):
         p1_score -= 1
         p2_score += 1
 
+rounds = 0
+while True:
+    judge(p1(), p2())
+
+    if p1_score ==50 and p2_score ==50:
+         print("TIE")
+         break
+
+    if p1_score ==50 and p2_score <50:
+        print("Player 1 won")
+        break
+
+    if p2_score == 50 and p1_score <50:
+        print("Player 2 won")
+        break
+
+    if rounds>100:
+        print("the rounds are over")
+        break
 
