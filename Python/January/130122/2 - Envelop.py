@@ -80,3 +80,5 @@ for brick_size in brick_sizes:
         print('ДА')
     else:
         print('НЕТ')
+
+# OK
