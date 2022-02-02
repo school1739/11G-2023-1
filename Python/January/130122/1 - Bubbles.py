@@ -2,11 +2,15 @@
 import random
 
 import simple_draw as sd
+
+
 def bubble(point, step):
     radius = 50
     for i in range(1):
         radius += step
         sd.circle(center_position=point, color=(sd.COLOR_RED), radius=radius, width=2)
+
+
 point = sd.get_point(100, 100)
 bubble(point=point, step=10)
 
@@ -37,3 +41,5 @@ for i in range(100):
     sd.circle(center_position=point, radius=radius, width=2)
     bubble(point=point, step=step)
 sd.pause()
+
+# +-OK. Для случайного цвета стоит использовать метод sd.random_color()

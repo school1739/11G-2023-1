@@ -7,3 +7,5 @@
 a, b = 179, 37
 
 # TODO здесь ваш код
+
+# Nothing to evaluate.
