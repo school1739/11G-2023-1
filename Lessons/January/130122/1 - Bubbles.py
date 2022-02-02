@@ -35,3 +35,6 @@ for i in range(100):
     sd.circle(sd.random_point(), 30, sd.random_color())
 
     sd.pause()
+
+# NOT OK. Вместо 100 пузырьков рисуется только один, а выход из окна
+# только с ошибкой.

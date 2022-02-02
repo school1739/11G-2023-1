@@ -88,3 +88,4 @@ for size in size_brick:
     else:
         print("Нет")
 
+# OK

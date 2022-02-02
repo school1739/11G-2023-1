@@ -29,3 +29,5 @@ for month in months:
         print("Студенту надо попросить", cash_by_parents, "рублей")
         print()
     expenses *= 1.03
+
+# OK
