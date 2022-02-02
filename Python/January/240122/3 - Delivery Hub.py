@@ -23,3 +23,5 @@ number = int(input('Количество товаров: '))
 cost = usd_to_rub(delivery_cost(number))
 # Выводим результат
 print(f'\nСтоимость доставки: {cost}₽')
+
+# OK

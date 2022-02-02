@@ -21,3 +21,5 @@ def taxi_fare(distance):
 distance = float(input('Расстояние в километрах: '))
 # Выводим результат
 print(f'Вы должны заплатить {taxi_fare(distance):.2f}₽')
+
+# OK

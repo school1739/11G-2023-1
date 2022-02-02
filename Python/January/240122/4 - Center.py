@@ -23,3 +23,5 @@ def center(string, width):
 while True:
     string, width = input('Строка: '), int(input('Ширина: '))
     print(f'Результат: "{center(string, width)}"\n')
+
+# OK

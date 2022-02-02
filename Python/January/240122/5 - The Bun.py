@@ -59,3 +59,5 @@ animals = ['Заяц', 'Волк', 'Медведь', 'Лиса']
 # Выводим песни
 for animal in animals:
     print(bun_song(animal), end='\n\n')
+
+# OK

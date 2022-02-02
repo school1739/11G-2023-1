@@ -14,3 +14,5 @@ def hypot(a, b):
 a, b = int(input('1-ый катет: ')), int(input('2-ой катет: '))
 # Выводим результат
 print(f'Гипотенуза: {hypot(a, b)}')
+
+# OK
