@@ -25,3 +25,5 @@ for month in months:
         print("студенту надо попросить", cash_by_parents, "рублей")
         print()
     expenses *= 1.03
+
+# +- OK. Надо было посчитать только общий единоразовый запрос

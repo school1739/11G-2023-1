@@ -79,3 +79,5 @@ for bricks in size_of_brick:
         print ("да")
     else:
         print ("нет")
+
+# NameError: name 'envelop_x' is not defined. Did you mean: 'evelop_x'?
