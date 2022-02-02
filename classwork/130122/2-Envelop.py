@@ -78,3 +78,5 @@ for bricks in size_of_brick:
         print("YES")
     else:
         print("NO")
+
+# OK

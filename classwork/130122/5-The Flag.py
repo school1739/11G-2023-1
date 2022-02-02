@@ -90,3 +90,5 @@ get_flag()
 get_fireworks()
 
 sd.pause()
+
+# OK
