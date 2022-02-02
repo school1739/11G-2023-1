@@ -15,4 +15,4 @@ def taxi_fare(S):
     return (4 + S * 1000 // 150 * 0.25) * factor
 
 S = int(input('Расстояние в километрах: '))
-print(f'Стоимость {taxi_fare(S):.2f}₽')
+print(f'Стоимость {taxi_fare(S):.2f} рублей')
