@@ -13,3 +13,5 @@ c = random.choice((1, 2.5))
 itog = fun(s) * c
 # Выводим ответ
 print(f' Стоимость поездки: {itog:.2f} рублей')
+
+# OK

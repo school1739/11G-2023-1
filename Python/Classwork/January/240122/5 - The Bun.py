@@ -34,3 +34,5 @@ animals = ['Выхухоль', 'Динозавр', 'Котище']
 for animal in animals:
     print(bunSong(animal))
     print()
+
+# OK
