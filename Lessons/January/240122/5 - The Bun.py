@@ -21,3 +21,17 @@ x -- Элемент, который требуется добавить в сп�
     my_list.append(3)
     my_list  # [1, 3]
 """
+
+animals = ["зайца", "волка", "медведя", "лиса"]
+animals_gone = []
+
+def bunSong(name):
+    for animal in animals_gone:
+        print(f'Я от {animal} ушел,')
+
+    animals_gone.append(name)
+    print(f'От тебя, {name}, подавно уйду!\n')
+
+
+for new_animal in animals:
+    bunSong(new_animal)
