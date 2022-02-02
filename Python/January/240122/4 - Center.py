@@ -31,3 +31,5 @@ print(centering("Что-то:", 50))
 print(centering("Где-то:", 2))
 print(centering("Как-то:", 15))
 print(centering("gg wp", 70))
+
+# OK

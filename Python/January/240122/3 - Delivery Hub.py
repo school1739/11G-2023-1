@@ -19,3 +19,5 @@ round_of_value_delivery = round(value_of_delivery(number_of_items=int(input("ent
 
 # вывод ответа
 print("payment for delivery - ", round_of_value_delivery, "rubles")
+
+# OK
