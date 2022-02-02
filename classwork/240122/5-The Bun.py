@@ -46,3 +46,5 @@ animals.append(another_animal)
 # вызов функции
 for animal in animals:
     bunSong(animal)
+
+# OK

@@ -18,3 +18,5 @@ length_of_hypotenuse = round(hypotenuse(first_cathetus=int(input("length of firs
 
 # вывод длины гипотенузы
 print("length of hypotenuse is", length_of_hypotenuse)
+
+# OK
