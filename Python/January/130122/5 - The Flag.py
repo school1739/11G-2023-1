@@ -1,6 +1,6 @@
 import simple_draw as sd
 
-
+import math
 # Нарисовать флаг России с древком
 
 # Вокруг флага добавить не менее пяти воздушных шариков (эллипс + треугольник "хвостик" + прямая линия "ниточка")
@@ -73,3 +73,5 @@ for i in range(balloon_count):
 
 sd.finish_drawing()
 sd.pause()
+
+# OK
