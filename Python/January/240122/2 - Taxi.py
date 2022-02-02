@@ -23,3 +23,5 @@ def tariff(km):
 
 
 print(tariff(float(input("Введите пройденное расстояние в километрах: "))))
+
+# OK

@@ -12,3 +12,5 @@ def hypotrnuse(katet_1, katet_2):
 
 
 hypotrnuse(int(input("Введите катет №1: ")), int(input("Введите катет №2: ")))
+
+# OK

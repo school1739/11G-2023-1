@@ -18,3 +18,5 @@ def delivery(amount):
 
 
 print(delivery(int(input("Введите кол-во товаров: "))))
+
+# OK

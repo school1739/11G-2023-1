@@ -41,3 +41,5 @@ for new_animal in animals:
     bunSong(new_animal)
 
 # Я решил не добавлять полную песню, тк тогда бы в выводе было много текста
+
+# OK
