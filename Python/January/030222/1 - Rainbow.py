@@ -8,12 +8,12 @@ rainbow_colors = (sd.COLOR_RED, sd.COLOR_ORANGE, sd.COLOR_YELLOW, sd.COLOR_GREEN
 # Нарисовать радугу: 7 линий разного цвета толщиной 4 с шагом 5 из точки (50, 50) в точку (350, 450)
 point_from = sd.get_point(50, 50)
 point_to = sd.get_point(350, 450)
-width = 4
+width = 10
 step = 5
 for i, color in enumerate(rainbow_colors):
-    y = point_from.y - step * i
-    start = sd.get_point(point_from.x, point_from.y + y)
-    end = sd.get_point(point_to.x, point_to.y + y)
+    shift = point_from.y - step * i
+    start = sd.get_point(point_from.x + shift, point_from.y - shift)
+    end = sd.get_point(point_to.x + shift, point_to.y - shift)
     sd.line(start, end, color, width)
 # TODO нарисовать Nyan Cat и звёздочки
 # Подсказка: цикл нужно делать сразу по кортежу с цветами радуги.
