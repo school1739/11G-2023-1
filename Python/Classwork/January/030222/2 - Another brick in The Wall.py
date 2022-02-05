@@ -3,21 +3,25 @@ import simple_draw as sd
 
 # Нарисовать стену из кирпичей. Размер кирпича - 100х50
 # Использовать вложенные циклы for
-sd.background_color = (128, 128, 128)
-sd._to_screen(1600, 900)
-sd.set_screen_size(width=1600, height=900)
-x1 = -155
+sd.background_color = (128, 128, 128) # Серый фон (бетон)
+sd._to_screen(1600, 900) # Хз зачем
+sd.set_screen_size(width=1600, height=900) # Хз пусть будет
+x1 = -1705
 y1 = -55
-x2 = -5
+x2 = -1555
 y2 = -5
-for i in range(20):
+n = 100
+for a in range(n): # Цикл для сдвига по y оси
     y1 = y1 + 55
     y2 = y2 + 55
-    for i in range(20):
+    for b in range(n): # Цикл для свдига по x оси
         x1 = x1 + 155
         x2 = x2 + 155
+        # Рисуем кирпич(и)
         sd.rectangle(left_bottom=sd.get_point(x1, y1), right_top=sd.get_point(x2, y2), color=sd.COLOR_ORANGE, width=0)
-
+    # Это чтобы кирпичи не шли далеко вперёд, а сдвигались чуть вперёд (на пол кирпича) от начальных далёких отрицательных координат
+    x1 = x1 - 155 * n + 80
+    x2 = x2 - 155 * n + 80
 # Подсказки:
 #  Для отрисовки кирпича использовать функцию rectangle
 #  Алгоритм должен получиться приблизительно такой:
