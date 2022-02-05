@@ -1,19 +1,26 @@
-# (цикл for)
 import simple_draw as sd
-sd.set_screen_size(1500,700)
+
+# Размер экрана
+height = 700
+width = 1500
+sd.set_screen_size(width, height)
+
 sd._init()
-# Цемент
-sd.rectangle(sd.get_point(-2000,-2000),sd.get_point(2000,2000),(100,100,100))
 
 # Нарисовать стену из кирпичей. Размер кирпича - 100х50
 # Использовать вложенные циклы for
 
-def brick(x,y):
-    sd.rectangle(sd.get_point(x,y),sd.get_point(x+100,y+50),(255, 127, 0))
-    sd.rectangle(sd.get_point(x,y),sd.get_point(x+100,y+50),(255, 127, 0))
+# Цемент
+sd.rectangle(sd.get_point(-width, -height), sd.get_point(width, height), (100, 100, 100))
 
+# Стена из кирпичей
+# Координата кирпичей по вертикали
+for y in range(-height, height + 200, 120):
+    # Координата кирпичей по горизонтали
+    for x in range(-width, width + 200, 120):
+        sd.rectangle(sd.get_point(x, y), sd.get_point(x + 100, y + 50), (255, 127, 0))
+        sd.rectangle(sd.get_point(x + 50, y + 60), sd.get_point(x + 150, y + 110), (255, 127, 0))
 
-brick(1500/2,700/2)
 
 # Подсказки:
 #  Для отрисовки кирпича использовать функцию rectangle
@@ -26,3 +33,12 @@ brick(1500/2,700/2)
 #           рисуем кирпич
 
 sd.pause()
+
+# ..........／＞　 フ.............
+# 　　　　　| 　_　 _|
+# 　 　　　／`ミ _x 彡
+# 　　 　 /　　　 　 |
+# 　　　 /　 ヽ　　 ﾉ
+# 　／￣|　　 |　|　|
+#  | (￣ヽ＿_ヽ_)_)
+# 　＼二つ
