@@ -3,18 +3,17 @@ import simple_draw as sd
 
 # Нарисовать стену из кирпичей. Размер кирпича - 100х50
 # Использовать вложенные циклы for
-sd.background_color = (128, 128, 128) # Серый фон (бетон)
-sd._to_screen(1600, 900) # Хз зачем
-sd.set_screen_size(width=1600, height=900) # Хз пусть будет
+sd.background_color = (128, 128, 128)  # Серый фон (бетон)
+sd.set_screen_size(width=1600, height=900)  # Разрешение моего экрана :(
 x1 = -1705
 y1 = -55
 x2 = -1555
 y2 = -5
 n = 100
-for a in range(n): # Цикл для сдвига по y оси
+for a in range(n):  # Цикл для сдвига по y оси
     y1 = y1 + 55
     y2 = y2 + 55
-    for b in range(n): # Цикл для свдига по x оси
+    for b in range(n):  # Цикл для свдига по x оси
         x1 = x1 + 155
         x2 = x2 + 155
         # Рисуем кирпич(и)
