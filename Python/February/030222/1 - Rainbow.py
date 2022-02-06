@@ -1,26 +1,33 @@
-# (цикл for)
-
 import simple_draw as sd
-
+import time
 rainbow_colors = (sd.COLOR_RED, sd.COLOR_ORANGE, sd.COLOR_YELLOW, sd.COLOR_GREEN,
                   sd.COLOR_CYAN, sd.COLOR_BLUE, sd.COLOR_PURPLE)
 
-point_from = sd.get_point(30, 30)
-point_to = sd.get_point(400, 500)
-width = 10
-step = 5
-for i, color in enumerate(rainbow_colors):
-    shift = point_from.y - step * i
-    start = sd.get_point(point_from.x + shift, point_from.y - shift)
-    end = sd.get_point(point_to.x + shift, point_to.y - shift)
-    sd.line(start, end, color, width)
-center = sd.get_point(400, 0)
-radius = 200
-step = 10
-width = 10
-for i, color in enumerate(rainbow_colors):
-    sd.circle(center, radius - step * i, color, width)
+# Нарисовать радугу: 7 линий разного цвета толщиной 4 с шагом 5 из точки (50, 50) в точку (350, 450)
+startx = 50
+endx = 350
+starty = 50
+endy = 450
+for i in range(7):
+    time.sleep(0.3)
+    startx +=5
+    endx +=+5
+    sd.line(start_point=sd.get_point(startx,starty),end_point=sd.get_point(endx,endy),color = rainbow_colors[i],width=5)
+
+# Подсказка: цикл нужно делать сразу по кортежу с цветами радуги.
+
+
+# Нарисовать радугу дугами от окружности (cсм sd.circle) за нижним краем экрана,
+point = sd.get_point(600,-500)
+r = 900
+q = 0
+for r in range(900,600,-10):
+    time.sleep(0.3)
+    sd.circle(center_position=point,radius=r,color=rainbow_colors[q],width=10)
+    q +=1
+    if q==7:
+        break
+
+
 
 sd.pause()
-
-
