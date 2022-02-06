@@ -9,3 +9,38 @@
 больше другого, игрок, который выдал большее число, получает 1 очко (+1),
 другой игрок штрафуется на 1 очко (-1). Игра продолжается до тех пор, пока
 один из игроков не наберёт 50 очков, но не более 100 раундов."""
+from random import randint
+points1=0
+points2=0
+def player1():
+    return randint(0,10)
+
+def player2():
+    return randint(0,10)
+
+def judge(choice1,choice2):
+    global points1,points2
+    if choice1 == choice2:
+        points1+=1
+        points2+=1
+    elif choice1>choice2:
+        points1+=1
+        points2-=1
+    else:
+        points1-=1
+        points2+=1
+rounds=0
+while True:
+    judge(player1(),player2())
+    rounds+=1
+    if points1 >=50 and points2 >=50:
+        print("Ничья")
+    elif points1 >=50:
+        print("1 чел победил")
+    elif points2 >=50:
+        print("второй чел победил")
+        break
+    rounds+=1
+    if rounds >=10000:
+        print("Раунды закончились")
+        break
