@@ -25,7 +25,7 @@ for current_row in range(ROW_NUMBER):
         right_top_x = left_bottom_x + BRICK_WIDTH
         right_top_y = left_bottom_y + BRICK_HEIGHT
         right_top = sd.get_point(right_top_x, right_top_y)
-        sd.rectangle(left_bottom, right_top, sd.COLOR_RED, width=3)
+        sd.rectangle(left_bottom, right_top, sd.COLOR_WHITE, width=3)
 # Подсказки:
 #  Для отрисовки кирпича использовать функцию rectangle
 #  Алгоритм должен получиться приблизительно такой:
