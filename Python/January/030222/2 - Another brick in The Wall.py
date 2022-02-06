@@ -12,18 +12,25 @@ rows = 10
 bricks_in_row = 10
 brick_color_difference = 30
 
-sd.rectangle(sd.get_point(0, 0), sd.get_point(*sd.resolution), background_color)
+# Задаём цвет заднего фона
+sd.background_color = background_color
+# Рисуем стену
 for x in range(bricks_in_row):
     for y in range(rows):
+        # Начало прямоугольника
         brick_x = (brick_size[0] + space_width) * x
         brick_y = (brick_size[1] + space_width) * y
+        # Рассчитываем сдвиг
         if y % 2 == 1:
             brick_x -= (brick_size[0] + space_width) / 2
+        # Рассчитываем начало и конец прямоугольника
         brick_start = sd.get_point(brick_x, brick_y)
         brick_end = sd.get_point(brick_x + brick_size[0], brick_y + brick_size[1])
+        # Рандомизируем цвет кирпичей
         brick_color = (255 - randint(0, brick_color_difference),
-                       127 + randint(-brick_color_difference, brick_color_difference),
+                       127 + randint(-brick_color_difference // 2, brick_color_difference // 2),
                        randint(0, brick_color_difference))
+        # Рисуем кирпич
         sd.rectangle(brick_start, brick_end, brick_color)
 
 # Подсказки:
