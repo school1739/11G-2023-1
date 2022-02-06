@@ -9,13 +9,9 @@
 подстановки коэффициента тарифа (от х1 -- обычный тариф до х2.5 -- повышенный."""
 
 import random
-import math
-
-def taxi_fare(kilometers):
-    value = kilometers * 1000 / 150 * 0,25 + 4
+def price(meters):
+    value = meters/150 * 0.25 + 4 #Рассчёт цены
     return value
-
-payment = taxi_fare(kilometers = float(input("Введите расстояние поездки в километрах")))
-k = random.uniform(1, 2.5)
-
-print("payment:", round(k * payment, 2), "рубли")
+cost = price(meters=float(input("Расстояние поездки: "))) #Водд данных
+a = random.uniform(1, 2.5)
+print(round(a * cost, 2)) #Вывод суммы оплаты поездки
