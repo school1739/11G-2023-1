@@ -1,5 +1,11 @@
 # (цикл for)
 import simple_draw
+sd.resolution = (2000, 1000)
+start_x = 0
+start_y = 0
+long = 100
+height = 50
+
 
 
 # Нарисовать стену из кирпичей. Размер кирпича - 100х50
