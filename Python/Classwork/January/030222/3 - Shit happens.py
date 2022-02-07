@@ -37,6 +37,17 @@ sd.line(start_point=sd.get_point(150, 100), end_point=sd.get_point(50, 200), col
 sd.line(start_point=sd.get_point(50, 200), end_point=sd.get_point(100, 250), color=sd.COLOR_BLACK, width=5)
 sd.line(start_point=sd.get_point(100, 250), end_point=sd.get_point(150, 200), color=sd.COLOR_BLACK, width=5)
 
+sd.line(start_point=sd.get_point(200, 50), end_point=sd.get_point(200, 250), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(200, 150), end_point=sd.get_point(300, 150), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(300, 150), end_point=sd.get_point(300, 50), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(350, 50), end_point=sd.get_point(350, 200), color=sd.COLOR_BLACK, width=4)
+sd.circle(center_position=sd.get_point(351, 210), radius=5, color=sd.COLOR_BLACK, width=0)
+
+sd.line(start_point=sd.get_point(425, 50), end_point=sd.get_point(425, 250), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(425, 50), end_point=sd.get_point(450, 50), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(400, 175), end_point=sd.get_point(450, 175), color=sd.COLOR_BLACK, width=4)
+
+
 
 
 sd.pause()
