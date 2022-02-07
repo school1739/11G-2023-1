@@ -7,6 +7,25 @@
 #       Расходы: ХХХ.ХХ рублей.
 #   Студенту надо попросить ХХХ.ХХ рублей
 
-educational_grant, expenses = 10000, 12000
+educational_grant, expenses = int(input("Стипендия - ")), int(input("Расходы - "))
 
-# TODO здесь ваш код
+
+months = ['September', 'October', 'November', 'December', 'January', 'February', 'March', 'April', 'May', 'June']
+
+money_by_parents = 0
+
+for month in months:
+    if month == 'September':
+        cash_by_parents = expenses - educational_grant
+        print("September:")
+        print("Расходы:", expenses, "рублей")
+        print()
+    else:
+        cash_by_parents = round(expenses) - educational_grant
+        print(month + ":")
+        print("Расходы:", round(expenses), "рублей")
+        print()
+    expenses *= 1.03
+    money_by_parents += cash_by_parents
+
+print("Студенту надо попросить", money_by_parents, "рублей")
