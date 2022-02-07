@@ -7,10 +7,10 @@ rainbow_colors = (sd.COLOR_RED, sd.COLOR_ORANGE, sd.COLOR_YELLOW, sd.COLOR_GREEN
                   sd.COLOR_CYAN, sd.COLOR_BLUE, sd.COLOR_PURPLE)
 
 # Нарисовать радугу: 7 линий разного цвета толщиной 4 с шагом 5 из точки (50, 50) в точку (350, 450)
-  startx: Any = 50
-  endx = 350
-  starty = 50
-  endy = 450
+startx: Any = 50
+endx = 350
+starty = 50
+endy = 450
   for i in range(7):
       time.sleep(0.3)
       startx +=5
