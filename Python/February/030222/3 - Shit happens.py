@@ -53,15 +53,14 @@ def draw_smile(x, y):
     # Круг
     center = sd.get_point(x, y)
     sd.circle(center, smile_radius, sd.COLOR_YELLOW, 0)
-    # Улыбка
-    sd.polygon([
-        sd.get_point(center.x - smile_radius // 2, center.y - smile_radius // 20),
-        sd.get_point(center.x - smile_radius // 7, center.y - smile_radius // 2),
-        sd.get_point(center.x + smile_radius // 7, center.y - smile_radius // 2),
-        sd.get_point(center.x + smile_radius // 2, center.y - smile_radius // 20),
-    ], sd.COLOR_BLACK, 0)
-    sd.circle(center, smile_radius // 3, sd.COLOR_YELLOW, 0)
-    # Глаза
+    # Улыбка с помощью двух эллипсов, один перекрывает другой
+    sd.ellipse(left_bottom=sd.get_point(x - 125, y - 150), right_top=sd.get_point(x + 125, y), color=sd.COLOR_BLACK,
+               width=0)
+    sd.ellipse(left_bottom=sd.get_point(x - 125, y - 125), right_top=sd.get_point(x + 125, y + 25),
+               color=sd.COLOR_YELLOW,
+               width=0)
+    sd.circle(center, smile_radius // 6, sd.COLOR_YELLOW, 2)
+    # Глаза, представляющие собой два круга
     eyes_y = center.y + smile_radius // 3
     eyes_shift_x = smile_radius // 2
     eyes_radius = smile_radius // 6
