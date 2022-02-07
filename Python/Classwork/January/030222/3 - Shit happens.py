@@ -28,6 +28,15 @@ def facik(x, y):  # Делаем функцию (потому так напис�
                width=0)
 
 
-facik(800, 450)
+facik(800, 500)
+
+
+sd.line(start_point=sd.get_point(50, 100), end_point=sd.get_point(100, 50), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(100, 50), end_point=sd.get_point(150, 100), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(150, 100), end_point=sd.get_point(50, 200), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(50, 200), end_point=sd.get_point(100, 250), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(100, 250), end_point=sd.get_point(150, 200), color=sd.COLOR_BLACK, width=5)
+
+
 
 sd.pause()
