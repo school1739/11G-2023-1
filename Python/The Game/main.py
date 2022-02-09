@@ -21,11 +21,11 @@
 from random import randint
 
 points = [0] * 2
-ranges = [[-1000, 1000]] * 2
+ranges = [[-1000, 1000], [-1000, 1000]]
 defeats_in_row = [0] * 2
 cheat_chances = [0] * 2
 
-max_rounds = 1000
+max_rounds = 10000
 max_points = 50
 
 
@@ -70,7 +70,7 @@ def judge(choice1, choice2):
 for i in range(max_rounds):
     judge(player(0), player(1))
 
-    print(*ranges)
+    print(f'Ход {i + 1}. Очки: {points}. Ranges: {ranges}')
 
     if points[0] >= max_points and points[1] >= max_points:
         print('Ничья!')
