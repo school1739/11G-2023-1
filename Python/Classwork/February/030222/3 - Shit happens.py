@@ -31,66 +31,98 @@ def facik(x, y):  # Делаем функцию (потому так напис�
 facik(800, 500)
 
 
-def shit_happens(x, y):  #625 125
+def shit_happens(x, y):  # 625 125
 
     #  S
-    sd.line(start_point=sd.get_point(x - 575, y - 25), end_point=sd.get_point(x - 525, y - 75), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x - 525, y - 75), end_point=sd.get_point(x - 475, y - 25), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x - 475, y - 25), end_point=sd.get_point(x - 575, y + 75), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x - 575, y + 75), end_point=sd.get_point(x - 525, y + 125), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x - 525, y + 125), end_point=sd.get_point(x - 475, y + 75), color=sd.COLOR_BLACK, width=5)
+    sd.line(start_point=sd.get_point(x - 575, y - 25), end_point=sd.get_point(x - 525, y - 75), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x - 525, y - 75), end_point=sd.get_point(x - 475, y - 25), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x - 475, y - 25), end_point=sd.get_point(x - 575, y + 75), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x - 575, y + 75), end_point=sd.get_point(x - 525, y + 125), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x - 525, y + 125), end_point=sd.get_point(x - 475, y + 75), color=sd.COLOR_BLACK,
+            width=5)
 
     #  h
-    sd.line(start_point=sd.get_point(x - 425, y - 75), end_point=sd.get_point(x - 425, y + 125), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x - 425, y + 25), end_point=sd.get_point(x - 375, y + 25), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x - 375, y + 25), end_point=sd.get_point(x - 375, y - 75), color=sd.COLOR_BLACK, width=4)
+    sd.line(start_point=sd.get_point(x - 425, y - 75), end_point=sd.get_point(x - 425, y + 125), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x - 425, y + 25), end_point=sd.get_point(x - 375, y + 25), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x - 375, y + 25), end_point=sd.get_point(x - 375, y - 75), color=sd.COLOR_BLACK,
+            width=4)
 
     #  i
-    sd.line(start_point=sd.get_point(x - 325, y - 75), end_point=sd.get_point(x - 325, y + 75), color=sd.COLOR_BLACK, width=4)
+    sd.line(start_point=sd.get_point(x - 325, y - 75), end_point=sd.get_point(x - 325, y + 75), color=sd.COLOR_BLACK,
+            width=4)
     sd.circle(center_position=sd.get_point(x - 324, y + 85), radius=5, color=sd.COLOR_BLACK, width=0)
 
     #  t
-    sd.line(start_point=sd.get_point(x - 250, y - 75), end_point=sd.get_point(x - 250, y + 125), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x - 250, y - 75), end_point=sd.get_point(x - 225, y - 75), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x - 275, y + 50), end_point=sd.get_point(x - 225, y + 50), color=sd.COLOR_BLACK, width=4)
+    sd.line(start_point=sd.get_point(x - 250, y - 75), end_point=sd.get_point(x - 250, y + 125), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x - 250, y - 75), end_point=sd.get_point(x - 225, y - 75), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x - 275, y + 50), end_point=sd.get_point(x - 225, y + 50), color=sd.COLOR_BLACK,
+            width=4)
 
     #  625  125
 
     # H
-    sd.line(start_point=sd.get_point(x - 25, y - 75), end_point=sd.get_point(x - 25, y + 125), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x - 25, y + 25), end_point=sd.get_point(x + 25, y + 25), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x + 25, y - 75), end_point=sd.get_point(x + 25, y + 125), color=sd.COLOR_BLACK, width=4)
+    sd.line(start_point=sd.get_point(x - 25, y - 75), end_point=sd.get_point(x - 25, y + 125), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x - 25, y + 25), end_point=sd.get_point(x + 25, y + 25), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x + 25, y - 75), end_point=sd.get_point(x + 25, y + 125), color=sd.COLOR_BLACK,
+            width=4)
 
     #  a
-    sd.ellipse(left_bottom=sd.get_point(x + 75, y - 75), right_top=sd.get_point(x + 125, y + 25), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x + 125, y - 75), end_point=sd.get_point(x + 125, y + 25), color=sd.COLOR_BLACK, width=4)
+    sd.ellipse(left_bottom=sd.get_point(x + 75, y - 75), right_top=sd.get_point(x + 125, y + 25), color=sd.COLOR_BLACK,
+               width=4)
+    sd.line(start_point=sd.get_point(x + 125, y - 75), end_point=sd.get_point(x + 125, y + 25), color=sd.COLOR_BLACK,
+            width=4)
 
     #  p
-    sd.line(start_point=sd.get_point(x + 175, y - 110), end_point=sd.get_point(x + 175, y), color=sd.COLOR_BLACK, width=4)
-    sd.ellipse(left_bottom=sd.get_point(x + 175, y - 50), right_top=sd.get_point(x + 225, y + 25), color=sd.COLOR_BLACK, width=4)
+    sd.line(start_point=sd.get_point(x + 175, y - 110), end_point=sd.get_point(x + 175, y), color=sd.COLOR_BLACK,
+            width=4)
+    sd.ellipse(left_bottom=sd.get_point(x + 175, y - 50), right_top=sd.get_point(x + 225, y + 25), color=sd.COLOR_BLACK,
+               width=4)
 
     #  p
-    sd.line(start_point=sd.get_point(x + 275, y - 110), end_point=sd.get_point(x + 275, y), color=sd.COLOR_BLACK, width=4)
-    sd.ellipse(left_bottom=sd.get_point(x + 275, y - 50), right_top=sd.get_point(950, y + 25), color=sd.COLOR_BLACK, width=4)
+    sd.line(start_point=sd.get_point(x + 275, y - 110), end_point=sd.get_point(x + 275, y), color=sd.COLOR_BLACK,
+            width=4)
+    sd.ellipse(left_bottom=sd.get_point(x + 275, y - 50), right_top=sd.get_point(x + 325, y + 25), color=sd.COLOR_BLACK,
+               width=4)
 
     #  e
-    sd.rectangle(left_bottom=sd.get_point(x + 375, y), right_top=sd.get_point(x + 425, y + 25), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x + 375, y - 75), end_point=sd.get_point(x + 375, y + 25), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x + 375, y - 75), end_point=sd.get_point(x + 425, y - 75), color=sd.COLOR_BLACK, width=4)
+    sd.rectangle(left_bottom=sd.get_point(x + 375, y), right_top=sd.get_point(x + 425, y + 25), color=sd.COLOR_BLACK,
+                 width=4)
+    sd.line(start_point=sd.get_point(x + 375, y - 75), end_point=sd.get_point(x + 375, y + 25), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x + 375, y - 75), end_point=sd.get_point(x + 425, y - 75), color=sd.COLOR_BLACK,
+            width=4)
 
     #  n
-    sd.line(start_point=sd.get_point(x + 475, y - 75), end_point=sd.get_point(x + 475, y + 25), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x + 475, y + 10), end_point=sd.get_point(x + 525, y + 10), color=sd.COLOR_BLACK, width=4)
-    sd.line(start_point=sd.get_point(x + 525, y + 10), end_point=sd.get_point(x + 525, y - 75), color=sd.COLOR_BLACK, width=4)
+    sd.line(start_point=sd.get_point(x + 475, y - 75), end_point=sd.get_point(x + 475, y + 25), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x + 475, y + 10), end_point=sd.get_point(x + 525, y + 10), color=sd.COLOR_BLACK,
+            width=4)
+    sd.line(start_point=sd.get_point(x + 525, y + 10), end_point=sd.get_point(x + 525, y - 75), color=sd.COLOR_BLACK,
+            width=4)
 
     #  s
-    sd.line(start_point=sd.get_point(x + 575, y - 50), end_point=sd.get_point(x + 600, y - 75), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x + 600, y - 75), end_point=sd.get_point(x + 625, y - 50), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x + 625, y - 50), end_point=sd.get_point(x + 575, y), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x + 575, y), end_point=sd.get_point(x + 600, y + 25), color=sd.COLOR_BLACK, width=5)
-    sd.line(start_point=sd.get_point(x + 600, y + 25), end_point=sd.get_point(x + 625, y), color=sd.COLOR_BLACK, width=5)
+    sd.line(start_point=sd.get_point(x + 575, y - 50), end_point=sd.get_point(x + 600, y - 75), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x + 600, y - 75), end_point=sd.get_point(x + 625, y - 50), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x + 625, y - 50), end_point=sd.get_point(x + 575, y), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x + 575, y), end_point=sd.get_point(x + 600, y + 25), color=sd.COLOR_BLACK,
+            width=5)
+    sd.line(start_point=sd.get_point(x + 600, y + 25), end_point=sd.get_point(x + 625, y), color=sd.COLOR_BLACK,
+            width=5)
 
-shit_happens(625, 125)
 
+shit_happens(800, 150)
 
 sd.pause()
