@@ -62,6 +62,28 @@ sd.ellipse(left_bottom=sd.get_point(700, 50), right_top=sd.get_point(750, 150), 
 sd.line(start_point=sd.get_point(750, 50), end_point=sd.get_point(750, 150), color=sd.COLOR_BLACK, width=4)
 
 #  p
+sd.line(start_point=sd.get_point(800, 15), end_point=sd.get_point(800, 125), color=sd.COLOR_BLACK, width=4)
+sd.ellipse(left_bottom=sd.get_point(800, 75), right_top=sd.get_point(850, 150), color=sd.COLOR_BLACK, width=4)
 
+#  p
+sd.line(start_point=sd.get_point(900, 15), end_point=sd.get_point(900, 125), color=sd.COLOR_BLACK, width=4)
+sd.ellipse(left_bottom=sd.get_point(900, 75), right_top=sd.get_point(950, 150), color=sd.COLOR_BLACK, width=4)
+
+#  e
+sd.rectangle(left_bottom=sd.get_point(1000, 125), right_top=sd.get_point(1050, 150), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(1000, 50), end_point=sd.get_point(1000, 150), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(1000, 50), end_point=sd.get_point(1050, 50), color=sd.COLOR_BLACK, width=4)
+
+#  n
+sd.line(start_point=sd.get_point(1100, 50), end_point=sd.get_point(1100, 150), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(1100, 135), end_point=sd.get_point(1150, 135), color=sd.COLOR_BLACK, width=4)
+sd.line(start_point=sd.get_point(1150, 135), end_point=sd.get_point(1150, 50), color=sd.COLOR_BLACK, width=4)
+
+#  s
+sd.line(start_point=sd.get_point(1200, 75), end_point=sd.get_point(1225, 50), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(1225, 50), end_point=sd.get_point(1250, 75), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(1250, 75), end_point=sd.get_point(1200, 125), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(1200, 125), end_point=sd.get_point(1225, 150), color=sd.COLOR_BLACK, width=5)
+sd.line(start_point=sd.get_point(1225, 150), end_point=sd.get_point(1250, 125), color=sd.COLOR_BLACK, width=5)
 
 sd.pause()
