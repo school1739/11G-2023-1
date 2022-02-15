@@ -13,9 +13,7 @@ for i in range(len(s)):
     else:
         if max_count <= count:
             max_count = count
-            count = 1
-        else:
-            count = 1
+        count = 1
 
     print('count={}, max_count={}'.format(count, max_count))
 print(max_count)
