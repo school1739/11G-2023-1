@@ -50,18 +50,18 @@ while True:
     # исход если закончаться раунды
     number_of_rounds += 1
     if number_of_rounds > 100:
-        print('The rounds are over')
+        print('Раунды закончились')
         exit()
 
     # Результат игры
     if player1_points == 50 and player2_points < 50:
-        print('First player won!')
+        print('Первый игрок победил')
         exit()
 
     elif player2_points == 50 and player1_points < 50:
-        print('Second player won!')
+        print('Второй игрок победил')
         exit()
 
     elif player1_points == 50 and player2_points == 50:
-        print('Draw!')
+        print('Ничья, идем по домам')
         exit()
