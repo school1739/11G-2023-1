@@ -9,4 +9,15 @@
 
 educational_grant, expenses = 10000, 12000
 
-# TODO здесь ваш код
+month = ['Сентябрь ', 'Октябрь ', 'Ноябрь ', 'Декабрь ', 'Январь ', 'Февраль ', 'Март ', 'Апрель ', 'Май ', 'Июнь ']
+# Деньги, которые нищий студент просит у родителей
+summa = 0
+# Цикл для расчёта суммы на 10 месяцев
+for i in range(10):
+    debt = expenses - educational_grant
+    summa += debt
+    print(f"{month[i]}:\n"
+          f"\tРасходы: {round(debt,2)} рублей")
+    expenses *= 1.03
+print(f"Студенту надо попросить {round(summa,2)} рублей")
+
