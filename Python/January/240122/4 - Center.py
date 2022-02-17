@@ -10,3 +10,38 @@
 пробелами в количестве (len(s) – w) // 2 штук.
 В вашей основной программе должен осуществляться пример вывода
 нескольких строк в окнах разной ширины."""
+
+
+# функция "отцентровки" строки по ширине окна в символах
+def centered_string(s, w):
+    s_len = len(s)
+    # если длина строки превышает или равна ширине окна, то не изменяем
+    if s_len >= w:
+        return s
+    # иначе добавляем пробелы в кол-ве половины от оставшего места
+    spaces_amount = ((w - s_len) // 2)
+    return " " * spaces_amount + s
+
+
+def main():
+    s = input("Введите строку: ")
+    w = -1
+    while w <= 0:
+        w = int(input("Введите ширину окна в символах: "))
+    s_new = centered_string(s, w)
+    print(s_new)
+
+
+# функция тестирования на заданных значения
+def test():
+    strings = ["aaab", "abasasaw", "abasasdawavdavav"]
+    widths = [100, 4, 8, 16, 50]
+    for w in widths:
+        print("w=%d" % w)
+        for s in strings:
+            print(centered_string(s, w))
+        print()
+
+
+if __name__ == '__main__':
+    test()

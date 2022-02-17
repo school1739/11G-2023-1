@@ -7,3 +7,27 @@
 
 Может быть применен повышающий коэффициент. Используйте рандом для
 подстановки коэффициента тарифа (от х1 -- обычный тариф до х2.5 -- повышенный."""
+import random
+
+
+# функция вычисление стоимости такси по расстоянию в км
+# dist_in_km - расстояние в км
+# min_cost - минимальная цена по тарифу
+# rate_dist_in_m - расстояние в м, по которому происходит надбавка к стоимости
+# rate - размер надбавки
+def taxi_cost(dist_in_km, min_cost=4, rate_dist_in_m=150, rate=0.25):
+    dist_in_meters = dist_in_km * 1000  # расстояние в метрах
+    factor = random.choice([1, 2.5])    # коэффициент тарифа
+    return factor * (min_cost + dist_in_meters // rate_dist_in_m * rate)
+
+
+def main():
+    dist = -1
+    while dist <= 0:
+        dist = float(input("Введите расстояние поездки в км: "))
+    cost = taxi_cost(dist)
+    print("Стоимость поездки равна %.2f." % cost)
+
+
+if __name__ == '__main__':
+    main()

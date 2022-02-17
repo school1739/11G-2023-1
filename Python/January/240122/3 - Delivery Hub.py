@@ -5,3 +5,28 @@
 сумму доставки. В основной программе должны производиться запрос
 количества позиций в заказе у пользователя, и отображаться на экране
 сумма доставки (сумму перевести в рубли по курсу $1 = 75₽."""
+
+
+# функция вычисление стоимости доставки по кол-ву товаров
+# goods_amount - кол-во товаров
+# first_cost - стоимость доставки первого товара
+# others_cost - стоимость доставки последующих товаров
+def delivery_cost(goods_amount, first_cost=10.95, others_cost=2.95):
+    if goods_amount < 1:
+        return 0
+    return first_cost + others_cost * (goods_amount - 1)
+
+
+# функция перевода долларов в рубли
+def usd_to_rub(usd):
+    return usd * 75
+
+
+def main():
+    amount = int(input("Введите число товаров: "))
+    cost = usd_to_rub(delivery_cost(amount))
+    print("Стоимость доставки равна %.2f₽." % cost)
+
+
+if __name__ == '__main__':
+    main()
