@@ -16,25 +16,21 @@ N — количество занятых мест (натуральное чи�
 26_test.txt
 Для данного примера ответом будет являться пара чисел 60 и 23.
 """
-
 from itertools import tee
 
 # Считываем весь ввод в список tickets
 tickets = []
 with open('26.txt') as file:
     n = int(file.readline())
-    for _ in range(n):
+    for i in range(n):
         tickets.append(tuple(map(int, file.readline().split())))
 
 # Сортируем список по номеру ряда по убыванию и по номеру места по возрастанию
 tickets.sort(key=lambda ticket: (-ticket[0], ticket[1]))
 
 # Берём по 2 билета
-a, b = tee(tickets)
-next(b, None)
-tickets_pairs = zip(a, b)
-
-for ticket1, ticket2 in tickets_pairs:
+for i in range(len(tickets) - 1):
+    ticket1, ticket2 = tickets[i], tickets[i + 1]
     # Проверяем, что это билеты из одного ряда и между ними 2 свободных места
     if ticket1[0] == ticket2[0] and ticket2[1] - ticket1[1] == 3:
         print(ticket1[0], ticket1[1] + 1)
