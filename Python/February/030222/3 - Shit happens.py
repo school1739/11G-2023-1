@@ -9,3 +9,5 @@ import simple_draw
 # TODO здесь ваш код
 
 simple_draw.pause()
+
+# Emptiness
