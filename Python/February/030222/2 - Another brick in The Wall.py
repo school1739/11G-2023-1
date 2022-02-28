@@ -38,3 +38,5 @@ for y in range(50, 600, 100):
 
 sd.pause()
 # Pink Floyd тащат!
+
+# NOT OK. Кирпич отдельно, цемент отдельно.

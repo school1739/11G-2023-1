@@ -27,3 +27,5 @@ with open('26.txt') as file:
             last = m
 
     print(i, listm[last])
+
+# OK
