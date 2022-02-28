@@ -27,3 +27,5 @@ sd.pause()
 # TODO здесь ваш код
 
 sd.pause()
+
+# +-OK

@@ -23,3 +23,5 @@ height = 50
 #           рисуем кирпич
 
 simple_draw.pause()
+
+# NOT OK
