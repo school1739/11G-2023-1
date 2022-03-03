@@ -34,3 +34,5 @@ for x in range(bricks_in_row):
 #           рисуем кирпич
 
 sd.pause()
+
+# NOT OK. Пустое место != цемент.

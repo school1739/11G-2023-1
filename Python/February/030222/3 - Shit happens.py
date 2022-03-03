@@ -97,3 +97,5 @@ draw_smile(450, 400)
 draw_text('Shit happens', sd.get_point(50, 50), sd.get_point(1000, 100), 5)
 
 sd.pause()
+
+# OK

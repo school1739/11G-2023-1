@@ -103,3 +103,7 @@ from random import randint
            break
       else:
           print('Раунды кончились!')
+
+# File "python.21-22-1\Python\The Game\main.py", line 14
+#     chances = [0] * 2
+# IndentationError: unexpected indent
