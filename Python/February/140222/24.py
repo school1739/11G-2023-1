@@ -4,3 +4,4 @@ seq = list(map(len, s.split("A")))
 result = max(map(sum, zip(seq, seq[1:])))+1 if len(seq) > 1 else len(s)
 
 print(result)
+
