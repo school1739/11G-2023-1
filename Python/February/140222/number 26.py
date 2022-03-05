@@ -16,3 +16,5 @@ for i in range (0, len(data)):
     if data[i] - data[count-1] <= zapas:
         itog = data[i]
 print(itog)
+
+# OK

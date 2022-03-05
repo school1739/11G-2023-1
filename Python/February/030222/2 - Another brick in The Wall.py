@@ -14,3 +14,5 @@ for y in range(0, 1000, 50):
         point1 = sd.get_point(x1, y1)
         sd.rectangle(point, point1, color=sd.random_color(), width=0)
 sd.pause()
+
+# +-OK. А где цемент?

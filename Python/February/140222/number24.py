@@ -1,4 +1,4 @@
-s = open("24.txt").read()
+s = open("24-1.txt").read()
 count = 1
 max_count = 0
 count_of_a = 0
@@ -13,3 +13,5 @@ for symbol in s:
             max_count = count
         count = 0
 print(max_count)
+
+# OK

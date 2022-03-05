@@ -84,3 +84,5 @@ for i, lttr in enumerate("Shit happens"):
         drawletter(lttr, sd.get_point(130 * i + 200, 700), 100, 100, 10)
 
 sd.pause()
+
+# +-OK. Где-то я уже видел такого клоуна... hmmm...

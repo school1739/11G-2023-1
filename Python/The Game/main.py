@@ -65,3 +65,5 @@ while True:
     elif player1_points == 50 and player2_points == 50:
         print('Ничья, идем по домам')
         exit()
+
+# NOT OK. При каждом запуске: Раунды закончились
