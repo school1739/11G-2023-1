@@ -32,3 +32,9 @@ space
 #           рисуем кирпич
 
 simple_draw.pause()
+
+# NOT OK.
+
+#   File "C:\Users\bormo\PycharmProjects\python.21-22-1\Python\February\030222\2 - Another brick in The Wall.py", line 12, in <module>
+#      sd.rectangle(sd.get_point(0, 0), sd.get_point(*sd.resolution), background_color)
+#  NameError: name 'sd' is not defined. Did you mean: 'id'?

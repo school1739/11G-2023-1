@@ -33,3 +33,15 @@ for r in range(900,600,-10):
 
 
 sd.pause()
+
+# NOT OK. Ругается на неправильные отступы.
+
+#   File "\February\030222\1 - Rainbow.py", line 14
+#      for i in range(7):
+#  IndentationError: unexpected indent
+
+# NOT OK. Даже если отступы починить, ничего не работает.
+
+#  File "\February\030222\1 - Rainbow.py", line 15, in <module>
+#     time.sleep(0.3)
+# NameError: name 'time' is not defined

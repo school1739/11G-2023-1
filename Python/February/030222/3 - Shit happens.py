@@ -27,3 +27,9 @@ for i in range(10):
     smile(x, y, color)
 
 simple_draw.pause()
+
+# NOT OK
+
+#  File "C:\Users\bormo\PycharmProjects\python.21-22-1\Python\February\030222\3 - Shit happens.py", line 9, in <module>
+#     sd.resolution = (700, 700)
+# NameError: name 'sd' is not defined. Did you mean: 'id'?
