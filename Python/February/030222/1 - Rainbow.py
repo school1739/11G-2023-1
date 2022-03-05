@@ -36,3 +36,5 @@ for step2, clr in enumerate(rainbow_colors):
     raduga_circle(clr, step2 * 15)
 
 sd.pause()
+
+# OK

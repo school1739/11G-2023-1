@@ -16,3 +16,5 @@ for i in range(len(s)):
         count=0
 
     print(count)
+
+# Не подружился ни с одним исходником. Оценка по 24-2.py

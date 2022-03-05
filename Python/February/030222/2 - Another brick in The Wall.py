@@ -11,7 +11,7 @@ sd._init()
 # Использовать вложенные циклы for
 
 # Цемент
-sd.rectangle(sd.get_point(-width, -height), sd.get_point(width, height), (100, 100, 100))
+sd.rectangle(sd.get_point(-width, -height), sd.get_point(width, height), (250, 10, 100))
 
 # Стена из кирпичей
 # Координата кирпичей по вертикали
@@ -42,3 +42,5 @@ sd.pause()
 # 　／￣|　　 |　|　|
 #  | (￣ヽ＿_ヽ_)_)
 # 　＼二つ
+
+# NOT OK. Цемент != пустое место между кирпичами.

@@ -23,3 +23,5 @@ print(max_count)
 
 # Время выполнения программы
 print("Time:  ", datetime.now() - start)
+
+# OK
