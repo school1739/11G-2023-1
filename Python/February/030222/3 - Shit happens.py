@@ -164,3 +164,5 @@ txt_y = smile_y - smile_r // 2 - txt_h - 64
 draw_text("Shit happens", txt_x, txt_y, txt_w, txt_h, simple_draw.COLOR_WHITE)
 
 simple_draw.pause()
+
+# OK

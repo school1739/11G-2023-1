@@ -60,3 +60,5 @@ while brick_y < screen_h:
 #           рисуем кирпич
 
 simple_draw.pause()
+
+# OK. Отдельный респект за правильный "цемент"!
