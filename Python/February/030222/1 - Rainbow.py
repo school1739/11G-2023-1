@@ -33,3 +33,5 @@ for i, color in enumerate(rainbow_colors):
     sd.circle(center, radius - step * i, color, width)
 
 sd.pause()
+
+# OK

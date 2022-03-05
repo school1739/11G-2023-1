@@ -20,3 +20,5 @@ with open('24-1.txt') as file:
             result += 1
 
 print(result)
+
+# OK

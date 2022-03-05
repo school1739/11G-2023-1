@@ -35,3 +35,5 @@ for i in range(len(tickets) - 1):
     if ticket1[0] == ticket2[0] and ticket2[1] - ticket1[1] == 3:
         print(ticket1[0], ticket1[1] + 1)
         break
+
+# OK. Отдельный респект за λ.
