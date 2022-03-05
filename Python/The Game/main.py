@@ -52,7 +52,7 @@ while True:
         break
 
     rounds += 1
-    if rounds >= 100:
+    if rounds >= 1000:
         print('Раунды кончились!')
         break
 
