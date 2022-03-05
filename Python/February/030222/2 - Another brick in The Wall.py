@@ -37,3 +37,5 @@ for y in range(50, 600, 100):
         sd.rectangle(start_point, end_point, width=1)
 
 sd.pause()
+
+# +-OK. Надо было отдельно оранжевый кирпич, отдельно серый слой цемента.

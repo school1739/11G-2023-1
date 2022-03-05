@@ -97,3 +97,5 @@ while not exit_flag:
     if players[1][SCORE] == 50:
         print("Player2 finally won!")
         exit_flag = True
+
+# OK

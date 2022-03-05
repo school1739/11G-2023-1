@@ -102,3 +102,5 @@ draw_smile(500, 500)
 draw_inscription(sd.get_point(50, 50), sd.get_point(700, 300), 'shit happens')
 
 sd.pause()
+
+# OK. Stalin happens

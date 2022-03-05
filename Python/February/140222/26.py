@@ -28,3 +28,4 @@ with open('26.txt') as file:
 
     print(i, list_of_memory[last])
 
+# OK
