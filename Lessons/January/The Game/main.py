@@ -51,3 +51,5 @@ while True:
     if rounds >= 1000000:
         print('Раунды кончились!')
         break
+
+# +-OK. Где читы?
