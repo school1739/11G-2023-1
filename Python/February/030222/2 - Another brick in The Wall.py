@@ -1,4 +1,4 @@
-import simple_draw
+import simple_draw as sd
 
 # Нарисовать стену из кирпичей. Размер кирпича - 100х50
 # Использовать вложенные циклы for
@@ -6,8 +6,8 @@ import simple_draw
 # Задача размеров окна и заголовка
 screen_w = 640
 screen_h = 480
-simple_draw.caption = "Wall"
-simple_draw.set_screen_size(screen_w, screen_h)
+sd.caption = "Wall"
+sd.set_screen_size(screen_w, screen_h)
 
 # Кирпич
 def brick(x, y, w, h):
@@ -36,5 +36,4 @@ brick_y += brick_h
 # Замена координаты X
 brick_start_x_idx = not brick_start_x_idx
 
-
-simple_draw.pause()
+sd.pause()
