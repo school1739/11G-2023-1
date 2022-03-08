@@ -9,15 +9,14 @@ screen_h = 480
 simple_draw.caption = "Wall"
 simple_draw.set_screen_size(screen_w, screen_h)
 
-
 # Кирпич
 def brick(x, y, w, h):
-p1 = simple_draw.get_point(x, y)
-p2 = simple_draw.get_point(x + w, y + h)
-# Заливка кирпичец
-simple_draw.rectangle(p1, p2, simple_draw.COLOR_DARK_RED, 0)
-# Границы кирпичей
-simple_draw.rectangle(p1, p2, simple_draw.COLOR_WHITE, 4)
+    p1 = simple_draw.get_point(x, y)
+    p2 = simple_draw.get_point(x + w, y + h)
+    # Заливка кирпичец
+    simple_draw.rectangle(p1, p2, simple_draw.COLOR_DARK_RED, 0)
+    # Границы кирпичей
+    simple_draw.rectangle(p1, p2, simple_draw.COLOR_WHITE, 4)
 # Размеры кирпича
 brick_w = 100
 brick_h = 50
@@ -39,5 +38,3 @@ brick_start_x_idx = not brick_start_x_idx
 
 
 simple_draw.pause()
-
-# NOT OK. Пустое место != цемент.
