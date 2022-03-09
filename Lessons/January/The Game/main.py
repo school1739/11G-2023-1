@@ -10,37 +10,42 @@
 другой игрок штрафуется на 1 очко (-1). Игра продолжается до тех пор, пока
 один из игроков не наберёт 50 очков, но не более 100 раундов."""
 from random import randint
-points1=0
-points2=0
-def player1():
-    return randint(0,10)
 
-def player2():
-    return randint(0,10)
+p1_score, p2_score = 0, 0
 
-def judge(choice1,choice2):
-    global points1,points2
-    if choice1 == choice2:
-        points1+=1
-        points2+=1
-    elif choice1>choice2:
-        points1+=1
-        points2-=1
+def p1():
+    return randint (0,10)
+def p2():
+    return randint (0,10)
+
+def judge(option1, option2):
+    global p1_score, p2_score
+    if option1 == option2:
+        p1_score +=1
+        p2_score +=1
+    elif option1 > option2:
+        p1_score += 1
+        p2_score -= 1
     else:
-        points1-=1
-        points2+=1
-rounds=0
+        p1_score -= 1
+        p2_score += 1
+
+rounds = 0
 while True:
-    judge(player1(),player2())
-    rounds+=1
-    if points1 >=50 and points2 >=50:
-        print("Ничья")
-    elif points1 >=50:
-        print("1 чел победил")
-    elif points2 >=50:
-        print("второй чел победил")
+    judge(p1(), p2())
+
+    if p1_score ==50 and p2_score ==50:
+         print("Ничья")
+         break
+
+    if p1_score ==50 and p2_score <50:
+        print("Первый чел победил")
         break
-    rounds+=1
-    if rounds >=10000:
-        print("Раунды закончились")
+
+    if p2_score == 50 and p1_score <50:
+        print("Втрой чел победил")
+        break
+
+    if rounds>100:
+        print("Раунды кончились")
         break
