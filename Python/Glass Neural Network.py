@@ -31,7 +31,7 @@
 
 Использование сторонних библиотек (pybrain, pygame, numpy и т.п.) запрещено. Можно использовать только random.
 """
-
+import enum
 import random
 
 
@@ -50,19 +50,17 @@ class Neuron:
 
     # Убрать последнюю выбранную бумажку при проигрыше, если их больше одной
     def fail(self):
-        if self.last_value != 0:
-            if len(self.values) > 1:
-                self.values.remove(self.last_value)
-            else:
-                self.fails_in_row += 1
-        self.last_value = 0
+        assert self.last_value != 0
+        if len(self.values) > 1:
+            self.values.remove(self.last_value)
+        else:
+            self.fails_in_row += 1
 
     # Добавить новую бумажку с тем же значением, что и на выбранной
     def success(self):
-        if self.last_value != 0:
-            self.values.append(self.last_value)
-            self.fails_in_row = 0
-        self.last_value = 0
+        assert self.last_value != 0
+        self.values.append(self.last_value)
+        self.fails_in_row = 0
 
     # Ресетнуть нейрон, если всё плохо
     def reset(self):
@@ -74,37 +72,62 @@ class AI:
     # Подготовить стаканчики
     def __init__(self):
         self.neurons = [Neuron() for _ in range(10)]
+        self.used_neurons = []
 
     # Выбрать число палочек
     def choose_number(self, sticks_left):
-        return self.neurons[sticks_left - 2].choose()
+        neuron = self.neurons[sticks_left - 2]
+        self.used_neurons.append(neuron)
+        return neuron.choose()
 
     # Нейросеть проиграла
     def fail(self):
-        for neuron in self.neurons:
+        for neuron in self.used_neurons:
             neuron.fail()
             if neuron.fails_in_row >= 10:
                 neuron.reset()
+        self.used_neurons.clear()
 
     # Нейросеть выиграла
     def win(self):
-        for neuron in self.neurons:
+        for neuron in self.used_neurons:
             neuron.success()
+        self.used_neurons.clear()
+
+
+class Color(str, enum.Enum):
+    RESET = "\u001B[0m",
+    BLACK = "\u001B[30m",
+    RED = "\u001B[31m",
+    GREEN = "\u001B[32m",
+    YELLOW = "\u001B[33m",
+    BLUE = "\u001B[34m",
+    PURPLE = "\u001B[35m",
+    CYAN = "\u001B[36m",
+    WHITE = "\u001B[37m"
+
+
+def colored(value, color):
+    return color + str(value) + Color.RESET
 
 
 def player_turn():
-    return int(input('Сколько возьмёте палочек: 1 или 2?: '))
+    choice = int(input('Сколько возьмёте палочек: 1 или 2?: '))
+    if choice not in (1, 2):
+        print('ಠ╭╮ಠ')
+        exit(-666)
+    return choice
 
 
 def bot_turn(ai, sticks_left):
     choice = ai.choose_number(sticks_left)
-    print(f'Я возьму столько палочек: {choice}')
+    print(f'Я возьму столько палочек: {colored(choice, Color.BLUE)}')
     return choice
 
 
 def random_turn():
     choice = random.randint(1, 2)
-    print(f'Рандомно выбрал число: {choice}')
+    print(f'Рандомно выбрал число: {colored(choice, Color.YELLOW)}')
     return choice
 
 
@@ -127,7 +150,7 @@ while True:
         random_play_rounds -= 1
     # Цикл игры
     while sticks_left > 1:
-        print(f'Палочек осталось: {sticks_left}')
+        print(f'Палочек осталось: {colored(sticks_left, Color.RED)}')
         if turn == 0:
             if random_play:
                 sticks_left -= random_turn()
@@ -136,7 +159,7 @@ while True:
         else:
             sticks_left -= bot_turn(bot, sticks_left)
         turn = 1 - turn
-    print('Осталась последняя палочка!')
+    print(colored('Осталась последняя палочка!', Color.CYAN))
     # Проверяем, кто проиграл
     if turn == 0:
         print('Ха-ха-ха! Я умнее тебя! У меня памяти 16 мегабайт!')
@@ -148,7 +171,8 @@ while True:
     print('\nСтаканчики:')
     print('1: Не используется')
     for i, neuron in enumerate(bot.neurons):
-        print(f'{i + 2}: Бумажки: {neuron.values}')
+        chance_one = neuron.values.count(1) / len(neuron.values) * 100
+        print(f'{i + 2}: '
+              f'Шансы - {chance_one:.2f}%, {100 - chance_one:.2f}%;\t'
+              f'Бумажки - {sorted(neuron.values)}')
     print()
-
-# Не знаю, работает ли ресет стаканчика если в нём 1 бумажка и он 10 раз проиграл, так как такого не было :/
