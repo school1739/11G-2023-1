@@ -33,6 +33,7 @@
 """
 import enum
 import random
+import os
 
 
 # Класс нейрона (стаканчика)
@@ -95,6 +96,7 @@ class AI:
         self.used_neurons.clear()
 
 
+# Цвета для красивого вывода
 class Color(str, enum.Enum):
     RESET = "\u001B[0m",
     BLACK = "\u001B[30m",
@@ -107,24 +109,28 @@ class Color(str, enum.Enum):
     WHITE = "\u001B[37m"
 
 
+# Цветной вывод
 def colored(value, color):
     return color + str(value) + Color.RESET
 
 
+# Ход игрока
 def player_turn():
     choice = int(input('Сколько возьмёте палочек: 1 или 2?: '))
     if choice not in (1, 2):
         print('ಠ╭╮ಠ')
-        exit(-666)
+        choice = player_turn()
     return choice
 
 
+# Ход бота
 def bot_turn(ai, sticks_left):
     choice = ai.choose_number(sticks_left)
     print(f'Я возьму столько палочек: {colored(choice, Color.BLUE)}')
     return choice
 
 
+# Ход рандома
 def random_turn():
     choice = random.randint(1, 2)
     print(f'Рандомно выбрал число: {colored(choice, Color.YELLOW)}')
