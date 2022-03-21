@@ -1,18 +1,28 @@
+import random
+
+
 class Player:
     def __init__(self, name):
-        print("Новый раб прибыл, милорд")
-        self.name=name
+        print("Консструктор создал игрока")
+        self.name = name
+        self.age = random.randint(12, 55)
+
     def say(self, message):
         print(message)
-    def saytrue(self):
-        self.say("Zhirinovsky was right")
 
-Ivanov = Player("Ivanoff")
-Petrov = Player("Petrosheves")
+    def say_shit(self):
+        # print("shit")
+        self.say("shit")
 
-Ivanov.say("Готов вкалывать")
-Petrov.say("Опять работа?")
 
-Ivanov.saytrue()
-print(Ivanov.name, "," ,Petrov.name)
-Ivanov.say(Ivanov.name)
+ivanow = Player("ivan")
+
+ivanow.say(ivanow.name)
+# print(ivanow.name)
+
+ivanow.say(ivanow.age)
+# ivanow.say("Ivan")
+# ivanow.say_shit()
+
+ivanow.work = "school"
+ivanow.say(ivanow.work)
