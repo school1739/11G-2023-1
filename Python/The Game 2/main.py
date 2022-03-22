@@ -20,11 +20,6 @@
 
 from random import randint
 
-points = [0] * 2
-ranges = [[-1000, 1000], [-1000, 1000]]
-defeats_in_row = [0] * 2
-cheat_chances = [0] * 2
-
 max_rounds = 10000
 max_points = 50
 
@@ -71,61 +66,48 @@ class Judge:
         if choice1 == choice2:
             self.player1.draw()
             self.player2.draw()
-            self.points1 += 1
-            self.points2 += 1
+            self.add_points(1, 1)
         elif choice1 > choice2:
             self.player1.win()
             self.player2.lose()
-            self.points1 += 1
-            self.points2 += 1
+            self.add_points(1, -1)
         else:
             self.player1.lose()
             self.player2.win()
-            self.points1 += 1
-            self.points2 += 1
+            self.add_points(-1, 1)
 
-    @staticmethod
-    def player_win(winner, loser):
-        winner.win()
-        loser.lose()
-        winner.points += 1
-        loser.points -= 1
+        if self.player1.points >= max_points and self.player2.points >= max_points:
+            return 'Ничья!'
+        if self.player1.points >= max_points:
+            return '1-ый игрок выиграл!'
+        if self.player2.points >= max_points:
+            return '2-ой игрок выиграл!'
+        return None
 
-    @staticmethod
-    def draw(player1, player2):
-        player1.draw()
-        player2.draw()
-        player1.points += 1
-        player2.points += 1
+    def rounds_over(self):
+        if self.player1.points == max_points and self.player2.points >= max_points:
+            return 'Ничья!'
+        if self.player1.points > self.player2.points:
+            return '1-ый игрок выиграл!'
+        return '2-ой игрок выиграл!'
+
+    def add_points(self, p1, p2):
+        self.player1.points += p1
+        self.player2.points += p2
 
 
-
-
-def judge(choice1, choice2):
-    if choice1 == choice2:
-        player_win(0)
-        player_win(1)
-    elif choice1 > choice2:
-        player_win(0)
-        player_lost(1)
-    else:
-        player_lost(0)
-        player_win(1)
-
+player1 = Player()
+player2 = Player()
+judge = Judge(player1, player2)
 
 for i in range(max_rounds):
-    judge(player(0), player(1))
+    result = judge.iteration()
 
-    print(f'Ход {i + 1}. Очки: {points}. Ranges: {ranges}')
+    print(f'Ход {i + 1}. Очки: {(player1.points, player2.points)}. Ranges: {(player1.range, player2.range)}')
 
-    if points[0] >= max_points and points[1] >= max_points:
-        print('Ничья!')
-        break
-    elif points[0] >= max_points:
-        print('1-ый игрок выиграл!')
-        break
-    elif points[1] >= max_points:
-        print('2-ой игрок выиграл!')
+    if result is not None:
+        print(result)
         break
 else:
     print('Раунды кончились!')
+    print(judge.rounds_over())
