@@ -1,4 +1,4 @@
-class Player:
+"""class Player:
     def __init__(self,name):
         print("sozdal")
         self.name=name
@@ -19,4 +19,36 @@ ivanov.say("z utq")
 ivanov.sayshit()
 print(ivanov.name,petrov.name)
 ivanov.say(ivanov.name)
-ivanovJR = PlayerJr("dflfkfkkf")
+ivanovJR = PlayerJr("dflfkfkkf")"""
+import random
+'''class Dude:
+    def __init__(self,name):
+        self.__name=name
+        self.__age=random.randint(0,90)
+    def set_age(self,age):
+        if 0<age<110:
+            self.__age = age
+        else:print("fff")
+    def get_age(self):
+        return self.__age
+    def set_name(self):
+        return self.__name
+
+Rick=Dude("Rick")'''
+class Dude:
+    def __init__(self,name):
+        self.__name=name
+        self.__age=random.randint(0,90)
+    def set_age(self,age):
+        if 0<age<110:
+            self.__age = age
+        else:print("fff")
+    def get_age(self):
+        return self.__age
+    def set_name(self):
+        return self.__name
+
+
+
+
+
