@@ -1,3 +1,4 @@
+"""
 import random
 
 
@@ -34,6 +35,26 @@ def study(self):
 
 Ivanov = player("Ivanoff")
 Petrov = player("P.E. Trove")
+"""
+import random
 
+class Dude:
+    def __init__(self, name):
+        self.__name=name
+        self.__age=random.randint(0, 90)
 
+    def set_age(self, age):
+        if 0<age<90:
+            self.__age=age
+        else:
+            print("Are you fucked up, dude?")
+
+    def show_age(self):
+        return self.__age
+
+    def say__name(self):
+        return self.__name
+
+    def show_all(self):
+        print(f"Name:{self.__name}, Age: {self.age}")
 
