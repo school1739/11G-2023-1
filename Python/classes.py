@@ -1,7 +1,6 @@
 import random
 
-
-def globalSay(msg):
+"""def globalSay(msg):
     print(msg)
 
 
@@ -54,4 +53,67 @@ class playerJunior(Player):
 
 ivanofJunior = playerJunior("Ivan")
 ivanofJunior.study()
-ivanofJunior.sayShit()
+ivanofJunior.sayShit()"""
+
+"""class Dude:
+    def __init__(self, name):
+        self.__name = name
+        print(f"{self.__name} is born")
+        self.__age = random.randint(0, 90)
+
+    def get_name(self):  # Функция-геттер NAME
+        return self.__name
+
+    def set_name(self, name):  # Функция-сеттер NAME
+        self.__name = name
+
+    def get_age(self):  # Функция-геттер AGE
+        return self.__age
+
+    def set_age(self, age):  # Функция-сеттер AGE
+        if 0 < age < 90:
+            self.__age = age
+        else:
+            print("No, dumbass")
+
+    def get_info(self):  # Функция-инфогеттер
+        print(f"Name: {self.__name}, Age: {self.__age}")"""
+
+
+class Dude:
+    def __init__(self, name):
+        self.__name = name
+        print(f"{self.__name} is born")
+        self.__age = random.randint(0, 90)
+
+    @property
+    def name(self):  # Функция-геттер NAME
+        return self.__name
+
+    @name.setter
+    def name(self, name):  # Функция-сеттер NAME
+        last_name = self.__name
+        self.__name = name
+        print(f"Last name is {last_name}")
+    @property
+    def age(self):  # Функция-геттер AGE
+        return self.__age
+
+    @age.setter
+    def age(self, age):  # Функция-сеттер AGE
+        if 0 < age < 90:
+            self.__age = age
+        else:
+            print("No, dumbass")
+
+    def get_info(self):  # Функция-инфогеттер
+        print(f"Name: {self.__name}, Age: {self.__age}")
+
+
+Rick = Dude("Rick")
+# Rick.age()
+# Rick.set_age(23)
+# print(Rick.get_age())
+print(Rick.name)
+Rick.name = "dick"
+print(Rick.name)
