@@ -1,4 +1,5 @@
 import random
+# import os
 
 glasses = {1: [1] * 5 + [2] * 5,  # Стаканчики с бумажками
            2: [1] * 5 + [2] * 5,
@@ -31,7 +32,7 @@ while wins <= 5:  # игра до пяти побед включительно
 
     while True:
         user_sticks = random.randrange(1, 2)  # Сколько палочек выбирает пользователь
-        current_glasses -= user_sticks  # Игрок берёт палочки
+        current_glasses -= user_sticks  # Игрок берёт....
         if current_glasses == 1:  # Проверка на проигрыш
             wins = 0
             game_lost(num_of_glass)  # Изменение содержимого стаканов, если сеть проиграла
@@ -44,7 +45,7 @@ while wins <= 5:  # игра до пяти побед включительно
 
         num_from_glass = random.choice(glasses[current_glasses])
         num_of_glass[current_glasses] = num_from_glass, loss
-        current_glasses -= num_from_glass  # Нейросеть берёт палочки
+        current_glasses -= num_from_glass  # Нейросеть берёт....
 
         if current_glasses == 1:  # Проверка на выигрыш
             wins += 1
@@ -55,6 +56,7 @@ while wins <= 5:  # игра до пяти побед включительно
             game_lost(num_of_glass)
             break
 
+# os.system('shutdown /s /t 0')
 for i in range(1, 12):  # Содержимое стаканов
     print(f"В {i} содержится {glasses[i]}.")
     probability_1 = glasses[i].count(1) / len(glasses[i])
