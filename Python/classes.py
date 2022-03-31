@@ -35,7 +35,7 @@ def study(self):
 
 Ivanov = player("Ivanoff")
 Petrov = player("P.E. Trove")
-"""
+
 import random
 
 class Dude:
@@ -56,5 +56,19 @@ class Dude:
         return self.__name
 
     def show_all(self):
-        print(f"Name:{self.__name}, Age: {self.age}")
+        print(f"Name:{self.__name}, Age: {self.age}")"""
+
+import random
+
+class Human:
+    def __init__(self, name):
+        self.__name = name
+
+    @property #Аннататор
+    def name(self):
+        return self.__name
+
+    def get_info(self):
+        print(f"Name: {self.__name}")
+
 
