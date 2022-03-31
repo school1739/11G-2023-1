@@ -24,6 +24,7 @@ class Player:
 Ivanov = Player("Ivanoff")
 Petrov = Player("P.E. Trove")
 """
+"""
 class Dude:
     def __init__(self, name):
         self.__name= name
@@ -46,4 +47,37 @@ class Dude:
             print("Are yuo fucked up, dude?")
 
     def get_info(self):# инфогеттер
-        print(f"Name: {self.__name,}")
+        print(f"Name: {self.__name}, Age {self.__age}")
+"""
+
+class Human:
+    def __init__(self, name):
+        self.__name=name
+
+    @property # Аннотатор анотация
+    def name(self):
+        return self.__name
+
+    def get_info(self):
+        print(f"Name: {self.__name}")
+
+class Employee(Human):
+    def __init__(self, name, company):
+        super().__init__(name)
+        self.company=company
+
+    def work(self):
+        print(f"{self.name} work somewhere")
+
+    def get_info(self):
+        super().get_info()
+        print(f"Company: {self.company}")
+
+
+Rick=Human("Rick")
+print(Rick.name)
+Rick.get_info()
+
+Dick=Employee("Dick", "Microsoft")
+print(Dick.name)
+Dick.get_info()
