@@ -1,5 +1,3 @@
-import random
-
 """class Dude:
     def __init__(self, name):
         self.__name = name
@@ -29,7 +27,6 @@ import random
 
 Rick = Dude("Rick")
 Rick.show_all()"""
-
 
 """def globalSay(msg):
     print(msg)
@@ -83,7 +80,7 @@ print(IvanovJr.name)
 IvanovJr.study()
 IvanovJr.sayShit()"""
 
-class Dude:
+"""class Dude:
     def __init__(self, name):
         self.__name = name
         print(f"{self.__name} is born")
@@ -111,4 +108,36 @@ class Dude:
         print(f'Name: {self.__name}, Age: {self.__age}')
 
 Rick = Dude("Rick")
+print(Rick.name)"""
+
+
+class Human:
+    def __init__(self, name):
+        self.__name = name
+
+    @property  # Аннотатор
+    def name(self):
+        return self.__name
+
+    def get_info(self):
+        print(f"Name: {self.__name}")
+
+
+class Employee(Human):
+    def __init__(self, name, company):
+        super().__init__(name)
+        self.__company = company
+
+    def work(self):
+        print(f"{self.__name} works somewhere")
+
+    def get_info(self):
+        super().get_info()
+        print(f"Company: {self.__company}")
+
+Rick=Human("Rick")
 print(Rick.name)
+Rick.get_info
+
+Dick=Employee("Dick", "Microsoft")
+print(Dick.name)
