@@ -1,7 +1,7 @@
 from random import random
 
 
-class Dude:
+"""class Dude:
     def __init__(self,name):
         self._name = name
         self._age = random.randit(0,90)
@@ -20,7 +20,26 @@ class Dude:
     def get_info(self):
         print(f"Name: {self._name}Age._name")
 Rick=Dude("Rick")
-Rick.get_info()
+Rick.get_info()"""
+
+class Human:
+    def __init__(self):
+        self._name = name
+
+    def(self,name):
+        pass
+    @property
+    def name(self):
+        return self._name
+    def get_into(self):
+        print(f"Name: {self._name}")
+
+    def __init__(self,name,company):
+        self._name = name
+    def work(self):
+        print(f"{self._name}works somewhere")
+
+
 
 
 
