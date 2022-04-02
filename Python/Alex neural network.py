@@ -23,7 +23,7 @@ def game_lost(num_of_glas):
             glasses[i].remove(num_of_glas[i][0])
 
 wins = 0  # кол-во побед подряд
-while wins <= 5:  # игра до пяти побед включительно
+while wins <= 4:  # игра до пяти побед включительно
     current_glasses = 10
     num_of_glas = {}
     loss = 0  # Кол-во проигрышей. Нужно чтобы знать кол-во проигрышей на таком-то листочке в таком-то стакане
