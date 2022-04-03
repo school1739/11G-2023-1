@@ -17,21 +17,21 @@ language = int(input(
     "Введите цифру языка, на котором вы напишите слово | Enter number of language, on which you will write a word (RU - 1, EU - 2): "))
 
 if language == 1:
-    keywordRU = input("Введите ключевое слово (только заглавными буквами): ")
-    wordRU = input("Введите слово, которое хотите зашифровать (только заглавными буквами): ")
-    keywordRU_spisok = []
-    wordRU_spisok = []
-    for b in keywordRU:
+    keywordRU = input("Введите ключевое слово (только заглавными буквами): ") #Просим ввести ключевое слово
+    wordRU = input("Введите слово, которое хотите зашифровать (только заглавными буквами): ") #Просим ввести само слово для шифровки
+    keywordRU_spisok = [] #Список для индекса ключевого слова
+    wordRU_spisok = [] #Список для индекса слова для шифровки
+    for b in keywordRU: #Находим индексы букв ключевого слова и складываем в список
         keywordRU_index = int(alphabet_RU.find(b) + 1)
         keywordRU_spisok.append(keywordRU_index)
 
-    for c in wordRU:
+    for c in wordRU: #Находим индексы букв слова для шифровки и складываем в список
         wordRU_index = int(alphabet_RU.find(c) + 1)
         wordRU_spisok.append(wordRU_index)
 
-    for i in range(len(wordRU_spisok)):
+    for i in range(len(wordRU_spisok)): #По очереди складываем индексы из слова для шифровки и ключевого слова
         sum = wordRU_spisok[i] + keywordRU_spisok[i % len(keywordRU_spisok)]
-        print(alphabet_RU[sum], end="")
+        print(alphabet_RU[sum], end="") #Получаем зашифрованное слово. Шифровка предложений, дешифровка, защита от дурака и версия с английскими словами приняла ислам
 
 
 
