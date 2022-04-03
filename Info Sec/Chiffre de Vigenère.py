@@ -12,3 +12,4 @@ alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
 #       Ci=(Pi+Ki) mod 26
 #   Расшифровка:
 #       Pi=(Ci-Ki+26) mod 26
+
