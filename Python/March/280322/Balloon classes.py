@@ -18,19 +18,51 @@ import random
 Использование pygame и/или иных библиотек, кроме SD и random не допускается.
 """
 
-class Firework: # Основной класс фейерверка
-    def __init__(self):
-        pass
+width = 1500
+height = 700
+sd.set_screen_size(width, height)
+sd._init()
 
-class FireworkCenter(Firework): # Подкласс для большой центральной части фейерверка
-    pass
+center = sd.get_point(width / 2, height / 2) #центр
 
-class FireworkAround(Firework): # Подкласс для маленьких фейерверков вокруг основного
-    pass
 
-class Balloon: # Класс для шарика
-    def __init__(self):
-        pass
-    def main_circle(self, center_x, center_y):
-        sd.ellipse(sd.get_point(center_x - random.raindit(10,20), (center_y - 30)), color = sd.random_color(), width=2)
-        sd.polygon([sd.get_point(center_x - 5, center_y - 30),sd.get_point(center_x + 5, center_y - 30), sd.get_point(center_x, center_y - 42)], width=1)
+class Firework:  # Основной класс фейерверка
+    def fireworks(x, y):
+        sd.circle(sd.get_point(x, y), 10, sd.random_color(), 0)
+
+
+class FireworkCenter(Firework):  # Подкласс для большой центральной части фейерверка
+    for i in range(1000):
+        Firework.fireworks(center.x + random.randint(-150, 150), center.y + random.randint(-150, 150))
+
+
+class FireworkAround(Firework):  # Подкласс для маленьких фейерверков вокруг основного
+    for indent in range(3):
+        for i in range(300):
+            Firework.fireworks(center.x + random.randint(-450, -350) + 400 * indent,
+                               center.y + random.randint(250, 350))
+    for indent in range(2):
+        for i in range(300):
+            Firework.fireworks(center.x + random.randint(-250, -150) + 400 * indent,
+                               center.y + random.randint(-350, -250))
+
+
+class Balloon:  # Класс для шарика
+    def balloon(point):
+        sd.ellipse(sd.get_point(point.x - 20, point.y - 30), sd.get_point(point.x + 20, point.y + 30),
+                   sd.random_color())
+
+        sd.polygon(point_list=[sd.get_point(point.x, point.y - 30), sd.get_point(point.x - 5, point.y - 40),
+                               sd.get_point(point.x + 5, point.y - 40)], color=sd.random_color(), width=0)
+
+        sd.line(sd.get_point(point.x, point.y - 40), sd.get_point(point.x - 5, point.y - 60))
+        sd.line(sd.get_point(point.x - 5, point.y - 60), sd.get_point(point.x + 5, point.y - 80))
+        sd.line(sd.get_point(point.x + 5, point.y - 80), sd.get_point(point.x - 5, point.y - 100))
+        sd.line(sd.get_point(point.x - 5, point.y - 100), sd.get_point(point.x + 5, point.y - 120))
+
+
+for i in range(5): # 5 шариков
+    Balloon.balloon(sd.random_point())
+
+sd.pause()
+

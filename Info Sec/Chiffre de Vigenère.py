@@ -25,3 +25,6 @@ for plain_char in plain_text:
 
 for char in (plain_text):
     print(alphabet_RU[plaint_index+key_index])
+
+
+
