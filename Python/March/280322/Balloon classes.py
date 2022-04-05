@@ -19,12 +19,18 @@ import random
 Использование pygame и/или иных библиотек, кроме SD и random не допускается.
 """
 
+'''
+Не понимаю, зачем здесь нужны классы, если гораздо проще сделать всё через функции, но ладно
+'''
+
 sd.background_color = sd.COLOR_WHITE
 sd.resolution = (1500, 1000)
 
 
-class Firework:  # Основной класс фейерверка
+# Основной класс фейерверка
+class Firework:
     def __init__(self, center: sd.Point, radius: int, circle_radius: int):
+        # Рисуем 15 окружностей в рандомном месте окружности
         for _ in range(15):
             angle = 2 * math.pi * random.random()
             r = radius * math.sqrt(random.random())
@@ -34,16 +40,19 @@ class Firework:  # Основной класс фейерверка
             sd.circle(sd.get_point(x, y), circle_radius, sd.random_color(), 0)
 
 
-class FireworkCenter(Firework):  # Подкласс для большой центральной части фейерверка
+# Подкласс для большой центральной части фейерверка
+class FireworkCenter(Firework):
     def __init__(self, center: sd.Point):
         super().__init__(center, 100, 50)
 
 
-class FireworkAround(Firework):  # Подкласс для маленьких фейерверков вокруг основного
+# Подкласс для маленьких фейерверков вокруг основного
+class FireworkAround(Firework):
     def __init__(self, center: sd.Point):
         super().__init__(center, 50, 25)
 
 
+# Класс салюта
 class Salute:
     def __init__(self, center: sd.Point, radius: int):
         FireworkCenter(center)
@@ -54,7 +63,8 @@ class Salute:
             FireworkAround(sd.Point(x, y))
 
 
-class Balloon:  # Класс для шарика
+# Класс для шарика
+class Balloon:
     def __init__(self, center: sd.Point, width: int, height: int):
         left_bottom = sd.Point(center.x - width / 2, center.y - height / 2)
         right_top = sd.Point(center.x + width / 2, center.y + height / 2)
