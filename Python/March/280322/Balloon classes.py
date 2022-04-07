@@ -17,23 +17,3 @@ import random
 инкапсуляция, функции и классовые методы - произвольно.
 Использование pygame и/или иных библиотек, кроме SD и random не допускается.
 """
-
-class Firework: # Основной класс фейерверка
-    def __init__(self, x , y, radius):
-        self.x = x
-        self.y = y
-        self.radius = radius
-
-    def draw(self):
-        sd.run
-        sd.circle(center_position=sd.get_point(x, y), radius = 5, color = YELLOW, width=10)
-
-class FireworkCenter(Firework): # Подкласс для большой центральной части фейерверка
-    pass
-
-class FireworkAround(Firework): # Подкласс для маленьких фейерверков вокруг основного
-    pass
-
-class Balloon: # Класс для шарика
-
-    pass
