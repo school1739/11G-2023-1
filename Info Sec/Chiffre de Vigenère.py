@@ -17,14 +17,14 @@ alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 # Общая функция для шифрования и дешифрования
 def vigenere_cipher(text: str, alphabet: str, encrypt: bool):
-    shifts = [alphabet.find(i) + 1 for i in codeword]
+    shifts = cycle([alphabet.find(i) + 1 for i in codeword])
     result = ''
-    for char, shift in zip(text, cycle(shifts)):
+    for char in text:
         if char not in alphabet:
             result += char
         else:
             x = 1 if encrypt else -1
-            result += alphabet[(alphabet.find(char) + shift * x) % len(alphabet)]
+            result += alphabet[(alphabet.find(char) + next(shifts) * x) % len(alphabet)]
     return result
 
 
