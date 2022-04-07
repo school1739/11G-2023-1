@@ -31,9 +31,9 @@ class Firework:  # Основной класс фейерверка
         sd.circle(sd.get_point(x, y), 10, sd.random_color(), 0)
 
 
-class FireworkCenter(Firework):  # Подкласс для большой центральной части фейерверка
-    for i in range(1000):
-        Firework.fireworks(center.x + random.randint(-150, 150), center.y + random.randint(-150, 150))
+class FireworkCenter(Firework): # Подкласс для большой центральной части фейерверка
+        for i in range(1000):
+            Firework.fireworks(center.x + random.randint(-150, 150), center.y + random.randint(-150, 150))
 
 
 class FireworkAround(Firework):  # Подкласс для маленьких фейерверков вокруг основного
@@ -48,17 +48,20 @@ class FireworkAround(Firework):  # Подкласс для маленьких ф
 
 
 class Balloon:  # Класс для шарика
-    def balloon(point):
-        sd.ellipse(sd.get_point(point.x - 20, point.y - 30), sd.get_point(point.x + 20, point.y + 30),
+    def __init__(self):
+        pass
+
+    def balloon(self):
+        sd.ellipse(sd.get_point(self.x - 20, self.y - 30), sd.get_point(self.x + 20, self.y + 30),
                    sd.random_color())
 
-        sd.polygon(point_list=[sd.get_point(point.x, point.y - 30), sd.get_point(point.x - 5, point.y - 40),
-                               sd.get_point(point.x + 5, point.y - 40)], color=sd.random_color(), width=0)
+        sd.polygon(point_list=[sd.get_point(self.x, self.y - 30), sd.get_point(self.x - 5, self.y - 40),
+                               sd.get_point(self.x + 5, self.y - 40)], color=sd.random_color(), width=0)
 
-        sd.line(sd.get_point(point.x, point.y - 40), sd.get_point(point.x - 5, point.y - 60))
-        sd.line(sd.get_point(point.x - 5, point.y - 60), sd.get_point(point.x + 5, point.y - 80))
-        sd.line(sd.get_point(point.x + 5, point.y - 80), sd.get_point(point.x - 5, point.y - 100))
-        sd.line(sd.get_point(point.x - 5, point.y - 100), sd.get_point(point.x + 5, point.y - 120))
+        sd.line(sd.get_point(self.x, self.y - 40), sd.get_point(self.x - 5, self.y - 60))
+        sd.line(sd.get_point(self.x - 5, self.y - 60), sd.get_point(self.x + 5, self.y - 80))
+        sd.line(sd.get_point(self.x + 5, self.y - 80), sd.get_point(self.x - 5, self.y - 100))
+        sd.line(sd.get_point(self.x - 5, self.y - 100), sd.get_point(self.x + 5, self.y - 120))
 
 
 for i in range(5): # 5 шариков

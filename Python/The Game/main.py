@@ -18,68 +18,89 @@
 
 from random import randint
 
-points = [0] * 2
-ranges = [[-1000, 1000], [-1000, 1000]]
-defeats_in_row = [0] * 2
-cheat_chances = [0] * 2
+player1_points = 0
+player2_points = 0
+number_of_rounds = 0
 
-max_rounds = 10000
-max_points = 50
-
-
-def player(player_num):
-    try_cheat(player_num)
-    return randint(*(ranges[player_num]))
+cheat_probability = 'cheat_probability'
+last_move = 'last_move'
+score = 'score'
+defeats_in_a_raw = 'defeat_in_a_raw'
 
 
-def try_cheat(player_num):
-    if defeats_in_row[player_num] >= 3:
-        defeats_in_row[player_num] = 0
-        cheat_chances[player_num] += 5
-        if cheat_chances[player_num] > 95:
-            cheat_chances[player_num] = 95
-        if randint(0, 100) <= cheat_chances[player_num]:
-            ranges[player_num][0] += 1000
-            ranges[player_num][1] += 1000
+players = [
+    {
+        score: 0,
+        defeats_in_a_raw: 0,
+        cheat_probability: 0,
+        last_move: None
+    },
+    {
+        score: 0,
+        defeats_in_a_raw: 0,
+        cheat_probability: 0,
+        last_move: None
+    }
+]
 
 
-def player_win(player_num):
-    defeats_in_row[player_num] = 0
-    points[player_num] += 1
+def player(index):
+    players[index][last_move] = randint(-1000, +1000) if randint(0, 99) > players[index][cheat_probability] else randint(10000,
+                                                                                                                         10000)
 
 
-def player_lost(player_num):
-    defeats_in_row[player_num] += 1
-    points[player_num] -= 1
+def referee(players):
+    if players[0][last_move] == players[1][last_move]:
+        print("Draw")
+        players[0][score] += 1
+        players[1][score] += 1
+        players[0][defeats_in_a_raw] = players[1][defeats_in_a_raw] = 0
+        return None
 
-
-def judge(choice1, choice2):
-    if choice1 == choice2:
-        player_win(0)
-        player_win(1)
-    elif choice1 > choice2:
-        player_win(0)
-        player_lost(1)
+    if players[0][last_move] < players[1][last_move]:
+        won_index = 1
+        lose_index = 0
     else:
-        player_lost(0)
-        player_win(1)
+        won_index = 0
+        lose_index = 1
+
+    players[won_index][score] += 1
+    players[won_index][defeats_in_a_raw] = 0
+    players[won_index][cheat_probability] = 0
+
+    players[lose_index][score] -= 1
+    players[lose_index][defeats_in_a_raw] += 1
+    players[lose_index][cheat_probability] += 5 if players[lose_index][defeats_in_a_raw] % 3 == 0 else 0
+
+    return won_index + 1
 
 
-for i in range(max_rounds):
-    judge(player(0), player(1))
+while True:
+    number_of_rounds += 1
 
-    print(f'Ход {i + 1}. Очки: {points}. Ranges: {ranges}')
+    player(0)
+    player(1)
 
-    if points[0] >= max_points and points[1] >= max_points:
-        print('Ничья!')
+    won_player = referee(players)
+
+
+    if number_of_rounds > 99:
+        print("ну типо раунды закончились")
+        if players[0][score] == players[1][score]:
+            print("ничья")
+        elif players[0][score] > players[1][score]:
+            print("игрок 1 выиграл")
+        else:
+            print("игрок 2 выиграл")
         break
-    elif points[0] >= max_points:
-        print('1-ый игрок выиграл!')
+
+    if players[0][score] == 50:
+        print("игрок 1 выиграл")
         break
-    elif points[1] >= max_points:
-        print('2-ой игрок выиграл!')
+
+    if players[1][score] == 50:
+        print("игрок 2 выиграл")
         break
-else:
-    print('Раунды кончились!')
+
 
 # NOT OK. При каждом запуске: Раунды закончились
