@@ -67,3 +67,5 @@ for i in range(10): # Рисуем 10 шариков
     Balloon.balloon(sd.random_point())
 
 sd.pause()
+
+# OK
