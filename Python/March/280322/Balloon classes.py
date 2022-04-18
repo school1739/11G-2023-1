@@ -69,3 +69,4 @@ for i in range(5): # 5 шариков
 
 sd.pause()
 
+# OK
