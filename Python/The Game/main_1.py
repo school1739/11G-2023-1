@@ -107,3 +107,5 @@ for i in range(10000):
     print()
 if score_1 < 50 and score_2 < 50:
     print(f'Никто не дошел до победого счета')
+
+# OK
