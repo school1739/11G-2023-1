@@ -87,3 +87,5 @@ for _ in range(3):
     Salute(sd.random_point(), sd.random_number(200, 300))
 
 sd.pause()
+
+# OK. Пуцки, так-то, должны быть того же цвета (очевидно!), что и основной шарик!
