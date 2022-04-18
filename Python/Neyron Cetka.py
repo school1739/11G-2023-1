@@ -182,3 +182,5 @@ while True:
               f'Шансы - {chance_one:.2f}%, {100 - chance_one:.2f}%;\t'
               f'Бумажки - {sorted(neuron.values)}')
     print()
+
+# OK
