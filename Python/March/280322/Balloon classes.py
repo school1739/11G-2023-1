@@ -96,3 +96,5 @@ for firework in big_firework:
     firework.draw()
 
 sd.pause()
+
+# OK
