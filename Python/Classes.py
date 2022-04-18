@@ -110,8 +110,7 @@ IvanovJr.sayShit()"""
 Rick = Dude("Rick")
 print(Rick.name)"""
 
-
-class Human:
+"""class Human:
     def __init__(self, name):
         self.__name = name
 
@@ -140,4 +139,4 @@ print(Rick.name)
 Rick.get_info
 
 Dick=Employee("Dick", "Microsoft")
-print(Dick.name)
+print(Dick.name)"""
