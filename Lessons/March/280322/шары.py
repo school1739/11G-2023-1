@@ -69,3 +69,5 @@ for i in range(10):
     Balloon.balloon(sd.random_point())
 
 sd.pause()
+
+# OK
