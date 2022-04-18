@@ -61,7 +61,7 @@ class Gamer:
 gamer_1 = Gamer("1")
 gamer_2 = Gamer("2")
 
-
+#Это класс(вау)
 class Referee:
     def __init__(self):
         print("Судья появился и готов следить за игрой")

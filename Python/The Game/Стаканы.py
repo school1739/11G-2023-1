@@ -20,10 +20,10 @@ def game_lost(num_of_glass):
     for i in num_of_glass_list:
         if len(glasses[i]) > 1:  # Убираем листочек
             glasses[i].remove(num_of_glass[i][0])
-        elif num_of_glass[i][1] == 10:  # Убираем последний листочек, если кол-во проигрышей на нём равно 10
+        elif num_of_glass[i][1] == 10:  # Убираем последний листочек, если кол-во проигрышей на нём 10
             glasses[i].remove(num_of_glass[i][0])
 
-wins = 0  # кол-во побед подряд
+wins = 0  #подряд количество побед
 while wins <= 5:  # игра до пяти побед включительно
     current_glasses = 10
     num_of_glass = {}

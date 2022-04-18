@@ -3,7 +3,7 @@ import random
 
 class Player:
     def __init__(self, name):
-        print("Консструктор создал игрока")
+        print("Конструктор создал игрока")
         self.name = name
         self.age = random.randint(12, 55)
 
