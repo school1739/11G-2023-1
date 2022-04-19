@@ -57,3 +57,5 @@ class FireworkAround(Firework):  # Вроде как подкласс для м�
                                center.y + random.randint(-350, -250))
 
 sd.pause()
+
+# OK
