@@ -13,3 +13,5 @@ with open('24-1.txt') as file:  # Читаем строки в файле
             result += 1
 
 print(result) #Вывод результата
+
+# OK

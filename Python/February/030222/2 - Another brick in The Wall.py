@@ -37,3 +37,12 @@ brick_y += brick_h
 brick_start_x_idx = not brick_start_x_idx
 
 sd.pause()
+
+# NOT OK. Ничего не происходит, приходится останавливать программу:
+# pygame 2.1.2 (SDL 2.0.18, Python 3.10.0)
+# Hello from the pygame community. https://www.pygame.org/contribute.html
+# Traceback (most recent call last):
+#   File "\Python\February\030222\2 - Another brick in The Wall.py", line 28, in <module>
+#     while brick_y < screen_h:
+# KeyboardInterrupt
+# Process finished with exit code -1073741510 (0xC000013A: interrupted by Ctrl+C)
