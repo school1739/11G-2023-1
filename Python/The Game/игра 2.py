@@ -106,6 +106,20 @@ for i in range(10000):
         break
     print()
 if score_1 < 50 and score_2 < 50:
-    print(f'Никто не дошел до победого счета')
-
+    print(f'Никто не дошел до победного счета')
 # OK
+import time
+
+from rich.progress import Progress
+
+with Progress() as progress:
+
+    task1 = progress.add_task("[red]Downloading...", total=1000)
+    task2 = progress.add_task("[green]Processing...", total=1000)
+    task3 = progress.add_task("[cyan]Cooking...", total=1000)
+
+    while not progress.finished:
+        progress.update(task1, advance=0.5)
+        progress.update(task2, advance=0.3)
+        progress.update(task3, advance=0.9)
+        time.sleep(0.02)
