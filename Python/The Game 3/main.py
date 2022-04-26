@@ -17,24 +17,29 @@
 Увеличение вероятности: +5%. После первой победы с читом чит отключается.
 Вероятность чита сохраняется.
 """
-
+import enum
 from random import randint
 
 from rich.console import Console
+from rich.panel import Panel
 from rich.table import Table
+from rich.text import Text
 
 max_rounds = 10000
 max_points = 50
 
-score_table = Table(title='Очки игроков')
-score_table.add_column('№')
-score_table.add_column('Ход 1')
-score_table.add_column('Ход 2')
-score_table.add_column('Очки 1')
-score_table.add_column('Очки 2')
-score_table.add_column('Чит 1?')
-score_table.add_column('Чит 2?')
-score_table.add_column('Победитель')
+score_table = Table(title='Очки игроков',
+                    title_style='bold italic green1',
+                    header_style='blue bold',
+                    border_style='aquamarine3')
+score_table.add_column('№', style='green')
+score_table.add_column('Ход 1', style='yellow')
+score_table.add_column('Ход 2', style='yellow')
+score_table.add_column('Очки 1', style='dark_slate_gray1')
+score_table.add_column('Очки 2', style='dark_slate_gray1')
+score_table.add_column('Чит 1?', justify='center')
+score_table.add_column('Чит 2?', justify='center')
+score_table.add_column('Победитель', justify='center', style='bold gold1')
 
 
 # Класс игрока
@@ -68,8 +73,8 @@ class Player:
                 self.total_cheats += 1
                 self.range[0] += 1000
                 self.range[1] += 1000
-            else:
-                self.is_cheat = False
+                return
+        self.is_cheat = False
 
     # Игрок победил
     def win(self):
@@ -82,6 +87,13 @@ class Player:
     # Игрок проиграл
     def lose(self):
         self.defeats_in_row += 1
+
+
+# Перечисление результата игры/раунда
+class Result(enum.Enum):
+    DRAW = 0
+    PLAYER_1 = 1
+    PLAYER_2 = 2
 
 
 # Класс судьи
@@ -99,30 +111,34 @@ class Judge:
             self.player1.draw()
             self.player2.draw()
             self.add_points(1, 1)
+            return Result.DRAW
         elif choice1 > choice2:
             self.player1.win()
             self.player2.lose()
             self.add_points(1, -1)
+            return Result.PLAYER_1
         else:
             self.player1.lose()
             self.player2.win()
             self.add_points(-1, 1)
+            return Result.PLAYER_2
 
+    def check_winner(self):
         if self.player1.points >= max_points and self.player2.points >= max_points:
-            return 'Ничья!'
+            return Result.DRAW
         if self.player1.points >= max_points:
-            return '1-ый игрок выиграл!'
+            return Result.PLAYER_1
         if self.player2.points >= max_points:
-            return '2-ой игрок выиграл!'
+            return Result.PLAYER_2
         return None
 
     # Если раунды закончились
     def rounds_over(self):
         if self.player1.points == max_points and self.player2.points >= max_points:
-            return 'Ничья!'
+            return Result.DRAW
         if self.player1.points > self.player2.points:
-            return '1-ый игрок выиграл!'
-        return '2-ой игрок выиграл!'
+            return Result.PLAYER_1
+        return Result.PLAYER_2
 
     # Добавить очки игрокам
     def add_points(self, p1, p2):
@@ -130,25 +146,55 @@ class Judge:
         self.player2.points += p2
 
 
+def bool2emoji(value):
+    if value:
+        return '[green]✔'
+    return ''
+
+
 # Создаём игроков и судью
 player1 = Player()
 player2 = Player()
 judge = Judge(player1, player2)
 
+rounds_over = False
+
 # Цикл игры
 for i in range(max_rounds):
-    result = judge.iteration()
+    round_result = judge.iteration()
 
-    score_table.add_row(*map(str, [i, player1.last_move, player2.last_move, player1.points, player2.points,
-                                   player1.is_cheat, player2.is_cheat, result]))
+    table_result = {Result.DRAW: '-',
+                    Result.PLAYER_1: '1',
+                    Result.PLAYER_2: '2'}[round_result]
 
-    if result is not None:
-        print(result)
+    score_table.add_row(str(i + 1),
+                        str(player1.last_move), str(player2.last_move),
+                        str(player1.points), str(player2.points),
+                        bool2emoji(player1.is_cheat), bool2emoji(player2.is_cheat),
+                        table_result)
+
+    game_result = judge.check_winner()
+    if game_result is not None:
         break
 # Раунды закончились
 else:
-    print('Раунды кончились!')
-    print(judge.rounds_over())
+    rounds_over = True
+    game_result = judge.rounds_over()
 
-console = Console()
+console = Console(record=True)
 console.print(score_table)
+
+result_text = Text()
+if rounds_over:
+    result_text.append('Раунды кончились!\n', style='yellow bold')
+result_text.append({Result.DRAW: 'Ничья!',
+                    Result.PLAYER_1: '1-ый игрок выиграл!',
+                    Result.PLAYER_2: '2-ой игрок выиграл!'}[game_result],
+                   style='green bold')
+
+result_panel = Panel(result_text, title='Результат игры', expand=False, border_style='red')
+
+console.print(result_panel)
+
+with open('log.txt', mode='w', encoding='utf-8') as log:
+    log.write(console.export_text())
