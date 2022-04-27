@@ -22,16 +22,18 @@ from random import randint
 
 from rich.console import Console
 from rich.panel import Panel
+from rich.progress import track
 from rich.table import Table
 from rich.text import Text
 
-max_rounds = 10000
+
+max_rounds = 1000
 max_points = 50
 
 score_table = Table(title='Очки игроков',
                     title_style='bold italic green1',
-                    header_style='blue bold',
-                    border_style='aquamarine3')
+                    header_style='green_yellow bold',
+                    border_style='yellow1')
 score_table.add_column('№', style='green')
 score_table.add_column('Ход 1', style='yellow')
 score_table.add_column('Ход 2', style='yellow')
@@ -160,7 +162,7 @@ judge = Judge(player1, player2)
 rounds_over = False
 
 # Цикл игры
-for i in range(max_rounds):
+for i in track(range(max_rounds), description='Играем...', transient=True):
     round_result = judge.iteration()
 
     table_result = {Result.DRAW: '-',
@@ -180,6 +182,7 @@ for i in range(max_rounds):
 else:
     rounds_over = True
     game_result = judge.rounds_over()
+
 
 console = Console(record=True)
 console.print(score_table)
