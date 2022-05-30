@@ -25,3 +25,5 @@ table.add_row(
 )
 
 console.print(table)
+
+# NOT OK. Why Star Wars? O_o
