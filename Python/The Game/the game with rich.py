@@ -98,3 +98,5 @@ for i in range(10000):
 console.print(table)
 if score1 < 50 and score2 < 50:
     print(f'Ничья')
+
+# OK
