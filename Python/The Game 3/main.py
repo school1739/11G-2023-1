@@ -201,3 +201,5 @@ console.print(result_panel)
 
 with open('log.txt', mode='w', encoding='utf-8') as log:
     log.write(console.export_text())
+
+# OK
