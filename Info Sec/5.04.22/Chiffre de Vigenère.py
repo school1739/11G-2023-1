@@ -1,7 +1,7 @@
 # Напишите программу, шифрующую входящее сообщение с помощью шифра Виженера.
 # Шифр Виженера представляет собой шифр Цезаря с переменной величиной сдвига.
 # Величину сдвига задают ключевым словом.
-# Например слово БАЗА означает последовательность сдвигов исходных букв: 219121912191...
+# Например слово БАЗА означает последовательность сдвигов исходных букв: 219121912191..
 
 alphabet_RU = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -37,6 +37,36 @@ def decrypt(encrypted_text, alphabet):
             output += alphabet[(alphabet.find(j) - shift) % len(alphabet)]
     print(output.lower())
 
+def brutforce(plain_text, alphabet):
+    for i in range (25):
+        changes = [alphabet.find(i) + 1 for i in key]
+        output = ''
+        for i, j in enumerate(plain_text):
+            shift = changes[i % len(changes)]
+            if j == ' ':
+                output += ' '
+            else:
+                output += alphabet[(alphabet.find(j) + shift) % len(alphabet)]
+        print(output.lower())
+
+wtf = int(input())
+
+match wtf:
+    case 1:
+        language = input("language: 'ru' or 'eng' -  ")
+
+        if language == "ru":
+            alphabet = alphabet_RU
+        elif language == "eng":
+            alphabet = alphabet_EU
+        else:
+            print("I dunno this language :(")
+
+        text = input("Then enter the text you want to encrypt:  ").upper()
+        key = input("And pls enter the key of encrypt:  ").upper()
+        encrypt(text, alphabet)
+    case 2:
+language = input("language: 'ru' or 'eng' -  ")
 
 language = input("language: 'ru' or 'eng' -  ")
 
