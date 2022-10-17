@@ -2,7 +2,8 @@ import string
 
 character_set = string.ascii_lowercase + string.ascii_uppercase + string.digits + " " + string.punctuation
 
-def cipher_cipher_using_lookup(text,  key, decrypt=False):
+
+def cipher_cipher(text, key, decrypt=False):
     if key < 0:
         print("key cannot be negative")
         return None
@@ -26,11 +27,11 @@ if action in (1, 2):
 result = ""
 match action:
     case 1:
-        print("Результат:", cipher_cipher_using_lookup(text, key))
+        print("Результат:", cipher_cipher(text, key))
     case 2:
-        print("Результат:", cipher_cipher_using_lookup(text, key, decrypt=True))
+        print("Результат:", cipher_cipher(text, key, decrypt=True))
     case 3:
         for key, _ in enumerate(character_set):
-            print(f"key '{key}':", cipher_cipher_using_lookup(text, key, decrypt=True))
+            print(f"key '{key}':", cipher_cipher(text, key, decrypt=True))
 
 
