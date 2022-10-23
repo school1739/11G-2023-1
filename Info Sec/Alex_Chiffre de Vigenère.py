@@ -15,7 +15,7 @@ alphabet_EU = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ '
 
 from itertools import cycle
 
-user_str = list(input("Слово(а) для шифровки(без пробелов!): ").upper())
+user_str = list(input("Слово(а) для шифровки/расшифровки(без пробелов!): ").upper())
 key_word = list(input("Слово(а) ключ(без пробелов!): ").upper())
 
 if user_str[0] in alphabet_RU:  # Узнаём язык слова
@@ -51,6 +51,26 @@ def encryption(alphabet):  # Функция для шифровки
 encryption_word = ''.join([alphabet[char - 1] for char in encryption(alphabet)])
 
 
+def brute_forse(encryption_word, alphabet):
+    index_encryption_word = []
+    for i in encryption_word:  # Узнаем индексы букв зашифрованного слова
+        index_encryption_word.append(alphabet.index(i) + 1)
+
+    index_decryption_w = []
+    for old, new in enumerate(cycle(index_key_w)):  # Высчитываем индекс для расшифрованной буквы
+        if old >= len(encryption_word):
+            break
+        index_decryption_w.append(index_encryption_word[old] - new)
+
+    return index_decryption_w
+
+
+i_d_w = brute_forse(user_str, alphabet)
+brute_forse_word1 = ''.join([alphabet[char - 1] for char in i_d_w])
+i_d_w_rev = list(reversed(i_d_w))
+brute_forse_word2 = ''.join([alphabet[char - 1] for char in i_d_w_rev])
+
+
 def decryption(encryption_word, alphabet):  # Функция для расшифровки
     index_encryption_word = []
     for i in encryption_word:  # Узнаем индексы букв зашифрованного слова
@@ -61,15 +81,21 @@ def decryption(encryption_word, alphabet):  # Функция для расшиф
         if old >= len(encryption_word):
             break
         index_decryption_w.append(index_encryption_word[old] - new)
+
     return index_decryption_w
 
 
+decryption_word = ''.join([alphabet[char - 1] for char in decryption(user_str, alphabet)])
 
-
-decryption_word = ''.join([alphabet[char - 1] for char in decryption(encryption_word, alphabet)])
-
-print(f"Зашифрованное слово: {encryption_word}.")
-print(f"Расшифрованное слово: {decryption_word}")
+crypt = str(input("Choose: encrypt - 1\n"
+                  "decrypt - 2\n"
+                  "brute forse - 3\n"))
+if crypt == '1':
+    print(f"Зашифрованное слово: {encryption_word}.")
+elif crypt == "2":
+    print(f"Расшифрованное слово: {decryption_word}")
+else:
+    print(f"Брутфорс: {brute_forse_word1} или {brute_forse_word2}")
 
 # !Моя программа считает пробел за символ!
-# Скорее всего это не хорошее и даже не нормальное решение, но я не понял что означает HINT, поэтому сделал так.
+# Решение я делал в прошлом году, не судите строго...
