@@ -5,8 +5,8 @@ PORT = 21
 USER = 'bormotoon_infosec'
 PASSWORD = 'zfyLKkD3'
 
-file_to_send = "secrets_very_secret.txt"
-file_to_load = "Decode.txt"
+file_to_send = "Ciphers/secrets_very_secret.txt"
+file_to_load = "Ciphers/Decode.txt"
 
 ftp = FTP()
 ftp.connect(HOST, PORT)
