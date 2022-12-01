@@ -1,25 +1,57 @@
-from ftplib import FTP
+import random
 
-HOST = 'vh388.timeweb.ru'
-PORT = 21
-USER = 'bormotoon_infosec'
-PASSWORD = 'zfyLKkD3'
 
-file_s = "encryption.txt"
-file_l = "Decode.txt"
+def nsd(a, b):
+    while a != 0 and b != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
 
-ftp = FTP()
-ftp.connect(HOST, PORT)
-ftp.login(USER, PASSWORD)
-print("1. Отправить файл")
-print("2. Скачать файл")
-print("3. Посмотреть файлы на сервере")
-action = int(input("Выберите действие: "))
-if action=="1":
-    with open(file_s, 'rb') as file:
-        ftp.storbinary(f'STOR {file_s}', file)
-if action=="2":
-    with open(file_l, 'wb') as fp:
-        ftp.retrbinary(f'RETR {file_l}', fp.write)
-if action=="3":
-    print(ftp.retrlines('LIST'))
+    if a + b == 1:
+        return True
+    else:
+        return False
+
+
+def bpow(a, b):
+    if b == 0:
+        return 1
+    elif b % 2 == 1:
+        return bpow(a, b - 1) * a
+    else:
+        c = bpow(a, b / 2)
+        return c * c
+
+
+while True:
+    p = random.randint(50, 1000)
+    q = random.randint(50, 1000)
+    if nsd(p, q) == True:
+        break
+
+print("p = ", p)
+print("q = ", q)
+
+n = p * q
+
+elr = (p - 1) * (q - 1)
+
+while True:
+    e = random.randint(2, elr)
+    if nsd(e, elr) == True:
+        break
+
+d = 2
+while True:
+    if (e * d) % elr == 1:
+        break
+    else:
+        d += 1
+        if d == e:
+            d += 1
+
+print("n = ", n)
+print("elr = ", elr)
+print("e = ", e)
+print("d = ", d)
