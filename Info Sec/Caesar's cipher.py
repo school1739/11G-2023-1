@@ -5,10 +5,13 @@ alfavit_RU = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
 def cipher_encrypt(alf, text, key):
     encrypted = ""
     for i in text:
-        i = i.upper()
-        index = alf.find(i)
-        new_index = index + key
-        encrypted += alf[new_index]
+        if i.upper() in alf:
+            i = i.upper()
+            index = alf.find(i)
+            new_index = index + key
+            encrypted += alf[new_index]
+        else:
+            encrypted+=i
     return encrypted
 
 
