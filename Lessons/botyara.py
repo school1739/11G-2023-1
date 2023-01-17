@@ -27,3 +27,4 @@ def get_text_message(message):
     if message.text == "/help":
         bot.send_message(message.from_user.id, "Это кнопка хелпы")
 
+
