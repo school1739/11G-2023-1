@@ -7,7 +7,10 @@ bot = telebot.TeleBot('5827315252:AAG3MaPfzVEPFkaawp7K53lF6xpNx0RCi70')
 commands = {
     'Привет!': ('text', 'Здарова'),
     'help': ('text', 'Типа помощь'),
-    'timothy': ('anim', 'https://thumbs.gfycat.com/UnrulyThriftyHedgehog-size_restricted.gif')
+    'timothy': ('anim', 'https://thumbs.gfycat.com/UnrulyThriftyHedgehog-size_restricted.gif'),
+    'Пришли картинку': ('photo', 'https://cdnn21.img.ria.ru/images/07e5/06/18/1738448523_0:89:864:575_1920x0_80_0_0_7541a4a6d36edb667d2de032b8aefc66.jpg'),
+    'Пришли видео': ('video', 'Кот - космонавт.mp4'),
+    'Пришли файл': ('file', 'secret.txt'),
 }
 
 
@@ -26,12 +29,19 @@ def get_text_messages(msg: types.Message):
     answer = commands.get(msg.text)
     if answer is None:
         bot.send_message(msg.chat.id, 'Не знаю такой команды')
+        return
 
     match answer[0]:
         case 'text':
             bot.send_message(msg.chat.id, answer[1])
         case 'anim':
             bot.send_animation(msg.chat.id, answer[1])
+        case 'photo':
+            bot.send_photo(msg.chat.id, answer[1])
+        case 'video':
+            bot.send_video(msg.chat.id, open(answer[1], 'rb'))
+        case 'file':
+            bot.send_document(msg.chat.id, open(answer[1], 'rb'))
 
 
 
