@@ -1,9 +1,12 @@
+import os
+import google.cloud.dialogflow_v2 as dialogflow
 import telebot
-from telebot import types
+
 
 bot = telebot.TeleBot('5658399786:AAHo9KLbR1ubY6fk4d2dWDhjDbugBFsSvzM')
-import google.cloud.dialowflow_v2 as dialogflow
-@bot.message_handler(commands=['start'])
+import google.cloud.dialogflow_v2 as dialogflow
+
+'''@bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup(row_width=2)
     itembtn1 = types.KeyboardButton('Привет!')
@@ -29,5 +32,34 @@ def get_text_message(message):
         bot.send_animation(message.from_user.id, 'https://gifgive.com/wp-content/uploads/2021/04/gorenie-ognya.gif')
     if message.text == 'Help':
         bot.send_message(message.from_user.id, 'Нажми на /start, там в будущем, возможно, будет меню с инструкцией')
+
+bot.polling()'''
+
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'guitar-bot-lgyr-3828c91bd9b6.json'
+DIALOGFLOW_PROJECT_ID = 'guitar-bot-lgyr'
+DIALOGFLOW_LANGUAGE_CODE = 'ru'
+SESSION_ID = 'me'
+
+
+@bot.message_handler(commands=['start'])
+def start_message(message):
+    bot.send_message(message.chat.id, 'Привет, человек!')
+
+
+@bot.message_handler(func=lambda message: True)
+def send_text(message):
+    text_to_be_analyzed = message.text
+    response = detect_intent_texts(DIALOGFLOW_PROJECT_ID, SESSION_ID, text_to_be_analyzed, DIALOGFLOW_LANGUAGE_CODE)
+    bot.reply_to(message, response.query_result.fulfillment_text)
+
+
+def detect_intent_texts(project_id, session_id, text, language_code):
+    session_client = dialogflow.SessionsClient()
+    session = session_client.session_path(project_id, session_id)
+    text_input = dialogflow.types.TextInput(text=text, language_code=language_code)
+    query_input = dialogflow.types.QueryInput(text=text_input)
+    response = session_client.detect_intent(session=session, query_input=query_input)
+    return response
+
 
 bot.polling()
