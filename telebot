@@ -1,0 +1,29 @@
+import telebot
+from telebot import types
+
+bot = telebot.TeleBot('5658399786:AAHo9KLbR1ubY6fk4d2dWDhjDbugBFsSvzM')
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    markup = types.ReplyKeyboardMarkup(row_width=2)
+    itembtn1 = types.KeyboardButton('Привет!')
+    itembtn2 = types.KeyboardButton('На сайт')
+    itembtn3 = types.KeyboardButton('Help')
+    markup.add(itembtn1, itembtn2, itembtn3)
+    bot.send_message(message.chat.id, "///", reply_markup=markup)
+
+@bot.message_handler(content_types=['text'])
+
+def get_text_message(message):
+    if message.text == 'Привет!':
+        bot.send_message(message.from_user.id, 'Привет, человек!')
+    if message.text == 'На сайт':
+        bot.send_animation(message.from_user.id, '')
+    if message.text == 'Help':
+        bot.send_message(message.from_user.id, 'Нажми на /start, там в будущем, возможно, будет меню с инструкцией')
+
+
+bot.polling()
+
+
+#send_sticker
