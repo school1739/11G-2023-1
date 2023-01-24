@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "guitar-bot-lgyr",
+  "private_key_id": "3828c91bd9b686b828b04b7ecdff4f0539a18488",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCOeOVyitEjur6O\nXtAt+Eb0ceioHIR4M4yI6z26KO7NT07/Z+VhpSDMIKs2o6tKBfUwBHcNeaX+on1l\ntCKfHX3+c0E7KwMmzWK6HjFM7+hXebBS8qj3EAVpiHq4waRTYLMBuin1EJ/x/pG2\nZkbudgWeb7SKYxjmb6ZwY1UzSqocaEJ2AbenG+GIluSG9Ry2aJxLevtXrGYu6bnK\nqcqH5sYOiBEPfG9ZLbQDC1E0B2Y8YPpUm39mJocjG13MsVdYHHTDkJYNSScLiuBP\nz9is61lsvOtc+GTvCvd1Fr+eSUEcA3pyLJ+YHMWLNEmlvN9iDo4k59c+TUSY6BNQ\nsiW6EstjAgMBAAECggEANqZzRRuwm6b/f3cpHekVtqCXIR1HRyBm8QJjfCxFZeXd\nJKWC3JDN4t9JLb1ccBmW8qNT04xtOx6zQTb27NgQQ3GMfRjDrbes/j2kpaGFG0Dn\nfPnuDE9N9CxQ/tvwn7cBE1GI1KNa5yXCWRgkb0ZAY4Tv2QGoRIRhcMz5mqIyXJCi\n8oiWmOZLm+etxObD1S62EYm0VSOM0VWrY2kHMyu8KXZq2nTt9kvKYFjdzRfP90s0\nI/LmFXbPD5F/I2XSFG0n58H4cxXTRpuzOnAhhr0O2XMe4MDbvwlhRBzl56HhBleY\nIsHHuFyAodMU43zUt7mVWzeRlaeLiNw5FviXc05cMQKBgQDI0JZhTQfv241zo7Ox\n/vlDzsECXZy5li9vHNN5Md4ErSE/7SieJ9tIA/IU+ZYFCA3ynL2MWMeDulbuKT26\n0A58aPjzXv6se07gw3plb47wfdS8fqDpVxR/XXfUwYiNRVWkbETnoLDAG9EpeVrP\nBeEezHjwc9SaIIzczeePDbXWaQKBgQC1n+JemG6M8zfCH/QGn+fiPtWM7CwbTSGq\ngPw+nfMsZUaNge5i7Lquwd+lkMqtWskFQzIS8WDM3PwM7pr5vMgec2Z6akiUuvQy\nZw8X8m+W4rpawprZ14QWF7NYWT8sYx82gcwJC41fMsIegfeQY9pJbLBPt9rU7kMO\n94Q6MFoR6wKBgER7zi0UphZIm67KLygOuldDlVMHNcGc1ERiYkQ8m2ig2mwApw94\nrDGdFtvMWjsRCiCpD4Nja3ci/y5tZh3lgmsvKWdmCBguXTINuBoLt4WQhBJcZOfu\nyJC/AXTPI5B6CsDuI3mStXRuiCBKwItFiAaG2N+3wNNnMmLC3atNk6uxAoGAAzka\nIEmeNJwgUi6U+wUdbVNmIMEUK0vcHBV75HSTGyeU7+/tVg4TZgSEvoBqSFdDF/fQ\nTKvB5wDI7EXTtDjYaEnt+KAoN5N1v+s6RleECW5uliu76b+8VVQIV7oFt/juVd5J\ny6NL1/OjpDz0MrjC5+io3FFL7dlokTxtOUcgYg8CgYEAmfFecav1DHmd5y9vRTGv\nwy80aTkaw4lL4l2A+g8eB6vvuc6O1smfGyi5QJMC42rbXULzaVM0JyQmqN9NqhTp\nrOZQtmGKD/OAx1hsqMcHo2ixiZbiHl3mVDS7W65C6BpYoo0EwSPs/LRIXoJPGsym\nLMXhYsbCij5JXB2GhSwuYvw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "botchat@guitar-bot-lgyr.iam.gserviceaccount.com",
+  "client_id": "115100718193258193196",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/botchat%40guitar-bot-lgyr.iam.gserviceaccount.com"
+}
