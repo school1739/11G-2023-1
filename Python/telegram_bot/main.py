@@ -1,10 +1,7 @@
 import telebot
 from telebot import types
-import google.cloud.dialogflow_v2
-
 
 bot = telebot.TeleBot('5827315252:AAG3MaPfzVEPFkaawp7K53lF6xpNx0RCi70')
-
 
 commands = {
     'Привет!':
